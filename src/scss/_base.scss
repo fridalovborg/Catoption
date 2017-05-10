@@ -45,11 +45,11 @@ body {
 /* ----------------------------------------------------------------------------
 			INSTAGRAM PAGE
 ---------------------------------------------------------------------------- */
-img { 
-	width: 20%;
-	float: left;
-}
-
 .instagram {
-	//padding-top: 20%;
+	@include flexbox(flex, column nowrap, flex-start, center);
+	padding-top: 20%;
+
+	img {
+		width:100%;
+	}
 }

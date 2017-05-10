@@ -1,0 +1,22 @@
+/*------------------------------------------------------------------------------
+                            Flexbox-mixin
+------------------------------------------------------------------------------*/
+@mixin flexbox($display, $directionWrap, $justify-content, $align-items) {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: $display;
+   
+    // Styling of Flex Flow Direction - applies to: flex containers
+    // row | row-reverse | column | column-reverse
+    // nowrap | wrap | wrap-reverse
+    -webkit-flex-flow: $directionWrap;
+    flex-flow: $directionWrap;
+
+    -webkit-justify-content: $justify-content;
+	justify-content: $justify-content;
+
+    -webkit-align-items: $align-items;
+	align-items: $align-items;
+}
+

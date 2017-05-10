@@ -1,5 +1,10 @@
+@import "assets/_mixins";
 @import 'base';
 @import 'vars/vars';
+
+@media screen and (min-width: 770px) {
+	@import 'tablets';
+}
 
 @media screen and (min-width: 1024px) {
 	@import 'desktop';
