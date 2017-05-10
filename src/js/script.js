@@ -1,4 +1,8 @@
+/* ----------------------------------------------------------------------------
+			HISTORY LINK
+---------------------------------------------------------------------------- */
 var links = document.querySelectorAll('h2');
+
 links.forEach(function(link) {
 
 	link.addEventListener('click', function(e) {
@@ -24,7 +28,9 @@ links.forEach(function(link) {
 	}, false);
 });
 
-//SCROLL EFFECT, change later...
+/* ----------------------------------------------------------------------------
+			SCROLL EFFECT
+---------------------------------------------------------------------------- */
 function scrollOne() {
     $('html, body').animate({ scrollTop: $('#onePage').offset().top }, 'slow');
     return false;
