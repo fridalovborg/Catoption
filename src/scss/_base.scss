@@ -1,3 +1,27 @@
+* {
+	margin: 0 auto;
+}
+
+body {
+	background-color: pink;
+	height: 200vh;
+}
+
+.header {
+	width: 100%;
+	z-index: 1;
+	position: fixed;
+	display: inline-flex;
+	height: 60px;
+	background-color: white;
+
+	h2 {
+		margin-top: 10px;
+		z-index: 10;
+		width: 200px;
+	}
+}
+
 .onePage,.secondPage,.thirdPage {
 	display: none;
 }
