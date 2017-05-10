@@ -1,3 +1,16 @@
-var links=document.querySelectorAll("h2");links.forEach(function(e){e.addEventListener("click",function(e){var a=e.target.getAttribute("id");e.preventDefault(),history.replaceState(null,null,a),
+//SCROLL EFFECT, change later...
+function scrollOne(){return $("html, body").animate({scrollTop:$("#onePage").offset().top},"slow"),!1}function scrollTwo(){return $("html, body").animate({scrollTop:$("#secondPage").offset().top},"slow"),!1}function scrollThree(){return $("html, body").animate({scrollTop:$("#thirdPage").offset().top},"slow"),!1}var links=document.querySelectorAll("h2");links.forEach(function(t){t.addEventListener("click",function(t){var o=t.target.getAttribute("class");t.preventDefault(),history.replaceState(null,null,o),
 //byt ut mot data-page ...någonting!
-"page-one"===a?($(".page").hide(),$("#onePage").show()):"page-two"===a?($(".page").hide(),$("#secondPage").show()):"page-three"===a?($(".page").hide(),$("#thirdPage").show()):"home"===a&&$(".page").hide(),e.stopPropagation()},!1)}),$(document).ready(function(){$("#fullpage").fullpage({sectionsColor:["#1bbc9b","#fff","#7BAABE","whitesmoke","#ccddff"],anchors:["firstPage","secondPage","lastPage"],menu:"#menu"})});
+// if(data === 'page-one') {
+// 	$('.page').hide();
+// 	$('#onePage').show();
+// } else if (data === 'page-two') {
+// 	$('.page').hide();
+// 	$('#secondPage').show();
+// } else if (data === 'page-three') {
+// 	$('.page').hide();
+// 	$('#thirdPage').show();
+// } else if (data === 'home') {
+//       $('.page').hide();
+//     }
+t.stopPropagation()},!1)});

@@ -7,23 +7,17 @@
 </head>
 <body>
 	<div class="header">
-		<h2 id="home">Logotyp</h2>
-		<h2 id="page-one">Kampain</h2>
-		<h2 id="page-two">About</h2>
-		<h2 id="page-three">Contact</h2>
+		<h2 onclick="scrollOne()" class="home">Logotype</h2>
+		<h2 onclick="scrollOne()" class="home">Campain</h2>
+		<h2 onclick="scrollTwo()" class="instagram">Instagram</h2>
+		<h2 onclick="scrollThree()" class="contact">Contact</h2>
 	</div>
-	<div id="fullpage">
-		<div id="onePage" data-page="page-one" class="onePage page">
-			<h3>Detta är första sidan</h3>
-		</div>
-		<div id="secondPage" class="secondPage page">
-			<h3>Detta är andra sidan</h3>
-		</div>
-		<div id="thirdPage" class="thirdPage page">
-			<h3>Detta är tredje sidan</h3>
-		</div>
+	<div id="onePage" data-page="campain" class="onePage page">
+		<h3>CAMPAIN PAGE</h3>
 	</div>
-	<div class="instagram">
+	<div id="secondPage" class="secondPage page">
+		<h3>INSTAGRAM PAGE</h3>
+		<div class="instagram">
 		<?php
 		/**
 		* @TODO: Lägg till logik för att hantera tömning av cache / hantering av borttagen fil.
@@ -50,6 +44,10 @@
 		var_dump($data->tag->media->page_info->has_next_page);
 		echo "</pre>";
 		*/?>
+		</div>
+	</div>
+	<div id="thirdPage" class="thirdPage page">
+		<h3>CONTACT PAGE</h3>
 	</div>
 </body>
 <script src="https://code.jquery.com/jquery-3.2.0.min.js"></script>
