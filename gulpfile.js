@@ -21,6 +21,7 @@ gulp.task('scripts', function() {
 		.pipe(concat('all.js'))
 		.pipe(uglify({ preserveComments: 'all'}))
 		.pipe(gulp.dest('./js'));
+		.pipe(bs.reload({ stream: true }))
 });
 
 gulp.task('browser-sync', ['sass'], function() {
@@ -33,7 +34,7 @@ gulp.task('browser-sync', ['sass'], function() {
 
 // Watch
 gulp.task('watch', function() {
-	gulp.watch('src/scss/**/*.scss', ['browser-sync']);
+	gulp.watch('src/scss/**/*.scss', ['sass']);
 	gulp.watch('src/js/**/*.js', ['scripts']);
 	gulp.watch('*.html').on('change', bs.reload);
 });

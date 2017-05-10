@@ -21,7 +21,7 @@ var links = document.querySelectorAll('h2');
           $('.page').hide();
         }
 				
-		 	e.stopPropagation();
+		e.stopPropagation();
 		}, false);
 
 	});
