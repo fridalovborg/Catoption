@@ -17,7 +17,7 @@
 	</div> <!-- #onePage, .onePage, .page -->
 	<div id="secondPage" class="secondPage page">
 		<h3>INSTAGRAM PAGE</h3>
-		<div class="instagram">
+		<div class="instagram-page">
 		<?php
 		/**
 		* @TODO: Lägg till logik för att hantera tömning av cache / hantering av borttagen fil.

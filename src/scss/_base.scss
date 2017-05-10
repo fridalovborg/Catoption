@@ -25,6 +25,7 @@ body {
 		margin-top: 10px;
 		z-index: 10;
 		width: 200px;
+		font-size: 0.8em;
 	}
 }
 
@@ -45,7 +46,7 @@ body {
 /* ----------------------------------------------------------------------------
 			INSTAGRAM PAGE
 ---------------------------------------------------------------------------- */
-.instagram {
+.instagram-page {
 	@include flexbox(flex, column nowrap, flex-start, center);
 	padding-top: 20%;
 
