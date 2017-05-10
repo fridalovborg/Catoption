@@ -25,3 +25,11 @@ var links = document.querySelectorAll('h2');
 		}, false);
 
 	});
+
+$(document).ready(function() {
+    $('#fullpage').fullpage({
+      sectionsColor: ['#1bbc9b', '#fff', '#7BAABE', 'whitesmoke', '#ccddff'],
+      anchors: ['firstPage', 'secondPage', 'lastPage'],
+      menu: '#menu',
+    });
+});

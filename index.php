@@ -12,14 +12,16 @@
 		<h2 id="page-two">About</h2>
 		<h2 id="page-three">Contact</h2>
 	</div>
-	<div id="onePage" data-page="page-one" class="onePage page">
-		<h3>Detta är första sidan</h3>
-	</div>
-	<div id="secondPage" class="secondPage page">
-		<h3>Detta är andra sidan</h3>
-	</div>
-	<div id="thirdPage" class="thirdPage page">
-		<h3>Detta är tredje sidan</h3>
+	<div id="fullpage">
+		<div id="onePage" data-page="page-one" class="onePage page">
+			<h3>Detta är första sidan</h3>
+		</div>
+		<div id="secondPage" class="secondPage page">
+			<h3>Detta är andra sidan</h3>
+		</div>
+		<div id="thirdPage" class="thirdPage page">
+			<h3>Detta är tredje sidan</h3>
+		</div>
 	</div>
 	<div class="instagram">
 		<?php
