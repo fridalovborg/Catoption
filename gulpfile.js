@@ -7,6 +7,12 @@ var uglify = require('gulp-uglify');
 var concat = require('gulp-concat');
 var bs = require('browser-sync').create();
 
+//PHP
+var gulp = require('gulp'),
+    connect = require('gulp-connect-php'),
+    browserSync = require('browser-sync');
+
+
 // Tasks
 gulp.task('sass', function() {
 	return gulp.src('src/scss/**/*.scss')
@@ -23,12 +29,25 @@ gulp.task('scripts', function() {
 		.pipe(gulp.dest('./js'));
 });
 
-gulp.task('browser-sync', ['sass'], function() {
-	bs.init({
-		server: {
-			baseDir: "./"
-		}
-	})
+// gulp.task('browser-sync', ['sass'], function() {
+// 	bs.init({
+// 		server: {
+// 			baseDir: "./"
+// 		}
+// 	})
+// });
+
+//PHP
+gulp.task('browser-sync', function() {
+  connect.server({}, function (){
+    browserSync({
+      proxy: '127.0.0.1:8000'
+    });
+  });
+ 
+  gulp.watch('**/*.php').on('change', function () {
+    browserSync.reload();
+  });
 });
 
 // Watch

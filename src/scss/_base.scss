@@ -3,7 +3,7 @@
 }
 
 body {
-	background-color: salmon;
+	background-color: pink;
 	height: 200vh;
 }
 
@@ -24,4 +24,14 @@ body {
 
 .onePage,.secondPage,.thirdPage {
 	display: none;
+}
+
+// INSTAGRAM
+img { 
+	width: 20%;
+	float:left;
+}
+
+.instagram {
+	padding-top: 20%;
 }
