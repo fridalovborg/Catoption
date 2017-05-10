@@ -21,7 +21,6 @@ gulp.task('scripts', function() {
 		.pipe(concat('all.js'))
 		.pipe(uglify({ preserveComments: 'all'}))
 		.pipe(gulp.dest('./js'));
-		.pipe(bs.reload({ stream: true }))
 });
 
 gulp.task('browser-sync', ['sass'], function() {
