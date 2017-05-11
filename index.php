@@ -19,12 +19,14 @@
 		</div>
 	</div>
 	<main id="main-page">
-		<div class="header">
+		<header>
 			<h2 onclick="scrollOne()" class="home">Logotype</h2>
-			<h2 onclick="scrollOne()" class="home">Campain</h2>
-			<h2 onclick="scrollTwo()" class="instagram">Instagram</h2>
-			<h2 onclick="scrollThree()" class="contact">Contact</h2>
-		</div> <!-- .header -->
+			<!-- <h2 onclick="scrollOne()" class="home">Campain</h2> -->
+			<div class="header">
+				<h2 onclick="scrollTwo()" class="instagram">Instagram</h2>
+				<h2 onclick="scrollThree()" class="contact">Contact</h2>
+			</div> <!-- .header -->
+		</header>
 		<div id="home-page" class="home-page page">
 			<!-- <h3>CAMPAIN PAGE</h3> -->
 			<div class="svg-cat">
