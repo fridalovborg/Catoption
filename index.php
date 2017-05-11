@@ -2,54 +2,49 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Adopt a cat</title>
+	<meta name="description" content="Catoption - adopt dont shop">
+	<meta name="author" content="Catoption Team">
+	<!--<link rel="icon" type="image/png" sizes="96x96" href="src/img/favicon-96x96.png">-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Catoption</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+	<script src="https://use.fontawesome.com/9af20410fa.js"></script>
 </head>
 <body>
-	<div class="header">
-		<h2 onclick="scrollOne()" class="home">Logotype</h2>
-		<h2 onclick="scrollOne()" class="home">Campain</h2>
-		<h2 onclick="scrollTwo()" class="instagram">Instagram</h2>
-		<h2 onclick="scrollThree()" class="contact">Contact</h2>
-	</div> <!-- .header -->
-	<div id="onePage" data-page="campain" class="onePage page">
-		<h3>CAMPAIN PAGE</h3>
-	</div> <!-- #onePage, .onePage, .page -->
-	<div id="secondPage" class="secondPage page">
-		<h3>INSTAGRAM PAGE</h3>
-		<div class="instagram-page">
-		<?php
-		/**
-		* @TODO: Lägg till logik för att hantera tömning av cache / hantering av borttagen fil.
-		*/
+	<div class="load-page" id="load-page" style="display: none;">
+		<div class="txt">
+			<h1>Logo here!</h1>
+			<h2>Turn up your sound <i id="icon" class="fa fa-volume-down" aria-hidden="true"></i></h2>
+		</div>
+	</div>
+	<main id="main-page">
+		<header>
+			<h2 onclick="scrollOne()" class="home">Logotype</h2>
+			<!-- <h2 onclick="scrollOne()" class="home">Campain</h2> -->
+			<div class="header">
+				<h2 onclick="scrollTwo()" class="instagram">Instagram</h2>
+				<h2 onclick="scrollThree()" class="contact">Contact</h2>
+			</div> <!-- .header -->
+		</header>
+		<div id="home-page" class="home-page page">
+			<!-- <h3>CAMPAIN PAGE</h3> -->
+			<div class="svg-cat">
+				<?php include 'src/img/cat.svg'; ?>
+			</div>
+		</div> <!-- #home-page, .home-page, .page -->
+		<div id="insta-page" class="insta-page page">
+			<h3>INSTAGRAM PAGE</h3>
 
-		$timeout = 1; // Timeout in seconds
-		$lastCache = file_get_contents("cache_time.txt"); // När uppdaterades senast cachen?
-
-		if ($lastCache + $timeout < time() ) { // Har det gått <timeout> tid?
-		    file_put_contents("cache_time.txt", time());
-		    $url = "https://www.instagram.com/explore/tags/love/?__a=1";
-		    // @ framför undertrycker felmeddelanden
-		    @$data = file_get_contents($url);
-		    // Skriv bara om cache om API:et svarar. Annars behåll den gamla cachen.
-		    if ($data)
-		        file_put_contents("cache.txt", $data);
-		}
-
-		$data = json_decode(file_get_contents("cache.txt"));
-		for ($i = 0; $i < count($data->tag->media->nodes); $i++) {
-		    echo '<img src="'.$data->tag->media->nodes[$i]->thumbnail_src.'">';
-		}
-		/*echo "<pre>";
-		var_dump($data->tag->media->page_info->has_next_page);
-		echo "</pre>";
-		*/?>
-		</div> <!-- .instagram -->
-	</div> <!-- #secondPage, .secondPage, .page -->
-	<div id="thirdPage" class="thirdPage page">
-		<h3>CONTACT PAGE</h3>
-	</div> <!-- #thirdPage, .thirdPage, .page -->
+			<div id ="img-container" class="img-container">
+			</div> <!-- .img-container -->
+		</div> <!-- #insta-page, .insta-page, .page -->
+		<div id="contact-page" class="contact-page page">
+			<h3>CONTACT PAGE</h3>
+		</div> <!-- #contact-page, .contact-page, .page -->
+	</main>
 </body>
 <script src="https://code.jquery.com/jquery-3.2.0.min.js"></script>
+<script src="greensock/src/minified/TweenMax.min.js"></script>
 <script src="js/all.js"></script>
 </html>
