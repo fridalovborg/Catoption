@@ -9,12 +9,16 @@
 	<title>Catoption</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+	<script src="https://use.fontawesome.com/9af20410fa.js"></script>
 </head>
 <body>
 	<div class="load-page" id="load-page" style="display: none;">
-		<h1>Turn up your sound</h1>
+		<div class="txt">
+			<h1>Logo here!</h1>
+			<h2>Turn up your sound <i id="icon" class="fa fa-volume-down" aria-hidden="true"></i></h2>
+		</div>
 	</div>
-	<main>
+	<main id="main-page">
 		<div class="header">
 			<h2 onclick="scrollOne()" class="home">Logotype</h2>
 			<h2 onclick="scrollOne()" class="home">Campain</h2>

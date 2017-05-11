@@ -10,7 +10,7 @@ body {
 	height: 200vh;
 }
 
-main {
+#main-page {
 	//display: none;
 }
 
@@ -20,6 +20,12 @@ main {
 	height: 100%;
 	padding: 0px;
 	margin: 0px;
+	text-align: center;
+
+	.txt {
+		padding-top: 65%;
+		color: salmon;
+	}
 }
 
 /* ----------------------------------------------------------------------------
