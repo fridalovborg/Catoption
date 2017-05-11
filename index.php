@@ -8,6 +8,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Catoption</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
 </head>
 <body>
 	<div class="header">
@@ -32,7 +33,7 @@
 
 			if ($lastCache + $timeout < time() ) { // Har det gått <timeout> tid?
 			    file_put_contents("cache_time.txt", time());
-			    $url = "https://www.instagram.com/explore/tags/catoption/?__a=1";
+			    $url = "https://www.instagram.com/explore/tags/cats/?__a=1";
 			    // @ framför undertrycker felmeddelanden
 			    @$data = file_get_contents($url);
 			    // Skriv bara om cache om API:et svarar. Annars behåll den gamla cachen.
