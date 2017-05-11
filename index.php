@@ -11,24 +11,30 @@
 	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
 </head>
 <body>
-	<div class="header">
-		<h2 onclick="scrollOne()" class="home">Logotype</h2>
-		<h2 onclick="scrollOne()" class="home">Campain</h2>
-		<h2 onclick="scrollTwo()" class="instagram">Instagram</h2>
-		<h2 onclick="scrollThree()" class="contact">Contact</h2>
-	</div> <!-- .header -->
-	<div id="home-page" class="home-page page">
-		<h3>CAMPAIN PAGE</h3>
-	</div> <!-- #home-page, .home-page, .page -->
-	<div id="insta-page" class="insta-page page">
-		<h3>INSTAGRAM PAGE</h3>
+	<div class="load-page">
+		
+	</div>
+	<main>
+		<div class="header">
+			<h2 onclick="scrollOne()" class="home">Logotype</h2>
+			<h2 onclick="scrollOne()" class="home">Campain</h2>
+			<h2 onclick="scrollTwo()" class="instagram">Instagram</h2>
+			<h2 onclick="scrollThree()" class="contact">Contact</h2>
+		</div> <!-- .header -->
+		<div id="home-page" class="home-page page">
+			<!-- <h3>CAMPAIN PAGE</h3> -->
+			<?php include 'src/img/cat.svg'; ?>
+		</div> <!-- #home-page, .home-page, .page -->
+		<div id="insta-page" class="insta-page page">
+			<h3>INSTAGRAM PAGE</h3>
 
-		<div id ="img-container" class="img-container">
-		</div> <!-- .img-container -->
-	</div> <!-- #insta-page, .insta-page, .page -->
-	<div id="contact-page" class="contact-page page">
-		<h3>CONTACT PAGE</h3>
-	</div> <!-- #contact-page, .contact-page, .page -->
+			<div id ="img-container" class="img-container">
+			</div> <!-- .img-container -->
+		</div> <!-- #insta-page, .insta-page, .page -->
+		<div id="contact-page" class="contact-page page">
+			<h3>CONTACT PAGE</h3>
+		</div> <!-- #contact-page, .contact-page, .page -->
+	</main>
 </body>
 <script src="https://code.jquery.com/jquery-3.2.0.min.js"></script>
 <script src="js/all.js"></script>
