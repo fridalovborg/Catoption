@@ -2,7 +2,11 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Adopt a cat</title>
+	<meta name="description" content="Catoption - adopt dont shop">
+	<meta name="author" content="Catoption Team">
+	<!--<link rel="icon" type="image/png" sizes="96x96" href="src/img/favicon-96x96.png">-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Catoption</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
@@ -37,7 +41,7 @@
 			}
 
 			$data = json_decode(file_get_contents("cache.txt"));
-			for ($i = 0; $i < count($data->tag->media->nodes); $i++) {
+			for ($i = 0; $i < 8; $i++) {
 			    echo '<img src="'.$data->tag->media->nodes[$i]->thumbnail_src.'">';
 			}
 			/*echo "<pre>";
