@@ -11,8 +11,8 @@
 	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
 </head>
 <body>
-	<div class="load-page">
-		
+	<div class="load-page" id="load-page" style="display: none;">
+		<h1>Turn up your sound</h1>
 	</div>
 	<main>
 		<div class="header">
@@ -39,5 +39,6 @@
 	</main>
 </body>
 <script src="https://code.jquery.com/jquery-3.2.0.min.js"></script>
+<script src="greensock/src/minified/TweenMax.min.js"></script>
 <script src="js/all.js"></script>
 </html>
