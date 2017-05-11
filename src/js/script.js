@@ -45,3 +45,21 @@ function scrollThree() {
     $('html, body').animate({ scrollTop: $('#contact-page').offset().top }, 'slow');
     return false;
 }
+
+
+function getIGImages() {
+
+	var xhr = new XMLHttpRequest();
+	xhr.open("GET", "getIGdata.php",true);
+
+	xhr.addEventListener('load', function(resp) {
+		console.log(this.responseText);
+
+		document.getElementById('img-container').innerHTML = this.responseText;
+	});
+
+	xhr.send();
+
+}
+setInterval(getIGImages, 60000);
+window.addEventListener('load', getIGImages);
