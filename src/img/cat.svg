@@ -1,0 +1,203 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 609.09 540.11">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #9a5430;
+      }
+
+      .cls-2 {
+        fill: #bc7750;
+      }
+
+      .cls-3 {
+        fill: #fadceb;
+      }
+
+      .cls-16, .cls-17, .cls-19, .cls-4, .cls-6, .cls-7 {
+        fill: none;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-4 {
+        stroke: #1d1d1b;
+      }
+
+      .cls-4, .cls-7 {
+        stroke-width: 2px;
+      }
+
+      .cls-5 {
+        fill: #c5845b;
+      }
+
+      .cls-19, .cls-6, .cls-7 {
+        stroke: #7d4e24;
+      }
+
+      .cls-6 {
+        stroke-width: 3px;
+      }
+
+      .cls-8 {
+        fill: #fef292;
+      }
+
+      .cls-9 {
+        fill: #f3c1db;
+      }
+
+      .cls-10 {
+        fill: #f9ea8c;
+      }
+
+      .cls-11 {
+        fill: #d49975;
+        opacity: 0.68;
+      }
+
+      .cls-12 {
+        fill: #d8a990;
+        opacity: 0.63;
+      }
+
+      .cls-13 {
+        fill: #fff;
+      }
+
+      .cls-14 {
+        fill: #683c11;
+      }
+
+      .cls-15 {
+        fill: #432918;
+      }
+
+      .cls-16 {
+        stroke: #93411c;
+        stroke-width: 9px;
+      }
+
+      .cls-17 {
+        stroke: #93401e;
+        stroke-width: 8px;
+      }
+
+      .cls-18 {
+        fill: #ad6441;
+      }
+
+      .cls-19 {
+        stroke-width: 4px;
+      }
+
+      .cls-20 {
+        fill: #93411c;
+      }
+
+      .cls-21 {
+        fill: #93401e;
+      }
+    </style>
+  </defs>
+  <title>cat</title>
+  <g id="tails">
+    <path id="tail1" class="cls-1" d="M434,461.94s81.45,33.26,89.49,27.54c13.92-9.92,18.36-31-41.3-48.19,0,0,145.45-22.13,80.58,68.81-22.63,31.72-77.12,37.78-154,0C326.43,469.72,434,461.94,434,461.94Z" transform="translate(-9.24 -17.59)"/>
+    <path id="tail2" class="cls-1" d="M434,461.94s56.83,26.42,84.26,20.72S565,464,549,405c0,0,72.75,46.1,15.78,108.57-24.28,19.82-78.25,45.1-156-3.44S434,461.94,434,461.94Z" transform="translate(-9.24 -17.59)"/>
+    <path id="tail3" class="cls-1" d="M434,461.94s56.83,26.42,84.26,20.72S592,464,617,414c0,0,14.23,60.22-50.5,101-26.52,16.71-80,43.68-157.76-4.87S434,461.94,434,461.94Z" transform="translate(-9.24 -17.59)"/>
+  </g>
+  <g id="highfive">
+    <g>
+      <rect class="cls-2" x="158.38" y="416.59" width="124" height="34.53" rx="12" ry="12" transform="translate(-81.26 27.29) rotate(-10)"/>
+      <g>
+        <path class="cls-2" d="M178.54,459l-15.43,2.89s-14.89,11.42-23.77,1.54c0,0-17.58-.59-12.33-12.15,0,0-8.8-9.47,6.59-15.27,0,0,.65-12.43,21.36-8.43l16.81-2.61Z" transform="translate(-9.24 -17.59)"/>
+        <g>
+          <path class="cls-3" d="M137.61,451.92c2.85,0,5.16,1.56,5.16,3.43s-2.31,3.37-5.15,3.35-5.16-1.56-5.16-3.43S134.76,451.89,137.61,451.92Z" transform="translate(-9.24 -17.59)"/>
+          <path class="cls-3" d="M134.4,440.13c2.85-.53,5.51.71,5.93,2.78s-1.54,4.17-4.39,4.71-5.51-.71-5.93-2.78S131.54,440.67,134.4,440.13Z" transform="translate(-9.24 -17.59)"/>
+          <path class="cls-3" d="M145.87,431.72c2.41-.45,4.67.67,5,2.51s-1.27,3.69-3.68,4.14-4.67-.67-5-2.51S143.46,432.17,145.87,431.72Z" transform="translate(-9.24 -17.59)"/>
+          <path class="cls-3" d="M150.68,455.65c2.35-.44,4.53.53,4.87,2.17s-1.3,3.32-3.65,3.76-4.53-.53-4.87-2.17S148.33,456.09,150.68,455.65Z" transform="translate(-9.24 -17.59)"/>
+          <path class="cls-3" d="M151.17,440c4.79-.9,9.26,1.21,10,4.72s-2.58,7.07-7.37,8-9.26-1.21-10-4.72S146.38,440.91,151.17,440Z" transform="translate(-9.24 -17.59)"/>
+        </g>
+      </g>
+    </g>
+    <g>
+      <path class="cls-4" d="M108,421s11-18,28-20" transform="translate(-9.24 -17.59)"/>
+      <path class="cls-4" d="M93,412.55c-3-1.32,8.53-28.25,41-29.29" transform="translate(-9.24 -17.59)"/>
+      <path class="cls-4" d="M126.48,485.54s-18.58-10-21.51-26.86" transform="translate(-9.24 -17.59)"/>
+      <path class="cls-4" d="M118.87,501c-1.15,3.11-28.67-7-31.5-39.33" transform="translate(-9.24 -17.59)"/>
+    </g>
+  </g>
+  <g id="body">
+    <g id="bodyMain">
+      <path id="body-2" data-name="body" class="cls-5" d="M338.24,302.95s12.2,61.69,54.9,99.89,120,159.62-69.13,154.73c-64.38-1.67-95.57-8.83-108.69-17.56-25.43-16.91,16.91-39.67,16.91-39.67L219,301Z" transform="translate(-9.24 -17.59)"/>
+      <path class="cls-6" d="M329.19,412.33s-88.11,81.82,32.52,118.53" transform="translate(-9.24 -17.59)"/>
+      <path class="cls-6" d="M331.1,518.28s-98.41-12.71-73.93,33.9" transform="translate(-9.24 -17.59)"/>
+      <line class="cls-7" x1="252.17" y1="403.69" x2="252.17" y2="507.75"/>
+      <path class="cls-7" d="M232.69,520.16s-18.84,3.3-16.48,19.78" transform="translate(-9.24 -17.59)"/>
+      <path class="cls-7" d="M272.3,533.52s-15.07-5.65-16.48,17.42" transform="translate(-9.24 -17.59)"/>
+    </g>
+    <g id="collar">
+      <rect class="cls-3" x="202.98" y="298.2" width="141.66" height="20.64" rx="9.54" ry="9.54"/>
+      <circle class="cls-8" cx="275.76" cy="325.41" r="15"/>
+      <path class="cls-9" d="M242.26,315.75s95,23.41,104.48,20.5,9.5-18.45-1.31-20.28" transform="translate(-9.24 -17.59)"/>
+      <ellipse class="cls-10" cx="278.9" cy="322.16" rx="11.15" ry="11.22"/>
+    </g>
+  </g>
+  <g id="headLayers">
+    <g id="head">
+      <path class="cls-5" d="M518.94,191.74,553,191l-43.29-48C481.54,87.53,376.5,37,271,37c-94.95,0-196,88-196,88L22,174l33.58,15.86c0,.36.08.71.12,1.07L55,191s-40,22-45,20c-4.77-1.91,13.2,17.1,45.22-.21L46,240s17-17,32-1a26.21,26.21,0,0,0,2.59,2.5C119.09,284.55,197.06,314,287,314c96,0,174.69-29.2,210-77l42,14-25.86-27.12L546,217Z" transform="translate(-9.24 -17.59)"/>
+      <path class="cls-11" d="M227,69.67c-130.13,39.69-123.67,122.67-128.67,142,92.33,98.67,371.33,108,410.67-5.67C486.33,98.33,325,39.78,227,69.67Z" transform="translate(-9.24 -17.59)"/>
+      <path class="cls-12" d="M292.33,75.67C230.33,99,205,165,227.67,177.67S365,215,382.33,213.67s93.33-38,78-76S354.33,52.33,292.33,75.67Z" transform="translate(-9.24 -17.59)"/>
+    </g>
+    <g id="eyes">
+      <g id="leftEye">
+        <ellipse class="cls-13" cx="213.76" cy="167.41" rx="39" ry="42.67"/>
+        <ellipse class="cls-14" cx="214.76" cy="162.41" rx="34.33" ry="36.67"/>
+        <ellipse class="cls-15" cx="214.43" cy="159.41" rx="32" ry="30.67"/>
+        <ellipse class="cls-13" cx="205.76" cy="155.74" rx="13.33" ry="13.67"/>
+        <ellipse class="cls-13" cx="221.63" cy="145.07" rx="9.54" ry="10.33"/>
+      </g>
+      <g id="rightEye">
+        <ellipse class="cls-13" cx="351.26" cy="169.41" rx="38.5" ry="42.67"/>
+        <ellipse class="cls-14" cx="352.09" cy="164.41" rx="34.33" ry="36.67"/>
+        <ellipse class="cls-15" cx="351.76" cy="161.41" rx="32" ry="30.67"/>
+        <ellipse class="cls-13" cx="343.09" cy="157.74" rx="13.33" ry="13.67"/>
+        <ellipse class="cls-13" cx="358.97" cy="147.07" rx="9.54" ry="10.33"/>
+      </g>
+    </g>
+    <g id="eyebrows">
+      <path id="eyebrowLeft" class="cls-16" d="M203.67,105.33s-20.57,17.18-23.34,32" transform="translate(-9.24 -17.59)"/>
+      <path id="eyebrowRight" class="cls-17" d="M399,137s-14.35-22.64-28.69-27.31" transform="translate(-9.24 -17.59)"/>
+    </g>
+    <g id="nosearea">
+      <path class="cls-18" d="M246.5,230.67s30-2,40.06-1.58c10.57.49,41.94,5.58,41.94,5.58S299.17,198,246.5,230.67Z" transform="translate(-9.24 -17.59)"/>
+      <g id="whiskers">
+        <g>
+          <line class="cls-19" x1="242.11" y1="230.27" x2="177.82" y2="234.37"/>
+          <line class="cls-19" x1="238.12" y1="236.24" x2="177.71" y2="258.63"/>
+          <line class="cls-19" x1="240.06" y1="241.73" x2="193.19" y2="285.93"/>
+        </g>
+        <g>
+          <line class="cls-19" x1="317.32" y1="229.02" x2="372.24" y2="231.83"/>
+          <line class="cls-19" x1="321.31" y1="233.7" x2="372.24" y2="254.12"/>
+          <line class="cls-19" x1="317.97" y1="238.26" x2="362.42" y2="284.89"/>
+        </g>
+      </g>
+      <path id="mouthRight" class="cls-19" d="M290.29,257.72s2,14.86,19.47,18.19" transform="translate(-9.24 -17.59)"/>
+      <path id="mouthLeft" class="cls-19" d="M268.26,275.14s16.91,1,19-16.65" transform="translate(-9.24 -17.59)"/>
+      <g id="nose">
+        <path class="cls-3" d="M264.57,241c-.07-3.83,23.6-8.33,42.16-4.85,7.62,1.43-2.27,24.9-16.38,27.51C278.28,265.89,265,255.75,264.57,241Z" transform="translate(-9.24 -17.59)"/>
+        <ellipse class="cls-13" cx="285.08" cy="226.98" rx="8.58" ry="5.38"/>
+      </g>
+    </g>
+    <g id="ears">
+      <g id="leftEar">
+        <path class="cls-5" d="M185,61S119.71,8.41,98,19C73.63,30.88,75,125,75,125Z" transform="translate(-9.24 -17.59)"/>
+        <path class="cls-20" d="M164.41,59.17,91,104s2-57.25,17.83-64C123.61,33.71,164.41,59.17,164.41,59.17Z" transform="translate(-9.24 -17.59)"/>
+      </g>
+      <g id="rightEar">
+        <path class="cls-5" d="M494.4,126.2s1.07-77.71-17.64-91.61c-21-15.6-84.23,25.62-84.23,25.62Z" transform="translate(-9.24 -17.59)"/>
+        <path class="cls-21" d="M481.56,105.32,406.31,63.65s50.75-26.57,64.45-16.12C483.54,57.27,481.56,105.32,481.56,105.32Z" transform="translate(-9.24 -17.59)"/>
+      </g>
+    </g>
+  </g>
+</svg>
