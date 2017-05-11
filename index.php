@@ -23,7 +23,9 @@
 		</div> <!-- .header -->
 		<div id="home-page" class="home-page page">
 			<!-- <h3>CAMPAIN PAGE</h3> -->
-			<?php include 'src/img/cat.svg'; ?>
+			<div class="svg-cat">
+				<?php include 'src/img/cat.svg'; ?>
+			</div>
 		</div> <!-- #home-page, .home-page, .page -->
 		<div id="insta-page" class="insta-page page">
 			<h3>INSTAGRAM PAGE</h3>
