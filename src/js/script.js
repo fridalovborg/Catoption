@@ -14,13 +14,13 @@ links.forEach(function(link) {
 			//byt ut mot data-page ...någonting!
 			// if(data === 'page-one') {
 			// 	$('.page').hide();
-			// 	$('#onePage').show();
+			// 	$('#home-page').show();
 			// } else if (data === 'page-two') {
 			// 	$('.page').hide();
-			// 	$('#secondPage').show();
+			// 	$('#insta-page').show();
 			// } else if (data === 'page-three') {
 			// 	$('.page').hide();
-			// 	$('#thirdPage').show();
+			// 	$('#contact-page').show();
 			// } else if (data === 'home') {
 //       $('.page').hide();
 //     }
@@ -32,16 +32,16 @@ links.forEach(function(link) {
 			SCROLL EFFECT
 ---------------------------------------------------------------------------- */
 function scrollOne() {
-    $('html, body').animate({ scrollTop: $('#onePage').offset().top }, 'slow');
+    $('html, body').animate({ scrollTop: $('#home-page').offset().top }, 'slow');
     return false;
 }
 
 function scrollTwo() {
-    $('html, body').animate({ scrollTop: $('#secondPage').offset().top }, 'slow');
+    $('html, body').animate({ scrollTop: $('#insta-page').offset().top }, 'slow');
     return false;
 }
 
 function scrollThree() {
-    $('html, body').animate({ scrollTop: $('#thirdPage').offset().top }, 'slow');
+    $('html, body').animate({ scrollTop: $('#contact-page').offset().top }, 'slow');
     return false;
 }
