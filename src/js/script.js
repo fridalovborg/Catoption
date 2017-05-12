@@ -83,6 +83,7 @@ setTimeout(function() {
 	$('#load-page').fadeOut();
 	clearInterval(interval);
 	anim.kill();
+	$('#show-btn').fadeIn('slow');
 }, 4000);
 
 /* ----------------------------------------------------------------------------
