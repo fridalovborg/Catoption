@@ -67,6 +67,22 @@ setInterval(getIGImages, 60000);
 window.addEventListener('load', getIGImages);
 
 /* ----------------------------------------------------------------------------
+			FIRST PAGE
+---------------------------------------------------------------------------- */
+var tl = TweenMax;
+tl.to('.txt', 0.8, {scaleX: 1.2, scaleY: 1.2, repeat: -1, yoyo: true});
+
+var icon = document.getElementById('icon');
+setInterval(function() {
+	$(icon).toggleClass("fa-volume-down fa-volume-up");
+}, 800);
+
+setTimeout(function() {
+	$('#load-page').fadeOut();
+	$('#main-page').show();
+}, 4000);
+
+/* ----------------------------------------------------------------------------
 			BACKGROUND COLOR FADE ANIMATION
 ---------------------------------------------------------------------------- */
 var colors = new Array(
@@ -102,12 +118,12 @@ var istep = 1 - step;
 var r1 = Math.round(istep * c0_0[0] + step * c0_1[0]);
 var g1 = Math.round(istep * c0_0[1] + step * c0_1[1]);
 var b1 = Math.round(istep * c0_0[2] + step * c0_1[2]);
-var color1 = "rgba("+r1+","+g1+","+b1+","+0.2+")";
+var color1 = "rgba("+r1+","+g1+","+b1+","+0.3+")";
 
 var r2 = Math.round(istep * c1_0[0] + step * c1_1[0]);
 var g2 = Math.round(istep * c1_0[1] + step * c1_1[1]);
 var b2 = Math.round(istep * c1_0[2] + step * c1_1[2]);
-var color2 = "rgba("+r2+","+g2+","+b2+","+0.2+")";
+var color2 = "rgba("+r2+","+g2+","+b2+","+0.3+")";
 
  $('#load-page').css({
    background: "-webkit-gradient(linear, left top, right top, from("+color1+"), to("+color2+"))"}).css({
