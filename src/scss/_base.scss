@@ -11,7 +11,7 @@ body {
 }
 
 #main-page {
-	display: none;
+	//display: none;
 }
 
 .load-page {
@@ -105,11 +105,19 @@ header {
 }
 
 /* ----------------------------------------------------------------------------
-			CONTACT PAGE
+			MAP PAGE
 ---------------------------------------------------------------------------- */
 .contact-page {
 	background-color: bisque;
 	color: #ffd199;
+}
+
+.map {
+	position: relative;
+	top: 10%;
+	height: 80vh;
+	width: 90%;
+	overflow: hidden;
 }
 
 /* ----------------------------------------------------------------------------

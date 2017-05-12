@@ -71,7 +71,6 @@ window.addEventListener('load', getIGImages);
 ---------------------------------------------------------------------------- */
 var tl = TweenMax;
 var audioTxt = document.querySelector('.txt');
-
 var anim = tl.to(audioTxt, 0.8, {scaleX: 1.2, scaleY: 1.2, repeat: -1, yoyo: true});
 
 var icon = document.getElementById('icon');
@@ -80,11 +79,60 @@ setInterval(function() {
 }, 800);
 
 setTimeout(function() {
-	$('#load-page').fadeOut();
-	anim.kill();
-	clearInterval(interval);
 	$('#main-page').show();
+	$('#load-page').fadeOut();
+	clearInterval(interval);
+	anim.kill();
 }, 4000);
+
+/* ----------------------------------------------------------------------------
+			MAP
+---------------------------------------------------------------------------- */
+var map, currentLocation, infoWindow, myStyles;
+
+function initMap() {
+	currentLocation = new google.maps.LatLng(59.346027, 18.058272);
+
+	myStyles = {
+		default: null,
+		hide: [{
+			featureType: 'poi',
+			stylers: [{ visibility: 'off' }]
+		}]
+	};
+
+	map = new google.maps.Map(document.getElementById('map'), {
+		center: currentLocation,
+		zoom: 17,
+		styles: myStyles['hide']
+	});
+
+	infoWindow = new google.maps.InfoWindow();
+
+	var request = {
+		location: currentLocation,
+		radius: '5000',
+		types: ['physiotherapist'],
+		name: [''],
+		// openNow: true,
+		rankBy: google.maps.places.RankBy.PROMINENCE
+	};
+
+	var services = new google.maps.places.PlacesService(map);
+	services.nearbySearch(request, showPlaces);
+
+	var styleControl = document.getElementById('style-selector-control');
+
+	map.controls[google.maps.ControlPosition.TOP_LEFT].push(styleControl);
+
+	document.getElementById('hide-poi').addEventListener('click', function() {
+		map.setOptions({ styles: myStyles['hide'] });
+	});
+
+	document.getElementById('show-poi').addEventListener('click', function() {
+		map.setOptions({ styles: myStyles['default'] });
+	});
+}
 
 /* ----------------------------------------------------------------------------
 			BACKGROUND COLOR FADE ANIMATION

@@ -13,8 +13,8 @@
 </head>
 <body>
 	<button class="audio-btn"><i id="audioIcon" class="fa fa-pause" aria-hidden="true"></i></button>  
-	<audio id="song" autoplay="autoplay" src="abba.mp3"></audio>
-	<div class="load-page" id="load-page" style=""> <!-- display: none; -->
+	<!-- <audio id="song" autoplay="autoplay" src="abba.mp3"></audio> -->
+	<div class="load-page" id="load-page" style="display: none;"> <!-- display: none; -->
 		<div class="txt">
 			<h1>Logo here!</h1>
 			<h2>Turn up your sound <i id="icon" class="fa fa-volume-down" aria-hidden="true"></i></h2>
@@ -41,11 +41,13 @@
 			</div> <!-- .img-container -->
 		</div> <!-- #insta-page, .insta-page, .page -->
 		<div id="contact-page" class="contact-page page">
-			<h3>CONTACT PAGE</h3>
+			<!-- <h3>CONTACT PAGE</h3> -->
+			<div id="map" class="map"></div>
 		</div> <!-- #contact-page, .contact-page, .page -->
 	</main>
 </body>
 <script src="https://code.jquery.com/jquery-3.2.0.min.js"></script>
 <script src="greensock/src/minified/TweenMax.min.js"></script>
 <script src="js/all.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBcWLN5wfY8TTNInU0jbCXlF6q4xUODTxY&libraries=places&callback=initMap" type="text/javascript" async></script>
 </html>
