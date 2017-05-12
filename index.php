@@ -12,7 +12,9 @@
 	<script src="https://use.fontawesome.com/9af20410fa.js"></script>
 </head>
 <body>
-	<div class="load-page" id="load-page" style="display: none;">
+	<button class="audio-btn"><i id="audioIcon" class="fa fa-pause" aria-hidden="true"></i></button>  
+	<audio id="song" autoplay="autoplay" src="abba.mp3"></audio>
+	<div class="load-page" id="load-page" style=""> <!-- display: none; -->
 		<div class="txt">
 			<h1>Logo here!</h1>
 			<h2>Turn up your sound <i id="icon" class="fa fa-volume-down" aria-hidden="true"></i></h2>
@@ -21,7 +23,6 @@
 	<main id="main-page">
 		<header>
 			<h2 onclick="scrollOne()" class="home">Logotype</h2>
-			<!-- <h2 onclick="scrollOne()" class="home">Campain</h2> -->
 			<div class="header">
 				<h2 onclick="scrollTwo()" class="instagram">Instagram</h2>
 				<h2 onclick="scrollThree()" class="contact">Contact</h2>

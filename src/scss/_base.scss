@@ -11,7 +11,7 @@ body {
 }
 
 #main-page {
-	//display: none;
+	display: none;
 }
 
 .load-page {
@@ -110,4 +110,21 @@ header {
 .contact-page {
 	background-color: bisque;
 	color: #ffd199;
+}
+
+/* ----------------------------------------------------------------------------
+			AUDIO
+---------------------------------------------------------------------------- */
+.audio-btn {
+	position: fixed;
+	top: calc(50% - 10px);
+	width: 40px;
+	height: 40px;
+	border-radius: 20px;
+	text-decoration: none;
+	font-size: 1.6em;
+	background: none;
+	cursor: pointer;
+	border: 2px solid black;
+	outline: none;
 }

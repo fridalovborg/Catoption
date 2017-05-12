@@ -70,7 +70,9 @@ window.addEventListener('load', getIGImages);
 			FIRST PAGE
 ---------------------------------------------------------------------------- */
 var tl = TweenMax;
-tl.to('.txt', 0.8, {scaleX: 1.2, scaleY: 1.2, repeat: -1, yoyo: true});
+var audioTxt = document.querySelector('.txt');
+
+var anim = tl.to(audioTxt, 0.8, {scaleX: 1.2, scaleY: 1.2, repeat: -1, yoyo: true});
 
 var icon = document.getElementById('icon');
 setInterval(function() {
@@ -79,6 +81,8 @@ setInterval(function() {
 
 setTimeout(function() {
 	$('#load-page').fadeOut();
+	anim.kill();
+	clearInterval(interval);
 	$('#main-page').show();
 }, 4000);
 
@@ -104,8 +108,7 @@ var colorIndices = [0,1,2,3];
 //transition speed
 var gradientSpeed = 0.002;
 
-function updateGradient()
-{
+function updateGradient() {
   
   if ( $===undefined ) return;
   
@@ -143,5 +146,28 @@ var color2 = "rgba("+r2+","+g2+","+b2+","+0.3+")";
     
   }
 }
+var interval = setInterval(updateGradient, 10);
 
-setInterval(updateGradient,10);
+/* ----------------------------------------------------------------------------
+			AUDIO BUTTON
+---------------------------------------------------------------------------- */
+const audioBtn = document.querySelector('.audio-btn');
+const player = document.querySelector('#song');
+
+var audLoop = document.getElementById('song');
+
+audLoop.loop = true;
+audLoop.load(); 
+
+audioBtn.addEventListener('click', function() {
+
+	var audioIcon = document.getElementById('audioIcon');
+
+	if(!player.paused) {
+		player.pause();
+		$(audioIcon).toggleClass("fa-pause fa-play");
+	} else {
+		player.play();
+		$(audioIcon).toggleClass("fa-play fa-pause");
+	}
+});
