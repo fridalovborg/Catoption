@@ -11,7 +11,7 @@ body {
 }
 
 #main-page {
-	//display: none;
+	display: none;
 }
 
 .load-page {
@@ -35,13 +35,15 @@ header {
 	width: 100%;
 	z-index: 1;
 	position: fixed;
-	background-color: rgba(255, 255, 255, 0.5);
+	// background-color: rgba(255, 255, 255, 0.5);
 	height: 50px;
 	display: inline-flex;
 
 	.home {
+		width: 200px;
 		float: left;
 		margin: 20px;
+		z-index: 50;
 	}
 
 	.header {
@@ -56,7 +58,6 @@ header {
 			margin-right: 0;
 		}
 	}
-
 }
 
 /* ----------------------------------------------------------------------------
@@ -79,11 +80,19 @@ header {
 .home-page {
 	background-color: #fffab3; //lemonchiffon
 	color: #fff780;
+	position: relative;
 }
 
 .svg-cat {
-	width: 50%;
-   	padding-top: 18vh;
+	width: 100%;
+   	padding-top: 30vh;
+}
+
+.svg-bubble {
+	width: 40%;
+	position: absolute;
+	top: 10%;
+	left: 8%;
 }
 
 /* ----------------------------------------------------------------------------
@@ -123,16 +132,23 @@ header {
 /* ----------------------------------------------------------------------------
 			AUDIO
 ---------------------------------------------------------------------------- */
+#show-btn {
+	display: none;
+}
+
 .audio-btn {
 	position: fixed;
-	top: calc(50% - 10px);
-	width: 40px;
-	height: 40px;
-	border-radius: 20px;
+	top: 10px;
+	left:10px;
+	width: 50px;
+	height: 50px;
+	border-radius: 25px;
 	text-decoration: none;
 	font-size: 1.6em;
 	background: none;
 	cursor: pointer;
 	border: 2px solid black;
 	outline: none;
+	z-index:100;
 }
+
