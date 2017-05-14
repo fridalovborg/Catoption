@@ -69,7 +69,8 @@ header {
 	text-align: center;
 
 	h3 {
-		padding-top: 60%;
+		// padding-top: 60%;
+		padding-top: 25%;
 		font-size: 2.6em;
 	}
 }
@@ -85,7 +86,7 @@ header {
 
 .svg-cat {
 	width: 100%;
-   	padding-top: 30vh;
+   	padding-top: 30%;
 }
 
 .svg-bubble {
@@ -106,7 +107,8 @@ header {
 
 .img-container {
 	@include flexbox(flex, column nowrap, flex-start, center);
-	padding-top: 20%;
+	// padding-top: 20%;
+	padding-top: 10%;
 
 	img {
 		width:100%;
@@ -119,6 +121,7 @@ header {
 .contact-page {
 	background-color: bisque;
 	color: #ffd199;
+	padding-top: 25%;
 }
 
 .map {

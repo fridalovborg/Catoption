@@ -38,7 +38,8 @@
 			</div>
 		</div> <!-- #home-page, .home-page, .page -->
 		<div id="insta-page" class="insta-page page">
-			<h3>INSTAGRAM PAGE</h3>
+			<!--<h3>INSTAGRAM PAGE</h3>-->
+			<h3>#catoption</h3>
 
 			<div id ="img-container" class="img-container">
 			</div> <!-- .img-container -->
