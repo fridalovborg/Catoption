@@ -33,11 +33,11 @@ function noseAnimation(el) {
 		tl.staggerFromTo(el, 0.2, {rotation: 0, transformOrigin: "center center"}, {rotation: 10, transformOrigin: "center center", yoyo: true, repeat: 1} );
 	}, 5000);
 }
-
+var testtest;
 //makes the eyes blink every 4 seconds
 function eyeBlink() {
-	setInterval(function() {
-		tl.fromTo([eyesClosed], 0.3, {alpha: 0}, {alpha:1, yoyo: true, repeat: 1, repeatDelay: 0.2});
+	testtest = window.setInterval(function() {
+		tl.fromTo(eyesClosed, 0.3, {alpha: 0}, {alpha:1, yoyo: true, repeat: 1, repeatDelay: 0.2});
 		tl.fromTo([rightEye, leftEye], 0.3, {alpha: 1}, {alpha:0, yoyo: true, repeat: 1, repeatDelay: 0.2});
 	}, 4000);
 }
@@ -80,11 +80,16 @@ body.addEventListener("click", function() {
 	audio.play();
 });
 
+tails.addEventListener("click", angryCat);
 //when touching/clicking on the cats tail
-tails.addEventListener("click", function() {
-	tl.fromTo(semiClosed, 0.5, {alpha: 0}, {alpha:1, yoyo: true, repeat: 1, repeatDelay: 2});
-	//dessa två funkar inte - WHY??
-	tl.staggerFromTo(eyebrowRight, 1, {rotation: 0, transformOrigin: "center center"}, {rotation: -50, transformOrigin: "center center", yoyo: true, repeat: 1} );
-	tl.staggerFromTo(eyebrowLeft, 1, {rotation: 0, transformOrigin: "center center"}, {rotation: 60, transformOrigin: "center center", yoyo: true, repeat: 1} );
-});
 
+function angryCat() {
+	window.clearInterval(testtest);
+	setTimeout(function() {
+		eyeBlink();
+	}, 3000);
+
+	tl.fromTo(semiClosed, 0.5, {alpha: 0}, {alpha:1, yoyo: true, repeat: 1, repeatDelay: 2});
+	tl.staggerFromTo($('#eyebrowRight'), 1, {rotation: 0, transformOrigin: "center center"}, {rotation: -50, transformOrigin: "center center", yoyo: true, repeat: 1, repeatDelay: 0.5});
+	tl.staggerFromTo($('#eyebrowLeft'), 1, {rotation: 0, transformOrigin: "center center"}, {rotation: 60, transformOrigin: "center center", yoyo: true, repeat: 1, repeatDelay: 0.5});
+}
