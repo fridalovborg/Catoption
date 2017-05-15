@@ -66,6 +66,9 @@ $(document).ready(function() {
 paw.addEventListener("click", function(){
 	tl.fromTo(paw, 0.3, {scale: 1, x:0, y:0}, {scale:1.3, x:0, y:-15, yoyo: true, repeat: 1});
 	tl.fromTo($('#highfiveLines'), 0.5, {alpha:0}, {alpha:1, yoyo: true, repeat: 1});
+
+	var hfSound = new Audio("../highfive.mp3");
+	hfSound.play();
 });
 
 //when stroking the cat (clicking on the body) 
@@ -75,7 +78,6 @@ body.addEventListener("click", function() {
 	tl.fromTo([rightEye, leftEye], 0.5, {alpha: 1}, {alpha:0, yoyo: true, repeat: 1, repeatDelay: 2});
 	tl.fromTo([eyesClosed], 0.5, {alpha: 0}, {alpha:1, yoyo: true, repeat: 1, repeatDelay: 2});
 
-	//FUNKAR INTE
 	var audio = new Audio("../catpurr.mp3");
 	audio.play();
 });
