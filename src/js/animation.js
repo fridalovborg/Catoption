@@ -25,7 +25,7 @@ var eyesClosed = document.getElementById('eyesClosed');
 var tails = document.getElementById('tails');
 var tailAnimation = document.querySelectorAll('#tails path');
 
-var chatbubble = document.getElementById('chatbubbleWhole');
+var chatbubble = document.getElementsByClassName('svg-bubble');
 
 //makes the nose and whiskers do a small rotation/shake every 5 seconds
 function noseAnimation(el) {
@@ -42,11 +42,11 @@ function eyeBlink() {
 	}, 4000);
 }
 
-//makes the chatbubble appear every 5 seconds
+//makes the chatbubble appear every 8 seconds
 function chatbubblePop() {
 	setInterval(function() {
 		tl.fromTo(chatbubble, 0.7, {alpha: 0}, {alpha:1, yoyo: true, repeat: 1, repeatDelay: 1});
-	}, 5000);
+	}, 8000);
 }
 
 //when document has loaded, the head starts moving to the music and nose+whiskers start twitching
@@ -60,13 +60,6 @@ $(document).ready(function() {
 	//Svansanimering. blir fult!!!
 	//tl.staggerFromTo(tailAnimation, 1, {alpha: 0}, {alpha: 1, yoyo: true, repeat: -1}, 0.9);
 
-
-
-	//flytta detta till css istället, annars funkar inte animationen med alphan nedan
-	//$('#highfiveLines').css('opacity', '0');
-	$('#chatbubbleWhole').css('opacity', '0');
-	$('#semiClosed').css('opacity', '0');
-	$('#eyesClosed').css('opacity', '0');
 });
 
 //scales the cats paw when user clicks it, making it look like a high five
