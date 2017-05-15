@@ -1,8 +1,3 @@
-// Snabbar laddtiden??
-google.load("maps", "3", {other_params:'sensor=false', callback: function(){
-	var map; // initialize your map in here
-});
-
 var currentLocation, infoWindow;
 
 function initMap() {
