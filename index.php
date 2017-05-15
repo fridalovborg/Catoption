@@ -13,8 +13,8 @@
 </head>
 <body>
 	<button class="audio-btn" id="show-btn"><i id="audioIcon" class="fa fa-pause" aria-hidden="true"></i></button>  
-	<!-- <audio id="song" autoplay="autoplay" src="abba.mp3"></audio> -->
-	<div class="load-page" id="load-page" style="display: none;"> <!-- display: none; -->
+	 <audio id="song" autoplay="autoplay" src="abba.mp3"></audio> 
+	<div class="load-page" id="load-page" style=""> <!-- display: none; -->
 		<div class="txt">
 			<h1>Logo here!</h1>
 			<h2>Turn up your sound <i id="icon" class="fa fa-volume-down" aria-hidden="true"></i></h2>
