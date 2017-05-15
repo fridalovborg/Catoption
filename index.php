@@ -12,7 +12,6 @@
 	<script src="https://use.fontawesome.com/9af20410fa.js"></script>
 </head>
 <body>
-	<button class="audio-btn" id="show-btn"><i id="audioIcon" class="fa fa-pause" aria-hidden="true"></i></button>  
 	 <!-- <audio id="song" autoplay="autoplay" src="abba.mp3"></audio>  -->
 	<div class="load-page" id="load-page" style="display: none;"> <!-- display: none; -->
 		<div class="txt">
@@ -22,10 +21,13 @@
 	</div>
 	<main id="main-page">
 		<header>
-			<div onclick="scrollOne()" class="home"><?php //include 'src/img/logotype.svg'; ?></div>
+			<div onclick="scrollOne()" class="home">LOGOTYPE!<?php //include 'src/img/logotype.svg'; ?></div>
 			<div class="header">
-				<h2 onclick="scrollTwo()" class="instagram">Instagram</h2>
-				<h2 onclick="scrollThree()" class="contact">Map</h2>
+				<!-- <button class="audio-btn" id="show-btn"><i id="audioIcon" class="fa fa-pause" aria-hidden="true"></i></button> -->
+				<h2><i class="fa fa-volume-off"></i></h2>
+				<h2 onclick="scrollTwo()" class="instagram"><i class="fa fa-instagram"></i></h2> 
+				<!-- fa-volume-up -->
+				<h2 onclick="scrollThree()" class="contact"><i class="fa fa-map-marker"></i></h2>
 			</div> <!-- .header -->
 		</header>
 		<div id="home-page" class="home-page page"> <!--addera data-anchor="home" samt a href #home i meny-->
