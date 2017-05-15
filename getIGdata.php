@@ -16,7 +16,7 @@ if ($lastCache + $timeout < time() ) { // Har det gått <timeout> tid?
 }
 
 $data = json_decode(file_get_contents("cache.txt"));
-for ($i = 0; $i < 8; $i++) {
+for ($i = 0; $i < 18; $i++) {
     echo '<img src="'.$data->tag->media->nodes[$i]->thumbnail_src.'">';
 }
 /*echo "<pre>";

@@ -50,11 +50,10 @@
 			INSTAGRAM PAGE
 ---------------------------------------------------------------------------- */
 .img-container {
-	@include flexbox(flex, row wrap, flex-start, center);
-	padding-top: 5%;
+	// padding-top: 5%;
 
 	img {
-		width: 50%;
+		width: 33.3%;
 	}
 }
 

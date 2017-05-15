@@ -65,14 +65,7 @@ header {
 ---------------------------------------------------------------------------- */
 .page {
 	width: 100%;
-	height: 100vh;
 	text-align: center;
-
-	h3 {
-		// padding-top: 60%;
-		padding-top: 25%;
-		font-size: 2.6em;
-	}
 }
 
 /* ----------------------------------------------------------------------------
@@ -82,11 +75,12 @@ header {
 	background-color: #fffab3; //lemonchiffon
 	color: #fff780;
 	position: relative;
+	height: 100vh;
 }
 
 .svg-cat {
 	width: 100%;
-   	padding-top: 30%;
+   	padding-top: 25vh;
 }
 
 .svg-bubble {
@@ -100,18 +94,16 @@ header {
 			INSTAGRAM PAGE
 ---------------------------------------------------------------------------- */
 .insta-page {
-	background-color: #ffb899; //ljusare salmon
-	height: initial;
+	background-color: #f2f2f2; 
 	color: #ffa680;
 }
 
 .img-container {
-	@include flexbox(flex, column nowrap, flex-start, center);
-	// padding-top: 20%;
-	padding-top: 10%;
+	@include flexbox(flex, row wrap, flex-start, center);
+	height: initial;
 
 	img {
-		width:100%;
+		width:50%;
 	}
 }
 
@@ -122,6 +114,7 @@ header {
 	background-color: bisque;
 	color: #ffd199;
 	padding-top: 25%;
+	height: 100vh;
 }
 
 .map {
