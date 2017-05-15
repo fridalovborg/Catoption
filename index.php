@@ -25,11 +25,10 @@
 			<div onclick="scrollOne()" class="home"><?php //include 'src/img/logotype.svg'; ?></div>
 			<div class="header">
 				<h2 onclick="scrollTwo()" class="instagram">Instagram</h2>
-				<h2 onclick="scrollThree()" class="contact">Contact</h2>
+				<h2 onclick="scrollThree()" class="contact">Map</h2>
 			</div> <!-- .header -->
 		</header>
 		<div id="home-page" class="home-page page">
-			<!-- <h3>CAMPAIN PAGE</h3> -->
 			<div class="svg-bubble">
 				<?php include 'src/img/chatbubble.svg'; ?>
 			</div>
@@ -38,14 +37,10 @@
 			</div>
 		</div> <!-- #home-page, .home-page, .page -->
 		<div id="insta-page" class="insta-page page">
-			<!--<h3>INSTAGRAM PAGE</h3>-->
-			<!--<h3>#catoption</h3>-->
-
 			<div id ="img-container" class="img-container">
 			</div> <!-- .img-container -->
 		</div> <!-- #insta-page, .insta-page, .page -->
 		<div id="contact-page" class="contact-page page">
-			<!-- <h3>CONTACT PAGE</h3> -->
 			<div id="map" class="map"></div>
 		</div> <!-- #contact-page, .contact-page, .page -->
 	</main>
