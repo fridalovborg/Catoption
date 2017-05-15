@@ -60,18 +60,14 @@
 /* ----------------------------------------------------------------------------
 			MAP PAGE
 ---------------------------------------------------------------------------- */
+.contact-page {
+	//detta bör kanske ligga på ev heading? och generellt på all pages
+	padding-top: 10%; 
+}
+
 .map {
 	position: relative;
 	top: 15%;
-	height: 80vh;
 	width: 80%;
 	overflow: hidden;
-}
-
-/* ----------------------------------------------------------------------------
-			MAP PAGE
----------------------------------------------------------------------------- */
-.contact-page {
-	//detta bör kanske ligga på ev heading? och generellt på all pages
-	padding-top: 5%; 
 }

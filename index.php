@@ -28,7 +28,7 @@
 				<h2 onclick="scrollThree()" class="contact">Map</h2>
 			</div> <!-- .header -->
 		</header>
-		<div id="home-page" class="home-page page">
+		<div id="home-page" class="home-page page"> <!--addera data-anchor="home" samt a href #home i meny-->
 			<div class="svg-bubble">
 				<?php include 'src/img/chatbubble.svg'; ?>
 			</div>
