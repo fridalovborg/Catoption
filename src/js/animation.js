@@ -65,8 +65,7 @@ $(document).ready(function() {
 //scales the cats paw when user clicks it, making it look like a high five
 paw.addEventListener("click", function(){
 	tl.fromTo(paw, 0.3, {scale: 1, x:0, y:0}, {scale:1.3, x:0, y:-15, yoyo: true, repeat: 1});
-	tl.fromTo(highfiveLines, 0.5, {alpha: 0}, {alpha:1, yoyo: true, repeat: 1});
-
+	tl.fromTo($('#highfiveLines'), 0.5, {alpha:0}, {alpha:1, yoyo: true, repeat: 1});
 });
 
 //when stroking the cat (clicking on the body) 

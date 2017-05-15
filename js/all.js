@@ -30,7 +30,7 @@ colorIndices[1]=(colorIndices[1]+Math.floor(1+Math.random()*(colors.length-1)))%
 //when document has loaded, the head starts moving to the music and nose+whiskers start twitching
 $(document).ready(function(){tl.fromTo(headLayers,.8,{x:-15,y:0},{x:15,y:0,yoyo:!0,repeat:-1}),noseAnimation(nose),noseAnimation(whiskers),eyeBlink(),chatbubblePop()}),
 //scales the cats paw when user clicks it, making it look like a high five
-paw.addEventListener("click",function(){tl.fromTo(paw,.3,{scale:1,x:0,y:0},{scale:1.3,x:0,y:-15,yoyo:!0,repeat:1}),tl.fromTo(highfiveLines,.5,{alpha:0},{alpha:1,yoyo:!0,repeat:1})}),
+paw.addEventListener("click",function(){tl.fromTo(paw,.3,{scale:1,x:0,y:0},{scale:1.3,x:0,y:-15,yoyo:!0,repeat:1}),tl.fromTo($("#highfiveLines"),.5,{alpha:0},{alpha:1,yoyo:!0,repeat:1})}),
 //when stroking the cat (clicking on the body) 
 body.addEventListener("click",function(){tl.staggerFromTo([eyebrowRight,mouthRight],2,{rotation:0,transformOrigin:"center center"},{rotation:-30,transformOrigin:"center center",yoyo:!0,repeat:1}),tl.staggerFromTo([eyebrowLeft,mouthLeft],2,{rotation:0,transformOrigin:"center center"},{rotation:40,transformOrigin:"center center",yoyo:!0,repeat:1}),tl.fromTo([rightEye,leftEye],.5,{alpha:1},{alpha:0,yoyo:!0,repeat:1,repeatDelay:2}),tl.fromTo([eyesClosed],.5,{alpha:0},{alpha:1,yoyo:!0,repeat:1,repeatDelay:2}),new Audio("../catpurr.mp3").play()}),
 //when touching/clicking on the cats tail
@@ -53,16 +53,9 @@ tl.staggerFromTo(eyebrowRight,1,{rotation:0,transformOrigin:"center center"},{ro
 e.stopPropagation()},!1)}),setInterval(getIGImages,6e4),window.addEventListener("load",getIGImages);/* ----------------------------------------------------------------------------
 			FIRST PAGE
 ---------------------------------------------------------------------------- */
-var tl=TweenMax,audioTxt=document.querySelector(".txt"),anim=tl.to(audioTxt,.8,{scaleX:1.2,scaleY:1.2,repeat:-1,yoyo:!0}),icon=document.getElementById("icon");setInterval(function(){$(icon).toggleClass("fa-volume-down fa-volume-up")},800);
+var tl=TweenMax,audioTxt=document.querySelector(".txt"),anim=tl.to(audioTxt,.8,{scaleX:1.2,scaleY:1.2,repeat:-1,yoyo:!0}),icon=document.getElementById("icon");setInterval(function(){$(icon).toggleClass("fa-volume-down fa-volume-up")},800),
 // UNDER TIDEN - RADERA EJ DETTA!!
-// setTimeout(function() {
-// 	$('#main-page').show();
-// 	$('#load-page').fadeOut();
-// 	clearInterval(interval);
-// 	anim.kill();
-// 	$('#show-btn').fadeIn('slow');
-// }, 4000);
-/* ----------------------------------------------------------------------------
+setTimeout(function(){$("#main-page").show(),$("#load-page").fadeOut(),clearInterval(interval),anim.kill(),$("#show-btn").fadeIn("slow")},4e3);/* ----------------------------------------------------------------------------
 			BACKGROUND COLOR FADE ANIMATION
 ---------------------------------------------------------------------------- */
 var colors=new Array([62,35,255],[60,255,60],[255,35,98],[45,175,230],[255,0,255],[255,128,0]),step=0,colorIndices=[0,1,2,3],gradientSpeed=.002,interval=setInterval(updateGradient,10);/* ----------------------------------------------------------------------------
