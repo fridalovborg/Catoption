@@ -86,7 +86,7 @@ header {
 
 .svg-cat {
 	width: 100%;
-   	padding-top: 30%;
+   	padding-top: 25vh;
 }
 
 .svg-bubble {
@@ -106,12 +106,12 @@ header {
 }
 
 .img-container {
-	@include flexbox(flex, column nowrap, flex-start, center);
+	@include flexbox(flex, row wrap, flex-start, center);
 	// padding-top: 20%;
-	padding-top: 10%;
+	// padding-top: 10%;
 
 	img {
-		width:100%;
+		width:50%;
 	}
 }
 
