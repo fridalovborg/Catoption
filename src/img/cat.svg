@@ -119,14 +119,14 @@
         </g>
       </g>
     </g>
-    <g id="highfiveLines">
+    <g id="highfive-lines">
       <path class="cls-4" d="M152,421s11-18,28-20" transform="translate(-53.24 -17.59)"/>
       <path class="cls-4" d="M137,412.55c-3-1.32,8.53-28.25,41-29.29" transform="translate(-53.24 -17.59)"/>
       <path class="cls-4" d="M170.48,485.54s-18.58-10-21.51-26.86" transform="translate(-53.24 -17.59)"/>
       <path class="cls-4" d="M162.87,501c-1.15,3.11-28.67-7-31.5-39.33" transform="translate(-53.24 -17.59)"/>
     </g>
   </g>
-  <g id="body">
+  <g id="cat-body">
     <g id="bodyMain">
       <path id="body-2" data-name="body" class="cls-5" d="M382.24,302.95s12.2,61.69,54.9,99.89,120,159.62-69.13,154.73c-64.38-1.67-95.57-8.83-108.69-17.56-25.43-16.91,16.91-39.67,16.91-39.67L263,301Z" transform="translate(-53.24 -17.59)"/>
       <path class="cls-6" d="M373.19,412.33s-88.11,81.82,32.52,118.53" transform="translate(-53.24 -17.59)"/>
@@ -142,28 +142,28 @@
       <ellipse class="cls-10" cx="278.9" cy="322.16" rx="11.15" ry="11.22"/>
     </g>
   </g>
-  <g id="headLayers">
+  <g id="head-layers">
     <g id="head">
       <path class="cls-5" d="M562.94,191.74,597,191l-43.29-48C525.54,87.53,420.5,37,315,37c-94.95,0-196,88-196,88L66,174l33.58,15.86c0,.36.08.71.12,1.07L99,191s-40,22-45,20c-4.77-1.91,13.2,17.1,45.22-.21L90,240s17-17,32-1a26.21,26.21,0,0,0,2.59,2.5C163.09,284.55,241.06,314,331,314c96,0,174.69-29.2,210-77l42,14-25.86-27.12L590,217Z" transform="translate(-53.24 -17.59)"/>
       <path class="cls-11" d="M271,69.67c-130.13,39.69-123.67,122.67-128.67,142,92.33,98.67,371.33,108,410.67-5.67C530.33,98.33,369,39.78,271,69.67Z" transform="translate(-53.24 -17.59)"/>
       <path class="cls-12" d="M336.33,75.67C274.33,99,249,165,271.67,177.67S409,215,426.33,213.67s93.33-38,78-76S398.33,52.33,336.33,75.67Z" transform="translate(-53.24 -17.59)"/>
     </g>
     <g id="eyes">
-      <g id="leftEye">
+      <g id="left-eye">
         <ellipse class="cls-13" cx="213.76" cy="167.41" rx="39" ry="42.67"/>
         <ellipse class="cls-14" cx="214.76" cy="162.41" rx="34.33" ry="36.67"/>
         <ellipse class="cls-15" cx="214.43" cy="159.41" rx="32" ry="30.67"/>
         <ellipse class="cls-13" cx="205.76" cy="155.74" rx="13.33" ry="13.67"/>
         <ellipse class="cls-13" cx="221.63" cy="145.07" rx="9.54" ry="10.33"/>
       </g>
-      <g id="rightEye">
+      <g id="right-eye">
         <ellipse class="cls-13" cx="351.26" cy="169.41" rx="38.5" ry="42.67"/>
         <ellipse class="cls-14" cx="352.09" cy="164.41" rx="34.33" ry="36.67"/>
         <ellipse class="cls-15" cx="351.76" cy="161.41" rx="32" ry="30.67"/>
         <ellipse class="cls-13" cx="343.09" cy="157.74" rx="13.33" ry="13.67"/>
         <ellipse class="cls-13" cx="358.97" cy="147.07" rx="9.54" ry="10.33"/>
       </g>
-      <g id="semiClosed">
+      <g id="semi-closed">
         <g>
           <path class="cls-14" d="M441.63,175.33c-4.74-17.72-19.7-30.67-37.43-30.67s-32.69,12.95-37.43,30.67Z" transform="translate(-53.24 -17.59)"/>
           <path class="cls-14" d="M366.78,199.33c4.74,17.72,19.7,30.67,37.43,30.67s32.69-12.95,37.43-30.67Z" transform="translate(-53.24 -17.59)"/>
@@ -173,14 +173,14 @@
           <path class="cls-14" d="M229.45,197.33c4.74,17.72,19.7,30.67,37.43,30.67s32.69-12.95,37.43-30.67Z" transform="translate(-53.24 -17.59)"/>
         </g>
       </g>
-      <g id="eyesClosed">
+      <g id="eyes-closed">
         <path class="cls-15" d="M436.82,185c0,.9-14.15,4.21-31.82,4.21s-32.66-3.05-32.66-4,15,.7,32.66.7S436.82,184.14,436.82,185Z" transform="translate(-53.24 -17.59)"/>
         <path class="cls-15" d="M299.82,184c0,.9-14.15,4.21-31.82,4.21s-32.66-3.05-32.66-4,15,.7,32.66.7S299.82,183.14,299.82,184Z" transform="translate(-53.24 -17.59)"/>
       </g>
     </g>
     <g id="eyebrows">
-      <path id="eyebrowLeft" class="cls-16" d="M247.67,105.33s-20.57,17.18-23.34,32" transform="translate(-53.24 -17.59)"/>
-      <path id="eyebrowRight" class="cls-17" d="M443,137s-14.35-22.64-28.69-27.31" transform="translate(-53.24 -17.59)"/>
+      <path id="eyebrow-left" class="cls-16" d="M247.67,105.33s-20.57,17.18-23.34,32" transform="translate(-53.24 -17.59)"/>
+      <path id="eyebrow-right" class="cls-17" d="M443,137s-14.35-22.64-28.69-27.31" transform="translate(-53.24 -17.59)"/>
     </g>
     <g id="nosearea">
       <path class="cls-18" d="M290.5,230.67s30-2,40.06-1.58c10.57.49,41.94,5.58,41.94,5.58S343.17,198,290.5,230.67Z" transform="translate(-53.24 -17.59)"/>
@@ -196,8 +196,8 @@
           <line class="cls-19" x1="317.97" y1="238.26" x2="362.42" y2="284.89"/>
         </g>
       </g>
-      <path id="mouthRight" class="cls-19" d="M334.29,257.72s2,14.86,19.47,18.19" transform="translate(-53.24 -17.59)"/>
-      <path id="mouthLeft" class="cls-19" d="M312.26,275.14s16.91,1,19-16.65" transform="translate(-53.24 -17.59)"/>
+      <path id="mouth-right" class="cls-19" d="M334.29,257.72s2,14.86,19.47,18.19" transform="translate(-53.24 -17.59)"/>
+      <path id="mouth-left" class="cls-19" d="M312.26,275.14s16.91,1,19-16.65" transform="translate(-53.24 -17.59)"/>
       <g id="nose">
         <path class="cls-3" d="M308.57,241c-.07-3.83,23.6-8.33,42.16-4.85,7.62,1.43-2.27,24.9-16.38,27.51C322.28,265.89,309,255.75,308.57,241Z" transform="translate(-53.24 -17.59)"/>
         <ellipse class="cls-13" cx="285.08" cy="226.98" rx="8.58" ry="5.38"/>

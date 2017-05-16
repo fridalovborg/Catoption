@@ -1,12 +1,12 @@
 /* ----------------------------------------------------------------------------
 			HISTORY LINK
 ---------------------------------------------------------------------------- */
-var links = document.querySelectorAll('h2');
+var links = document.querySelectorAll('href');
 
 links.forEach(function(link) {
 
 	link.addEventListener('click', function(e) {
-		var data = e.target.getAttribute('class');
+		var data = e.target.getAttribute('href');
 	    e.preventDefault();
 
 			history.replaceState(null, null, data);
@@ -20,7 +20,7 @@ links.forEach(function(link) {
 			// 	$('#insta-page').show();
 			// } else if (data === 'page-three') {
 			// 	$('.page').hide();
-			// 	$('#contact-page').show();
+			// 	$('#map-page').show();
 			// } else if (data === 'home') {
 //       $('.page').hide();
 //     }
@@ -31,18 +31,18 @@ links.forEach(function(link) {
 /* ----------------------------------------------------------------------------
 			SCROLL EFFECT
 ---------------------------------------------------------------------------- */
-function scrollOne() {
+function navHome() {
     $('html, body').animate({ scrollTop: $('#home-page').offset().top }, 'slow');
     return false;
 }
 
-function scrollTwo() {
+function navInsta() {
     $('html, body').animate({ scrollTop: $('#insta-page').offset().top }, 'slow');
     return false;
 }
 
-function scrollThree() {
-    $('html, body').animate({ scrollTop: $('#contact-page').offset().top }, 'slow');
+function navMap() {
+    $('html, body').animate({ scrollTop: $('#map-page').offset().top }, 'slow');
     return false;
 }
 
@@ -70,7 +70,7 @@ window.addEventListener('load', getIGImages);
 			FIRST PAGE
 ---------------------------------------------------------------------------- */
 var tl = TweenMax;
-var audioTxt = document.querySelector('.txt');
+var audioTxt = document.querySelector('.intro-txt');
 var anim = tl.to(audioTxt, 0.8, {scaleX: 1.2, scaleY: 1.2, repeat: -1, yoyo: true});
 
 var icon = document.getElementById('icon');
@@ -78,14 +78,14 @@ setInterval(function() {
 	$(icon).toggleClass("fa-volume-down fa-volume-up");
 }, 800);
 
-// UNDER TIDEN - RADERA EJ DETTA!!
-setTimeout(function() {
-	$('#main-page').show();
-	$('#load-page').fadeOut();
-	clearInterval(interval);
-	anim.kill();
-	$('#show-btn').fadeIn('slow');
-}, 4000);
+// Kommentar UNDER TIDEN - RADERA EJ DETTA!!
+// setTimeout(function() {
+// 	$('#main-page').show();
+// 	$('#intro-page').fadeOut();
+// 	clearInterval(interval);
+// 	anim.kill();
+// 	$('#sound-btn').fadeIn('slow');
+// }, 4000);
 
 /* ----------------------------------------------------------------------------
 			BACKGROUND COLOR FADE ANIMATION
@@ -129,7 +129,7 @@ var g2 = Math.round(istep * c1_0[1] + step * c1_1[1]);
 var b2 = Math.round(istep * c1_0[2] + step * c1_1[2]);
 var color2 = "rgba("+r2+","+g2+","+b2+","+0.3+")";
 
- $('#load-page').css({
+ $('#intro-page').css({
    background: "-webkit-gradient(linear, left top, right top, from("+color1+"), to("+color2+"))"}).css({
     background: "-moz-linear-gradient(left, "+color1+" 0%, "+color2+" 100%)"});
   
@@ -153,22 +153,22 @@ var interval = setInterval(updateGradient, 10);
 			AUDIO BUTTON
 ---------------------------------------------------------------------------- */
 const audioBtn = document.querySelector('.audio-btn');
-const player = document.querySelector('#song');
+const player = document.querySelector('#sound');
 
-var audLoop = document.getElementById('song');
+var audLoop = document.getElementById('sound');
 
 audLoop.loop = true;
-audLoop.load(); 
+//audLoop.load(); 
 
 audioBtn.addEventListener('click', function() {
 
-	var audioIcon = document.getElementById('audioIcon');
+	var audioIcon = document.getElementById('sound-icon');
 
 	if(!player.paused) {
 		player.pause();
-		$(audioIcon).toggleClass("fa-pause fa-play");
+		$(audioIcon).toggleClass("fa-volume-off fa-volume-up");
 	} else {
 		player.play();
-		$(audioIcon).toggleClass("fa-play fa-pause");
+		$(audioIcon).toggleClass("fa-volume-up fa-volume-off");
 	}
 });

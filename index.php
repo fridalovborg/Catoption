@@ -12,40 +12,49 @@
 	<script src="https://use.fontawesome.com/9af20410fa.js"></script>
 </head>
 <body>
-	 <!-- <audio id="song" autoplay="autoplay" src="abba.mp3"></audio>  -->
-	<div class="load-page" id="load-page" style="display: none;"> <!-- display: none; -->
-		<div class="txt">
+	<!-- <audio id="sound" autoplay="autoplay" src="abba.mp3"></audio>  -->
+	<div class="intro-page" id="intro-page" style="display: none;"> <!-- display: none; -->
+		<div class="intro-txt">
 			<h1>Logo here!</h1>
 			<h2>Turn up your sound <i id="icon" class="fa fa-volume-down" aria-hidden="true"></i></h2>
 		</div>
 	</div>
 	<main id="main-page">
 		<header>
-			<div onclick="scrollOne()" class="home">LOGOTYPE!<?php //include 'src/img/logotype.svg'; ?></div>
+			<a href="#home" onclick="navHome()" class="home">LOGOTYPE!
+				<?php //include 'src/img/logotype.svg'; ?>
+			</a>
 			<div class="header">
-				<!-- <button class="audio-btn" id="show-btn"><i id="audioIcon" class="fa fa-pause" aria-hidden="true"></i></button> -->
-				<h2><i class="fa fa-volume-off"></i></h2>
-				<h2 onclick="scrollTwo()" class="instagram"><i class="fa fa-instagram"></i></h2> 
-				<!-- fa-volume-up -->
-				<h2 onclick="scrollThree()" class="contact"><i class="fa fa-map-marker"></i></h2>
+				<h3 id="sound-btn" class="audio-btn"><i id="sound-icon" class="fa fa-volume-off"></i></h3>
+				<a href="#instagram" onclick="navInsta()" class="instagram"><i class="fa fa-instagram"></i></a>
+				<a href="#map" onclick="navMap()" class="map"><i class="fa fa-map-marker"></i></a>
+				
+				<!-- TA INTE BORT NÅGONTING / FRIDA -->
+				<!-- <h2><i class="fa fa-volume-off"></i></h2>
+				<h2 onclick="navInsta()" class="instagram"><i class="fa fa-instagram"></i></h2> 
+				<h2 onclick="navMap()" class="map"><i class="fa fa-map-marker"></i></h2> -->
+
 			</div> <!-- .header -->
 		</header>
-		<div id="home-page" class="home-page page"> <!--addera data-anchor="home" samt a href #home i meny-->
+		
+		<!--addera data-anchor="home" samt a href #home i meny-->
+		<div id="home-page" data-anchor="home"  class="home-page pages">
 			<div class="svg-bubble">
 				<?php include 'src/img/chatbubble.svg'; ?>
-			</div>
+			</div> <!-- .svg-bubble -->
 			<div class="svg-cat">
 				<?php include 'src/img/cat.svg'; ?>
-			</div>
-		</div> <!-- #home-page, .home-page, .page -->
-		<div id="insta-page" class="insta-page page">
-			<div id ="img-container" class="img-container">
-			</div> <!-- .img-container -->
-		</div> <!-- #insta-page, .insta-page, .page -->
-		<div id="contact-page" class="contact-page page">
-			<div id="map" class="map"></div>
-		</div> <!-- #contact-page, .contact-page, .page -->
-	</main>
+			</div> <!-- .svg-cat -->
+		</div> <!-- #home-page, .home-page, .pages -->
+
+		<div id="insta-page" data-anchor="instagram" class="insta-page pages">
+			<div id ="img-container" class="img-container"></div> <!-- .img-container -->
+		</div> <!-- #insta-page, .insta-page, .pages -->
+
+		<div id="map-page" data-anchor="map" class="map-page pages">
+			<div id="the-map" class="the-map"></div> <!-- .the-map -->
+		</div> <!-- #map-page, .map-page, .pages -->
+	</main> <!-- #main-page -->
 </body>
 <script src="https://code.jquery.com/jquery-3.2.0.min.js"></script>
 <script src="greensock/src/minified/TweenMax.min.js"></script>

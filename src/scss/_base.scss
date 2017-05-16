@@ -7,14 +7,14 @@
 
 body {
 	font-family: 'Josefin Sans', sans-serif;
-	// height: 200vh;
+	height: 100vh;
 }
 
 #main-page {
-	// display: none;
+	//display: none;
 }
 
-.load-page {
+.intro-page {
 	background-color: #FFF;
 	width: 100%;
 	height: 100%;
@@ -22,7 +22,7 @@ body {
 	margin: 0px;
 	text-align: center;
 
-	.txt {
+	.intro-txt {
 		padding-top: 65%;
 		color: salmon;
 	}
@@ -49,8 +49,12 @@ header {
 		@include flexbox(flex, row wrap, flex-end, center);
 		margin: 0;
 
+		a {
+			color: black;
+		}
+
 		.fa {
-			font-size: 1.8em;
+			font-size: 2em;
 		}
 	}
 }
@@ -58,7 +62,7 @@ header {
 /* ----------------------------------------------------------------------------
 			ALL PAGES
 ---------------------------------------------------------------------------- */
-.page {
+.pages {
 	width: 100%;
 	min-height: 100vh;
 	text-align: center;
@@ -66,7 +70,7 @@ header {
 }
 
 /* ----------------------------------------------------------------------------
-			FIRST PAGE
+			HOME PAGE
 ---------------------------------------------------------------------------- */
 .home-page {
 	background-color: #fffab3; //lemonchiffon
@@ -89,8 +93,8 @@ header {
 	opacity: 0;
 }
 
-//funkar inte, linjerna syns inte alls genom animationen
-#highfiveLines, #semiClosed, #eyesClosed {
+// funkar inte, linjerna syns inte alls genom animationen
+#highfive-lines, #semi-closed, #eyes-closed {
 	opacity: 0;
 }
 
@@ -114,14 +118,14 @@ header {
 /* ----------------------------------------------------------------------------
 			MAP PAGE
 ---------------------------------------------------------------------------- */
-.contact-page {
+.map-page {
 	background-color: bisque;
 	color: #ffd199;
 	padding-top: 25%;
 	// height: 100vh;
 }
 
-.map {
+.the-map {
 	position: relative;
 	top: 10%;
 	height: 80vh;
@@ -132,22 +136,17 @@ header {
 /* ----------------------------------------------------------------------------
 			AUDIO
 ---------------------------------------------------------------------------- */
-#show-btn {
-	//display: none;
-}
-
-.audio-btn {
-	// top: 10px;
-	// left: 10px;
-	width: 3em;
-	height: 3em;
-	border-radius: 1.5em;
-	text-decoration: none;
-	//font-size: 1.6em;
-	background: none;
-	cursor: pointer;
-	//border: 2px solid black;
-	outline: none;
-	z-index: 100;
-}
-
+// .audio-btn {
+// 	// top: 10px;
+// 	// left: 10px;
+// 	width: 3em;
+// 	height: 3em;
+// 	border-radius: 1.5em;
+// 	text-decoration: none;
+// 	//font-size: 1.6em;
+// 	background: none;
+// 	cursor: pointer;
+// 	//border: 2px solid black;
+// 	outline: none;
+// 	z-index: 100;
+// }

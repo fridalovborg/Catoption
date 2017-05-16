@@ -1,7 +1,7 @@
-var currentLocation, infoWindow;
+var map, infoWindow;
 
 function initMap() {
-	map = new google.maps.Map(document.getElementById('map'), {
+	map = new google.maps.Map(document.getElementById('the-map'), {
 		zoom: 12
 	});
 
