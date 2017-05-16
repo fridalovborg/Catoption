@@ -38,25 +38,39 @@ header {
 	height: 70px;
 	@include flexbox(flex, row nowrap, space-between, center);
 
+	a.home {
+		border-bottom: none;
+	}
+
 	.home {
-		width: 55%;
+		width: 60%;
 		box-sizing: border-box;
 		padding-left: 5%;
+		text-decoration: none;
+		color: #FFF;
+		font-size: 1.8em;
 	}
 
 	.header {
-		width: 45%;
+		width: 40%;
 		@include flexbox(flex, row wrap, flex-end, center);
 		margin: 0;
 
-		a {
-			color: black;
-		}
-
 		.fa {
-			font-size: 2em;
+			font-size: 2.4em;
+			color: #FFF;
 		}
 	}
+}
+
+a {
+	border-bottom: 2px solid rgba(255,255,255, 0);
+	transition: 600ms all;
+	padding-bottom: 6px;
+}
+
+a:hover {
+	border-bottom: 2px solid rgba(255,255,255, 1);
 }
 
 /* ----------------------------------------------------------------------------
@@ -73,7 +87,8 @@ header {
 			HOME PAGE
 ---------------------------------------------------------------------------- */
 .home-page {
-	background-color: #fffab3; //lemonchiffon
+	// background-color: #fffab3; //lemonchiffon
+	background: linear-gradient(to right,  rgb(255, 179, 179), rgb(255, 179, 255)); //test
 	color: #fff780;
 	position: relative;
 	// height: 100vh;

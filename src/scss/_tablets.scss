@@ -15,10 +15,15 @@ header {
 	.home {
 		width: 75%;
 		padding-left: 3%;
+		font-size: 3em;
 	}
 
 	.header {
 		width: 25%;
+
+		.fa {
+			font-size: 3em;
+		}
 	}
 }
 

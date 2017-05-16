@@ -21,7 +21,7 @@
 	</div>
 	<main id="main-page">
 		<header>
-			<a href="#home" onclick="navHome()" class="home">LOGOTYPE!
+			<a href="#home" onclick="navHome()" class="home">#CATOPTION
 				<?php //include 'src/img/logotype.svg'; ?>
 			</a>
 			<div class="header">
@@ -38,7 +38,7 @@
 		</header>
 		
 		<!--addera data-anchor="home" samt a href #home i meny-->
-		<div id="home-page" data-anchor="home"  class="home-page pages">
+		<div id="home-page" data-anchor="home" class="home-page pages">
 			<div class="svg-bubble">
 				<?php include 'src/img/chatbubble.svg'; ?>
 			</div> <!-- .svg-bubble -->
@@ -58,6 +58,8 @@
 </body>
 <script src="https://code.jquery.com/jquery-3.2.0.min.js"></script>
 <script src="greensock/src/minified/TweenMax.min.js"></script>
-<script src="js/all.js"></script>
+<script src="src/js/script.js"></script>
+<script src="src/js/animation.js"></script>
+<script src="src/js/map.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBcWLN5wfY8TTNInU0jbCXlF6q4xUODTxY&libraries=places&callback=initMap" type="text/javascript" async></script>
 </html>

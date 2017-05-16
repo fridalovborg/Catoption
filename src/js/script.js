@@ -1,3 +1,10 @@
+// var tl = TweenMax; // ta bort sen
+// var intro = document.querySelector('.home-page');
+
+// setInterval(function(){
+// 	tl.to('.home-page', 2, {css:{backgroundImage:'linear-gradient(to left, rgb(255, 179, 255), rgb(255, 179, 179)', yoyo: true, repeat: -1}});
+// }, 50);
+// TweenLite.to($(this), 1, { css:{ backgroundImage: '-moz-linear-gradient(top, #3e3e40, #252122)'} });
 /* ----------------------------------------------------------------------------
 			HISTORY LINK
 ---------------------------------------------------------------------------- */
