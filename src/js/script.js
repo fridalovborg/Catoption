@@ -52,10 +52,10 @@ function navMap() {
 function getIGImages() {
 
 	var xhr = new XMLHttpRequest();
-	xhr.open("GET", "getIGdata.php",true);
+	xhr.open("GET", "getIGdata.php", true);
 
 	xhr.addEventListener('load', function(resp) {
-		console.log(this.responseText);
+		console.log(this.responseText); 
 
 		document.getElementById('img-container').innerHTML = this.responseText;
 	});

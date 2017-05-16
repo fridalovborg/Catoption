@@ -1,13 +1,16 @@
 var map, infoWindow;
 
+var an = google.maps.Animation.DROP;
+
 function initMap() {
 	map = new google.maps.Map(document.getElementById('the-map'), {
-		zoom: 12,
+		zoom: 10,
 		scrollwheel: false
 	});
 
 	infoWindow = new google.maps.InfoWindow();
 	var $myMarker;
+
 	if (navigator.geolocation) {
 		navigator.geolocation.watchPosition(function(position) { //getCurrentPosition
 
@@ -18,7 +21,6 @@ function initMap() {
 			};
 
 			// MY POSITIONS MARKER
-			var an = google.maps.Animation.DROP;
 			if ($myMarker) {
 				$myMarker.setPosition(pos);
 			} else {
@@ -65,20 +67,14 @@ function showPlaces(results, status) {
  		}
  	}
 }
-//var marker;
-function addMarker(place) {
-	var an = google.maps.Animation.DROP;
 
-	// if (marker) {
-		//marker.setPosition(pos);
-	// } else {
-		var marker = new google.maps.Marker({
-			map: map,
-			animation: an,
-			position: place.geometry.location,
-			icon: '../src/img/icon.png'
-		});
-	//}
+function addMarker(place) {
+	var marker = new google.maps.Marker({
+		map: map,
+		animation: an,
+		position: place.geometry.location,
+		icon: '../src/img/icon.png'
+	});
 
 	google.maps.event.addListener(marker, 'click', function() {
 		var txt = "<strong>" + place.name + "</strong><br>";
