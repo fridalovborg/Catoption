@@ -17,7 +17,11 @@ var o={lat:t.coords.latitude,lng:t.coords.longitude},n=google.maps.Animation.DRO
 // INFO BOX FOR MY POSITION
 google.maps.event.addListener(e,"click",function(){var e="<strong>You are here!</strong><br>";infoWindow.setContent(e),infoWindow.open(map,this)}),map.setCenter(o);var a={location:o,radius:"50000",keyword:"cat_shelter"};new google.maps.places.PlacesService(map).nearbySearch(a,showPlaces)},function(){handleLocationError(!0,infoWindow,map.getCenter())}):
 // BROWSER DO NOT SUPPORT GEOLOCATION
-handleLocationError(!1,infoWindow,map.getCenter())}function showPlaces(e,t){if(t==google.maps.places.PlacesServiceStatus.OK)for(var o=0;o<e.length;o++)addMarker(e[o]),console.log(e[o])}function addMarker(e){var t=google.maps.Animation.DROP,o=new google.maps.Marker({map:map,animation:t,position:e.geometry.location,icon:"../src/img/icon.png"});google.maps.event.addListener(o,"click",function(){var t="<strong>"+e.name+"</strong><br>";t+=e.vicinity,infoWindow.setContent(t),infoWindow.open(map,this)})}/* ----------------------------------------------------------------------------
+handleLocationError(!1,infoWindow,map.getCenter())}function showPlaces(e,t){if(t==google.maps.places.PlacesServiceStatus.OK)for(var o=0;o<e.length;o++)addMarker(e[o]),console.log(e[o])}
+//var marker;
+function addMarker(e){var t=google.maps.Animation.DROP,o=new google.maps.Marker({map:map,animation:t,position:e.geometry.location,icon:"../src/img/icon.png"});
+//}
+google.maps.event.addListener(o,"click",function(){var t="<strong>"+e.name+"</strong><br>";t+=e.vicinity,infoWindow.setContent(t),infoWindow.open(map,this)})}/* ----------------------------------------------------------------------------
 			SCROLL EFFECT
 ---------------------------------------------------------------------------- */
 function navHome(){return $("html, body").animate({scrollTop:$("#home-page").offset().top},"slow"),!1}function navInsta(){return $("html, body").animate({scrollTop:$("#insta-page").offset().top},"slow"),!1}function navMap(){return $("html, body").animate({scrollTop:$("#map-page").offset().top},"slow"),!1}/* ----------------------------------------------------------------------------

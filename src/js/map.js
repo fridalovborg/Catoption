@@ -65,15 +65,20 @@ function showPlaces(results, status) {
  		}
  	}
 }
-
+//var marker;
 function addMarker(place) {
 	var an = google.maps.Animation.DROP;
-	var marker = new google.maps.Marker({
-		map: map,
-		animation: an,
-		position: place.geometry.location,
-		icon: '../src/img/icon.png'
-	});
+
+	// if (marker) {
+		//marker.setPosition(pos);
+	// } else {
+		var marker = new google.maps.Marker({
+			map: map,
+			animation: an,
+			position: place.geometry.location,
+			icon: '../src/img/icon.png'
+		});
+	//}
 
 	google.maps.event.addListener(marker, 'click', function() {
 		var txt = "<strong>" + place.name + "</strong><br>";
