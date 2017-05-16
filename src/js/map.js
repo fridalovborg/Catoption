@@ -2,7 +2,8 @@ var map, infoWindow;
 
 function initMap() {
 	map = new google.maps.Map(document.getElementById('the-map'), {
-		zoom: 12
+		zoom: 12,
+		scrollwheel: false
 	});
 
 	infoWindow = new google.maps.InfoWindow();
