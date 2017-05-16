@@ -61,7 +61,6 @@ function getIGImages() {
 	});
 
 	xhr.send();
-
 }
 setInterval(getIGImages, 60000);
 window.addEventListener('load', getIGImages);

@@ -48,7 +48,7 @@
 		</div> <!-- #home-page, .home-page, .pages -->
 
 		<div id="insta-page" class="insta-page pages">
-			<div id ="img-container" class="img-container"></div> <!-- .img-container -->
+			<div id="img-container" class="img-container"></div> <!-- .img-container -->
 		</div> <!-- #insta-page, .insta-page, .pages -->
 
 		<div id="map-page" data-anchor="map" class="map-page pages">
