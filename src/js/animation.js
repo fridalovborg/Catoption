@@ -1,10 +1,6 @@
 /* PROBLEM:
 1. svansen blir ful när den animeras. går detta att lösa på något sätt?
-2. ögonblinkningen var 3e sekund krockar med andra funktioner som påverkar ögonen. hur fixa? // KLAR
-3. ögonbrynsrotationen på rad ~95-96 funkar inte
 4. de olika animationerna krockar, tex klappa kropp, svans och blinkning
-5. ljudeffekterna funkar inte // KLAR ?!
-6. kattens huvud åker ur viewbox // KLAR
 7. Fråga om vilken funktion en ska göra, se längst ner på sidan + varför funkar ljudet bara om en har olika av dessa?
 8. Fråga om varför vissa funktioner bara fungerar med $ och id och inte variablenamenet
 */
