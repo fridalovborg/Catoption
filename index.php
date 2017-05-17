@@ -21,8 +21,8 @@
 	</div>
 	<main id="main-page">
 		<header>
-			<a href="#home" onclick="navHome()" class="home">#CATOPTION
-				<?php //include 'src/img/logotype.svg'; ?>
+			<a href="#home" onclick="navHome()" class="home">
+				<?php include 'src/img/logotype.svg'; ?>
 			</a>
 			<div class="header">
 				<h3 id="sound-btn" class="audio-btn"><i id="sound-icon" class="fa fa-volume-off"></i></h3>
