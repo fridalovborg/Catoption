@@ -6,6 +6,7 @@
 // }, 50);
 // TweenLite.to($(this), 1, { css:{ backgroundImage: '-moz-linear-gradient(top, #3e3e40, #252122)'} });
 
+// LANDSCAPE MODE
 if ($(window).height() <= 400 || $(window).width() <= 600) {
 	$('.svg-cat').css('width', '50%');
 	$('.svg-bubble').css('width', '25%');
