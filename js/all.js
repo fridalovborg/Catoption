@@ -21,10 +21,7 @@ handleLocationError(!1,infoWindow,map.getCenter())}function showPlaces(e,t){if(t
 function navHome(){return $("html, body").animate({scrollTop:$("#home-page").offset().top},"slow"),!1}function navInsta(){return $("html, body").animate({scrollTop:$("#insta-page").offset().top},"slow"),!1}function navMap(){return $("html, body").animate({scrollTop:$("#map-page").offset().top},"slow"),!1}/* ----------------------------------------------------------------------------
 			UPDATE IMAGES IN REALTIME
 ---------------------------------------------------------------------------- */
-function getIGImages(){var e=new XMLHttpRequest;e.open("GET","getIGdata.php",!0),e.addEventListener("load",function(e){console.log(this.responseText),document.getElementById("img-container").innerHTML=this.responseText}),e.send()}function updateGradient(){if(void 0!==$){var e=colors[colorIndices[0]],t=colors[colorIndices[1]],o=colors[colorIndices[2]],n=colors[colorIndices[3]],a=1-step,r=Math.round(a*e[0]+step*t[0]),l=Math.round(a*e[1]+step*t[1]),i=Math.round(a*e[2]+step*t[2]),s="rgba("+r+","+l+","+i+",0.3)",c=Math.round(a*o[0]+step*n[0]),d=Math.round(a*o[1]+step*n[1]),m=Math.round(a*o[2]+step*n[2]),p="rgba("+c+","+d+","+m+",0.3)";$("#intro-page").css({background:"-webkit-gradient(linear, left top, right top, from("+s+"), to("+p+"))"}).css({background:"-moz-linear-gradient(left, "+s+" 0%, "+p+" 100%)"}),step+=gradientSpeed,step>=1&&(step%=1,colorIndices[0]=colorIndices[1],colorIndices[2]=colorIndices[3],
-//pick two new target color indices
-//do not pick the same as the current one
-colorIndices[1]=(colorIndices[1]+Math.floor(1+Math.random()*(colors.length-1)))%colors.length,colorIndices[3]=(colorIndices[3]+Math.floor(1+Math.random()*(colors.length-1)))%colors.length)}}var tl=TweenMax,headLayers=document.getElementById("head-layers"),nose=document.querySelectorAll("#nose path, #nose ellipse"),whiskers=document.querySelectorAll("#whiskers line"),paw=document.getElementById("paw"),highfiveLines=document.querySelectorAll("#highfive-lines path"),catBody=document.getElementById("cat-body"),eyebrowLeft=document.getElementById("eyebrow-left"),eyebrowRight=document.getElementById("eyebrow-right"),mouthRight=document.getElementById("mouth-right"),mouthLeft=document.getElementById("mouth-left"),rightEye=document.getElementById("right-eye"),leftEye=document.getElementById("left-eye"),semiClosed=document.getElementById("semi-closed"),eyesClosed=document.getElementById("eyes-closed"),tails=document.getElementById("tails"),tailAnimation=document.querySelectorAll("#tails path"),chatBubble=document.getElementsByClassName("svg-bubble"),eyeBlinkInterval;
+function getIGImages(){var e=new XMLHttpRequest;e.open("GET","getIGdata.php",!0),e.addEventListener("load",function(e){console.log(this.responseText),document.getElementById("img-container").innerHTML=this.responseText}),e.send()}var tl=TweenMax,headLayers=document.getElementById("head-layers"),nose=document.querySelectorAll("#nose path, #nose ellipse"),whiskers=document.querySelectorAll("#whiskers line"),paw=document.getElementById("paw"),highfiveLines=document.querySelectorAll("#highfive-lines path"),catBody=document.getElementById("cat-body"),eyebrowLeft=document.getElementById("eyebrow-left"),eyebrowRight=document.getElementById("eyebrow-right"),mouthRight=document.getElementById("mouth-right"),mouthLeft=document.getElementById("mouth-left"),rightEye=document.getElementById("right-eye"),leftEye=document.getElementById("left-eye"),semiClosed=document.getElementById("semi-closed"),eyesClosed=document.getElementById("eyes-closed"),tails=document.getElementById("tails"),tailAnimation=document.querySelectorAll("#tails path"),chatBubble=document.getElementsByClassName("svg-bubble"),eyeBlinkInterval;
 //when document has loaded, the head starts moving to the music and nose+whiskers start twitching
 $(document).ready(function(){tl.fromTo(headLayers,.8,{x:-15,y:0},{x:15,y:0,yoyo:!0,repeat:-1}),noseAnimation(nose),noseAnimation(whiskers),eyeBlink(),chatBubblePop()}),paw.addEventListener("click",highfivePaw),
 //scales the cats paw when user clicks it, making it look like a high five
@@ -76,7 +73,54 @@ var tl=TweenMax,audioTxt=document.querySelector(".intro-txt"),anim=tl.to(audioTx
 /* ----------------------------------------------------------------------------
 			BACKGROUND COLOR FADE ANIMATION
 ---------------------------------------------------------------------------- */
-var colors=new Array([62,35,255],[60,255,60],[255,35,98],[45,175,230],[255,0,255],[255,128,0]),step=0,colorIndices=[0,1,2,3],gradientSpeed=.002,interval=setInterval(updateGradient,10);/* ----------------------------------------------------------------------------
+// var colors = new Array(
+//   [62,35,255],
+//   [60,255,60],
+//   [255,35,98],
+//   [45,175,230],
+//   [255,0,255],
+//   [255,128,0]);
+// var step = 0;
+// //color table indices for: 
+// // current color left
+// // next color left
+// // current color right
+// // next color right
+// var colorIndices = [0,1,2,3];
+// //transition speed
+// var gradientSpeed = 0.002;
+// function updateGradient() {
+//   if ( $===undefined ) return;
+// var c0_0 = colors[colorIndices[0]];
+// var c0_1 = colors[colorIndices[1]];
+// var c1_0 = colors[colorIndices[2]];
+// var c1_1 = colors[colorIndices[3]];
+// var istep = 1 - step;
+// var r1 = Math.round(istep * c0_0[0] + step * c0_1[0]);
+// var g1 = Math.round(istep * c0_0[1] + step * c0_1[1]);
+// var b1 = Math.round(istep * c0_0[2] + step * c0_1[2]);
+// var color1 = "rgba("+r1+","+g1+","+b1+","+0.3+")";
+// var r2 = Math.round(istep * c1_0[0] + step * c1_1[0]);
+// var g2 = Math.round(istep * c1_0[1] + step * c1_1[1]);
+// var b2 = Math.round(istep * c1_0[2] + step * c1_1[2]);
+// var color2 = "rgba("+r2+","+g2+","+b2+","+0.3+")";
+//  $('#intro-page').css({
+//    background: "-webkit-gradient(linear, left top, right top, from("+color1+"), to("+color2+"))"}).css({
+//     background: "-moz-linear-gradient(left, "+color1+" 0%, "+color2+" 100%)"});
+//   step += gradientSpeed;
+//   if ( step >= 1 )
+//   {
+//     step %= 1;
+//     colorIndices[0] = colorIndices[1];
+//     colorIndices[2] = colorIndices[3];
+//     //pick two new target color indices
+//     //do not pick the same as the current one
+//     colorIndices[1] = ( colorIndices[1] + Math.floor( 1 + Math.random() * (colors.length - 1))) % colors.length;
+//     colorIndices[3] = ( colorIndices[3] + Math.floor( 1 + Math.random() * (colors.length - 1))) % colors.length;
+//   }
+// }
+// var interval = setInterval(updateGradient, 10);
+/* ----------------------------------------------------------------------------
 			AUDIO BUTTON
 ---------------------------------------------------------------------------- */
 const audioBtn=document.querySelector(".audio-btn"),player=document.querySelector("#sound");var audLoop=document.getElementById("sound");audLoop.loop=!0,
