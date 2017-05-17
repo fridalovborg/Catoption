@@ -103,9 +103,9 @@ window.addEventListener('load', getIGImages);
 /* ----------------------------------------------------------------------------
 			FIRST PAGE
 ---------------------------------------------------------------------------- */
-var tl = TweenMax;
-var audioTxt = document.querySelector('.intro-txt');
-var anim = tl.to(audioTxt, 0.8, {scaleX: 1.2, scaleY: 1.2, repeat: -1, yoyo: true});
+//var tl = TweenMax;
+//var audioTxt = document.querySelector('.intro-txt');
+//var anim = tl.to(audioTxt, 0.8, {scaleX: 1.2, scaleY: 1.2, repeat: -1, yoyo: true});
 
 var icon = document.getElementById('icon');
 setInterval(function() {

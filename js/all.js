@@ -7,21 +7,46 @@
 //makes the nose and whiskers do a small rotation/shake every 5 seconds
 function noseAnimation(e){setInterval(function(){tl.staggerFromTo(e,.2,{rotation:0,transformOrigin:"center center"},{rotation:10,transformOrigin:"center center",yoyo:!0,repeat:1})},5e3)}function eyeBlink(){eyeBlinkInterval=window.setInterval(function(){tl.fromTo(eyesClosed,.3,{alpha:0},{alpha:1,yoyo:!0,repeat:1,repeatDelay:.2}),tl.fromTo([rightEye,leftEye],.3,{alpha:1},{alpha:0,yoyo:!0,repeat:1,repeatDelay:.2})},4e3)}
 //makes the chatBubble appear every 8 seconds
-function chatBubblePop(){setInterval(function(){tl.fromTo(chatBubble,.7,{alpha:0},{alpha:1,yoyo:!0,repeat:1,repeatDelay:1})},8e3)}function highfivePaw(){tl.fromTo(paw,.3,{scale:1,x:0,y:0},{scale:1.3,x:0,y:-15,yoyo:!0,repeat:1}),tl.fromTo($("#highfive-lines"),.5,{alpha:0},{alpha:1,yoyo:!0,repeat:1}),new Audio("../audio/highfive.m4a").play()}function angryCat(){window.clearInterval(eyeBlinkInterval),setTimeout(function(){eyeBlink()},3e3),tl.fromTo(semiClosed,.5,{alpha:0},{alpha:1,yoyo:!0,repeat:1,repeatDelay:2}),tl.staggerFromTo($("#eyebrow-right"),1,{rotation:0,transformOrigin:"center center"},{rotation:-50,transformOrigin:"center center",yoyo:!0,repeat:1,repeatDelay:.5}),tl.staggerFromTo($("#eyebrow-left"),1,{rotation:0,transformOrigin:"center center"},{rotation:60,transformOrigin:"center center",yoyo:!0,repeat:1,repeatDelay:.5})}function initMap(){map=new google.maps.Map(document.getElementById("the-map"),{zoom:10,scrollwheel:!1}),infoWindow=new google.maps.InfoWindow;var e;navigator.geolocation?navigator.geolocation.watchPosition(function(t){//getCurrentPosition
+function chatBubblePop(){setInterval(function(){tl.fromTo(chatBubble,.7,{alpha:0},{alpha:1,yoyo:!0,repeat:1,repeatDelay:1})},8e3)}function highfivePaw(){tl.fromTo(paw,.3,{scale:1,x:0,y:0},{scale:1.3,x:0,y:-15,yoyo:!0,repeat:1}),tl.fromTo($("#highfive-lines"),.5,{alpha:0},{alpha:1,yoyo:!0,repeat:1}),new Audio("../audio/highfive.m4a").play()}function angryCat(){window.clearInterval(eyeBlinkInterval),setTimeout(function(){eyeBlink()},3e3),tl.fromTo(semiClosed,.5,{alpha:0},{alpha:1,yoyo:!0,repeat:1,repeatDelay:2}),tl.staggerFromTo($("#eyebrow-right"),1,{rotation:0,transformOrigin:"center center"},{rotation:-50,transformOrigin:"center center",yoyo:!0,repeat:1,repeatDelay:.5}),tl.staggerFromTo($("#eyebrow-left"),1,{rotation:0,transformOrigin:"center center"},{rotation:60,transformOrigin:"center center",yoyo:!0,repeat:1,repeatDelay:.5})}function initMap(){map=new google.maps.Map(document.getElementById("the-map"),{zoom:10,scrollwheel:!1}),infoWindow=new google.maps.InfoWindow;var e;navigator.geolocation?navigator.geolocation.getCurrentPosition(function(t){//getCurrentPosition
 // MY POSITION COORDS
-var o={lat:t.coords.latitude,lng:t.coords.longitude};
+var o={lat:t.coords.latitude,lng:t.coords.longitude};an=google.maps.Animation.DROP,
 // MY POSITIONS MARKER
 e?e.setPosition(o):e=new google.maps.Marker({position:o,animation:an,map:map}),
 // INFO BOX FOR MY POSITION
 google.maps.event.addListener(e,"click",function(){var e="<strong>You are here!</strong><br>";infoWindow.setContent(e),infoWindow.open(map,this)}),map.setCenter(o);var n={location:o,radius:"50000",keyword:"cat_shelter"};new google.maps.places.PlacesService(map).nearbySearch(n,showPlaces)},function(){handleLocationError(!0,infoWindow,map.getCenter())}):
 // BROWSER DO NOT SUPPORT GEOLOCATION
-handleLocationError(!1,infoWindow,map.getCenter())}function showPlaces(e,t){if(t==google.maps.places.PlacesServiceStatus.OK)for(var o=0;o<e.length;o++)addMarker(e[o]),console.log(e[o])}function addMarker(e){var t=new google.maps.Marker({map:map,animation:an,position:e.geometry.location,icon:"../src/img/icon.png"});google.maps.event.addListener(t,"click",function(){var t="<strong>"+e.name+"</strong><br>";t+=e.vicinity,infoWindow.setContent(t),infoWindow.open(map,this)})}/* ----------------------------------------------------------------------------
+handleLocationError(!1,infoWindow,map.getCenter())}function showPlaces(e,t){if(t==google.maps.places.PlacesServiceStatus.OK)for(var o=0;o<e.length;o++)addMarker(e[o]),console.log(e[o])}function addMarker(e){an=google.maps.Animation.DROP;var t=new google.maps.Marker({map:map,animation:an,position:e.geometry.location,icon:"../src/img/icon.png"});google.maps.event.addListener(t,"click",function(){var t="<strong>"+e.name+"</strong><br>";t+=e.vicinity,infoWindow.setContent(t),infoWindow.open(map,this)})}/*links.forEach(function(link) {
+
+	link.addEventListener('click', function(e) {
+		var data = e.target.getAttribute('href');
+	    e.preventDefault();
+
+			history.replaceState(null, null, data);
+
+			//byt ut mot data-page ...någonting!
+			// if(data === 'page-one') {
+			// 	$('.page').hide();
+			// 	$('#home-page').show();
+			// } else if (data === 'page-two') {
+			// 	$('.page').hide();
+			// 	$('#insta-page').show();
+			// } else if (data === 'page-three') {
+			// 	$('.page').hide();
+			// 	$('#map-page').show();
+			// } else if (data === 'home') {
+//       $('.page').hide();
+//     }
+		e.stopPropagation();
+	}, false);
+});
+
+/* ----------------------------------------------------------------------------
 			SCROLL EFFECT
 ---------------------------------------------------------------------------- */
 function navHome(){return $("html, body").animate({scrollTop:$("#home-page").offset().top},"slow"),!1}function navInsta(){return $("html, body").animate({scrollTop:$("#insta-page").offset().top},"slow"),!1}function navMap(){return $("html, body").animate({scrollTop:$("#map-page").offset().top},"slow"),!1}/* ----------------------------------------------------------------------------
 			UPDATE IMAGES IN REALTIME
 ---------------------------------------------------------------------------- */
-function getIGImages(){var e=new XMLHttpRequest;e.open("GET","getIGdata.php",!0),e.addEventListener("load",function(e){console.log(this.responseText),document.getElementById("img-container").innerHTML=this.responseText}),e.send()}var tl=TweenMax,headLayers=document.getElementById("head-layers"),nose=document.querySelectorAll("#nose path, #nose ellipse"),whiskers=document.querySelectorAll("#whiskers line"),paw=document.getElementById("paw"),highfiveLines=document.querySelectorAll("#highfive-lines path"),catBody=document.getElementById("cat-body"),eyebrowLeft=document.getElementById("eyebrow-left"),eyebrowRight=document.getElementById("eyebrow-right"),mouthRight=document.getElementById("mouth-right"),mouthLeft=document.getElementById("mouth-left"),rightEye=document.getElementById("right-eye"),leftEye=document.getElementById("left-eye"),semiClosed=document.getElementById("semi-closed"),eyesClosed=document.getElementById("eyes-closed"),tails=document.getElementById("tails"),tailAnimation=document.querySelectorAll("#tails path"),chatBubble=document.getElementsByClassName("svg-bubble"),eyeBlinkInterval;
+function getIGImages(){var e=new XMLHttpRequest;e.open("GET","getIGdata.php?foo="+Math.random(),!0),e.addEventListener("readystatechange",function(e){console.log(this),4===this.readyState&&200===this.status&&(document.getElementById("img-container").innerHTML=this.responseText)}),e.send()}var tl=TweenMax,headLayers=document.getElementById("head-layers"),nose=document.querySelectorAll("#nose path, #nose ellipse"),whiskers=document.querySelectorAll("#whiskers line"),paw=document.getElementById("paw"),highfiveLines=document.querySelectorAll("#highfive-lines path"),catBody=document.getElementById("cat-body"),eyebrowLeft=document.getElementById("eyebrow-left"),eyebrowRight=document.getElementById("eyebrow-right"),mouthRight=document.getElementById("mouth-right"),mouthLeft=document.getElementById("mouth-left"),rightEye=document.getElementById("right-eye"),leftEye=document.getElementById("left-eye"),semiClosed=document.getElementById("semi-closed"),eyesClosed=document.getElementById("eyes-closed"),tails=document.getElementById("tails"),tailAnimation=document.querySelectorAll("#tails path"),chatBubble=document.getElementsByClassName("svg-bubble"),eyeBlinkInterval;
 //when document has loaded, the head starts moving to the music and nose+whiskers start twitching
 $(document).ready(function(){tl.fromTo(headLayers,.8,{x:-15,y:0},{x:15,y:0,yoyo:!0,repeat:-1}),noseAnimation(nose),noseAnimation(whiskers),eyeBlink(),chatBubblePop()}),paw.addEventListener("click",highfivePaw),
 //scales the cats paw when user clicks it, making it look like a high five
@@ -44,7 +69,7 @@ $(document).ready(function(){tl.fromTo(headLayers,.8,{x:-15,y:0},{x:15,y:0,yoyo:
 catBody.addEventListener("click",function(){tl.staggerFromTo([eyebrowRight,mouthRight],2,{rotation:0,transformOrigin:"center center"},{rotation:-30,transformOrigin:"center center",yoyo:!0,repeat:1}),tl.staggerFromTo([eyebrowLeft,mouthLeft],2,{rotation:0,transformOrigin:"center center"},{rotation:40,transformOrigin:"center center",yoyo:!0,repeat:1}),tl.fromTo([rightEye,leftEye],.5,{alpha:1},{alpha:0,yoyo:!0,repeat:1,repeatDelay:2}),tl.fromTo([eyesClosed],.5,{alpha:0},{alpha:1,yoyo:!0,repeat:1,repeatDelay:2}),new Audio("../audio/catpurr.mp3").play()}),
 // FRÅGA-Jenni: om att göra på detta sättet eller sättet ovan: 
 //when touching/clicking on the cats tail
-tails.addEventListener("click",angryCat);var map,infoWindow,an=google.maps.Animation.DROP,links=document.querySelectorAll("href");links.forEach(function(e){e.addEventListener("click",function(e){var t=e.target.getAttribute("href");e.preventDefault(),history.replaceState(null,null,t),
+tails.addEventListener("click",angryCat);for(var map,infoWindow,an,links=document.querySelectorAll("href"),i=0;i<links.length;i++)links[i].addEventListener("click",function(e){var t=e.target.getAttribute("href");e.preventDefault(),history.replaceState(null,null,t),
 //byt ut mot data-page ...någonting!
 // if(data === 'page-one') {
 // 	$('.page').hide();
@@ -58,19 +83,17 @@ tails.addEventListener("click",angryCat);var map,infoWindow,an=google.maps.Anima
 // } else if (data === 'home') {
 //       $('.page').hide();
 //     }
-e.stopPropagation()},!1)}),setInterval(getIGImages,6e4),window.addEventListener("load",getIGImages);/* ----------------------------------------------------------------------------
+e.stopPropagation()},!1);setInterval(getIGImages,6e4),window.addEventListener("load",getIGImages);/* ----------------------------------------------------------------------------
 			FIRST PAGE
 ---------------------------------------------------------------------------- */
-var tl=TweenMax,audioTxt=document.querySelector(".intro-txt"),anim=tl.to(audioTxt,.8,{scaleX:1.2,scaleY:1.2,repeat:-1,yoyo:!0}),icon=document.getElementById("icon");setInterval(function(){$(icon).toggleClass("fa-volume-down fa-volume-up")},800);
+//var tl = TweenMax;
+//var audioTxt = document.querySelector('.intro-txt');
+//var anim = tl.to(audioTxt, 0.8, {scaleX: 1.2, scaleY: 1.2, repeat: -1, yoyo: true});
+var icon=document.getElementById("icon");setInterval(function(){$(icon).toggleClass("fa-volume-down fa-volume-up")},800),
 // Kommentar UNDER TIDEN - RADERA EJ DETTA!!
-// setTimeout(function() {
-// 	$('#main-page').show();
-// 	$('#intro-page').fadeOut();
-// 	clearInterval(interval);
-// 	anim.kill();
-// 	$('#sound-btn').fadeIn('slow');
-// }, 4000);
-/* ----------------------------------------------------------------------------
+setTimeout(function(){$("#main-page").show(),$("#intro-page").fadeOut(),
+//clearInterval(interval);
+anim.kill(),$("#sound-btn").fadeIn("slow")},4e3);/* ----------------------------------------------------------------------------
 			BACKGROUND COLOR FADE ANIMATION
 ---------------------------------------------------------------------------- */
 // var colors = new Array(
@@ -123,6 +146,7 @@ var tl=TweenMax,audioTxt=document.querySelector(".intro-txt"),anim=tl.to(audioTx
 /* ----------------------------------------------------------------------------
 			AUDIO BUTTON
 ---------------------------------------------------------------------------- */
-const audioBtn=document.querySelector(".audio-btn"),player=document.querySelector("#sound");var audLoop=document.getElementById("sound");audLoop.loop=!0,
+const audioBtn=document.querySelector(".audio-btn"),player=document.querySelector("#sound");var audLoop=document.getElementById("sound");
+//audLoop.loop = true;
 //audLoop.load(); 
 audioBtn.addEventListener("click",function(){var e=document.getElementById("sound-icon");player.paused?(player.play(),$(e).toggleClass("fa-volume-up fa-volume-off")):(player.pause(),$(e).toggleClass("fa-volume-off fa-volume-up"))});
