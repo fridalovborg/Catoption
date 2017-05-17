@@ -11,7 +11,7 @@ body {
 }
 
 #main-page {
-	display: none;
+	//display: none;
 }
 
 .intro-page {
@@ -53,6 +53,7 @@ header {
 		text-decoration: none;
 		color: #FFF;
 		font-size: 1.8em;
+		text-shadow: 2px 2px 4px #666;
 	}
 
 	.header {
@@ -63,6 +64,7 @@ header {
 		.fa {
 			font-size: 2.4em;
 			color: #FFF;
+			text-shadow: 2px 2px 4px #666;
 		}
 	}
 }
@@ -159,17 +161,6 @@ a:hover {
 /* ----------------------------------------------------------------------------
 			AUDIO
 ---------------------------------------------------------------------------- */
-// .audio-btn {
-// 	// top: 10px;
-// 	// left: 10px;
-// 	width: 3em;
-// 	height: 3em;
-// 	border-radius: 1.5em;
-// 	text-decoration: none;
-// 	//font-size: 1.6em;
-// 	background: none;
-// 	cursor: pointer;
-// 	//border: 2px solid black;
-// 	outline: none;
-// 	z-index: 100;
-// }
+.audio-btn {
+	margin-top: -6px;
+}

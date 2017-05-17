@@ -103,9 +103,9 @@ window.addEventListener('load', getIGImages);
 /* ----------------------------------------------------------------------------
 			FIRST PAGE
 ---------------------------------------------------------------------------- */
-//var tl = TweenMax;
-//var audioTxt = document.querySelector('.intro-txt');
-//var anim = tl.to(audioTxt, 0.8, {scaleX: 1.2, scaleY: 1.2, repeat: -1, yoyo: true});
+var tl = TweenMax;
+var audioTxt = document.querySelector('.pulse-txt');
+var anim = tl.to(audioTxt, 0.8, {scaleX: 1.2, scaleY: 1.2, repeat: -1, yoyo: true});
 
 var icon = document.getElementById('icon');
 setInterval(function() {
@@ -113,13 +113,13 @@ setInterval(function() {
 }, 800);
 
 // Kommentar UNDER TIDEN - RADERA EJ DETTA!!
-setTimeout(function() {
-$('#main-page').show();
-	$('#intro-page').fadeOut();
-	//clearInterval(interval);
-	anim.kill();
-	$('#sound-btn').fadeIn('slow');
-}, 4000);
+// setTimeout(function() {
+// 	$('#main-page').show();
+// 	$('#intro-page').fadeOut();
+// 	//clearInterval(interval);
+// 	anim.kill();
+// 	$('#sound-btn').fadeIn('slow');
+// }, 4000);
 
 /* ----------------------------------------------------------------------------
 			BACKGROUND COLOR FADE ANIMATION
