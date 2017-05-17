@@ -10,7 +10,31 @@
 ---------------------------------------------------------------------------- */
 var links = document.querySelectorAll('href');
 
-links.forEach(function(link) {
+for (var i = 0; i < links.length; i++) {
+	links[i].addEventListener('click', function(e) {
+		var data = e.target.getAttribute('href');
+	    e.preventDefault();
+
+			history.replaceState(null, null, data);
+
+			//byt ut mot data-page ...någonting!
+			// if(data === 'page-one') {
+			// 	$('.page').hide();
+			// 	$('#home-page').show();
+			// } else if (data === 'page-two') {
+			// 	$('.page').hide();
+			// 	$('#insta-page').show();
+			// } else if (data === 'page-three') {
+			// 	$('.page').hide();
+			// 	$('#map-page').show();
+			// } else if (data === 'home') {
+//       $('.page').hide();
+//     }
+		e.stopPropagation();
+	}, false);
+}
+
+/*links.forEach(function(link) {
 
 	link.addEventListener('click', function(e) {
 		var data = e.target.getAttribute('href');
@@ -59,12 +83,16 @@ function navMap() {
 function getIGImages() {
 
 	var xhr = new XMLHttpRequest();
-	xhr.open("GET", "getIGdata.php", true);
+	xhr.open("GET", "getIGdata.php?foo="+Math.random(), true);
 
-	xhr.addEventListener('load', function(resp) {
-		console.log(this.responseText); 
+	xhr.addEventListener('readystatechange', function(e) {
+		console.log(this);
+
+	if (this.readyState === 4 && this.status === 200) {
 
 		document.getElementById('img-container').innerHTML = this.responseText;
+		}
+		
 	});
 
 	xhr.send();
@@ -85,13 +113,13 @@ setInterval(function() {
 }, 800);
 
 // Kommentar UNDER TIDEN - RADERA EJ DETTA!!
-// setTimeout(function() {
-// 	$('#main-page').show();
-// 	$('#intro-page').fadeOut();
-// 	clearInterval(interval);
-// 	anim.kill();
-// 	$('#sound-btn').fadeIn('slow');
-// }, 4000);
+ setTimeout(function() {
+	$('#main-page').show();
+ 	$('#intro-page').fadeOut();
+ 	clearInterval(interval);
+ 	anim.kill();
+ 	$('#sound-btn').fadeIn('slow');
+ }, 4000);
 
 /* ----------------------------------------------------------------------------
 			BACKGROUND COLOR FADE ANIMATION

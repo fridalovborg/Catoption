@@ -12,7 +12,7 @@ function initMap() {
 	var $myMarker;
 
 	if (navigator.geolocation) {
-		navigator.geolocation.watchPosition(function(position) { //getCurrentPosition
+		navigator.geolocation.getCurrentPosition(function(position) { //getCurrentPosition
 
 			// MY POSITION COORDS
 			var pos = {
