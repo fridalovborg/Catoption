@@ -12,18 +12,16 @@
 	<script src="https://use.fontawesome.com/9af20410fa.js"></script>
 </head>
 <body>
-	 <!-- <audio id="sound" autoplay="autoplay" src="abba.mp3"></audio> -->  
-	<div class="intro-page" id="intro-page" style="display: none;"> <!-- display: none; -->
+	 <audio id="sound" autoplay="autoplay" src="abba.mp3"></audio>   
+	<div class="intro-page" id="intro-page" style=""> <!-- display: none; -->
 		<div class="intro-txt">
-			<h1>Logo here!</h1>
+			<?php include 'src/img/logotype.svg'; ?>
 			<h2>Turn up your sound <i id="icon" class="fa fa-volume-down" aria-hidden="true"></i></h2>
 		</div>
 	</div>
 	<main id="main-page">
 		<header>
-			<a href="#home" onclick="navHome()" class="home">
-				<?php include 'src/img/logotype.svg'; ?>
-			</a>
+			<a href="#home" onclick="navHome()" class="home">#Catoption</a>
 			<div class="header">
 				<h3 id="sound-btn" class="audio-btn"><i id="sound-icon" class="fa fa-volume-off"></i></h3>
 				<a href="#instagram" onclick="navInsta()" class="instagram"><i class="fa fa-instagram"></i></a>
