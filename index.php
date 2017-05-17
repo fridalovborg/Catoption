@@ -43,7 +43,7 @@
 				<?php include 'src/img/chatbubble.svg'; ?>
 			</div> <!-- .svg-bubble -->
 			<div class="svg-cat">
-				<?php include 'src/img/cat.svg'; ?>
+				<?php //include 'src/img/cat.svg'; ?>
 			</div> <!-- .svg-cat -->
 		</div> <!-- #home-page, .home-page, .pages -->
 
