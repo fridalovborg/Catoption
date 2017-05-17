@@ -12,8 +12,8 @@
 	<script src="https://use.fontawesome.com/9af20410fa.js"></script>
 </head>
 <body>
-	 <audio id="sound" autoplay="autoplay" src="abba.mp3"></audio>  
-	<div class="intro-page" id="intro-page" style=""> <!-- display: none; -->
+	 <!-- <audio id="sound" autoplay="autoplay" src="abba.mp3"></audio> -->  
+	<div class="intro-page" id="intro-page" style="display: none;"> <!-- display: none; -->
 		<div class="intro-txt">
 			<h1>Logo here!</h1>
 			<h2>Turn up your sound <i id="icon" class="fa fa-volume-down" aria-hidden="true"></i></h2>
@@ -61,5 +61,6 @@
 <script src="src/js/script.js"></script>
 <script src="src/js/animation.js"></script>
 <script src="src/js/map.js"></script>
+<script src="src/js/ie.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBcWLN5wfY8TTNInU0jbCXlF6q4xUODTxY&libraries=places&callback=initMap" type="text/javascript" async></script>
 </html>
