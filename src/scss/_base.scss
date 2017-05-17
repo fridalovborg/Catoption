@@ -57,7 +57,7 @@ header {
 
 	.header {
 		width: 40%;
-		@include flexbox(flex, row wrap, flex-end, center);
+		@include flexbox(flex, row wrap, center, center);
 		margin: 0;
 
 		.fa {

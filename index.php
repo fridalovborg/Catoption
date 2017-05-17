@@ -21,9 +21,9 @@
 	</div>
 	<main id="main-page">
 		<header>
-			<a href="#home" onclick="navHome()" class="home">#Catoption</a>
+			<a href="#home" onclick="navHome()" class="home">#CATOPTION</a>
 			<div class="header">
-				<h3 id="sound-btn" class="audio-btn"><i id="sound-icon" class="fa fa-volume-off"></i></h3>
+				<div id="sound-btn" class="audio-btn"><i id="sound-icon" class="fa fa-volume-off"></i></div> <!--tidigare h3-->
 				<a href="#instagram" onclick="navInsta()" class="instagram"><i class="fa fa-instagram"></i></a>
 				<a href="#map" onclick="navMap()" class="map"><i class="fa fa-map-marker"></i></a>
 				
