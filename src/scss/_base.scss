@@ -95,9 +95,11 @@ a:hover {
 
 .svg-cat {
 	width: 100%;
-	max-height: 90vh;
-   	padding-top: 25vh;
+	height: 75vh;
+	max-height: 80vh;
+   	padding-top: 20vh;
 	cursor: pointer;
+	box-sizing: border-box;
 }
 
 .svg-bubble {
