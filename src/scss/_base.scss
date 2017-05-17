@@ -11,7 +11,7 @@ body {
 }
 
 #main-page {
-	//display: none;
+	display: none;
 }
 
 .intro-page {
@@ -22,8 +22,13 @@ body {
 	overflow: hidden;
 
 	.intro-txt {
-		padding-top: 20%;
+		padding-top: 10%;
 		color: salmon;
+	}
+
+	.cat-logotype {
+		width: 35%;
+		height: 20%;
 	}
 }
 

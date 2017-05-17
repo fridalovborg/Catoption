@@ -69,7 +69,7 @@ $(document).ready(function(){tl.fromTo(headLayers,.8,{x:-15,y:0},{x:15,y:0,yoyo:
 catBody.addEventListener("click",function(){tl.staggerFromTo([eyebrowRight,mouthRight],2,{rotation:0,transformOrigin:"center center"},{rotation:-30,transformOrigin:"center center",yoyo:!0,repeat:1}),tl.staggerFromTo([eyebrowLeft,mouthLeft],2,{rotation:0,transformOrigin:"center center"},{rotation:40,transformOrigin:"center center",yoyo:!0,repeat:1}),tl.fromTo([rightEye,leftEye],.5,{alpha:1},{alpha:0,yoyo:!0,repeat:1,repeatDelay:2}),tl.fromTo([eyesClosed],.5,{alpha:0},{alpha:1,yoyo:!0,repeat:1,repeatDelay:2}),new Audio("../audio/catpurr.mp3").play()}),
 // FRÅGA-Jenni: om att göra på detta sättet eller sättet ovan: 
 //when touching/clicking on the cats tail
-tails.addEventListener("click",angryCat),navigator.userAgent.match(/Trident\/7\./)&&($(".svg-cat").css("width","100%"),$(".svg-cat").css("height","100vh"),$(".svg-cat").css("max-height","100vh"));for(var map,infoWindow,an,links=document.querySelectorAll("href"),i=0;i<links.length;i++)links[i].addEventListener("click",function(e){var t=e.target.getAttribute("href");e.preventDefault(),history.replaceState(null,null,t),
+tails.addEventListener("click",angryCat),navigator.userAgent.match(/Trident\/7\./)&&($(".svg-cat").css("width","100%"),$(".svg-cat").css("height","100vh"),$(".svg-cat").css("max-height","100vh"),$(".cat-logotype").css("width","50%"),$(".cat-logotype").css("height","30%"));for(var map,infoWindow,an,links=document.querySelectorAll("href"),i=0;i<links.length;i++)links[i].addEventListener("click",function(e){var t=e.target.getAttribute("href");e.preventDefault(),history.replaceState(null,null,t),
 //byt ut mot data-page ...någonting!
 // if(data === 'page-one') {
 // 	$('.page').hide();
