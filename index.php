@@ -12,8 +12,8 @@
 	<script src="https://use.fontawesome.com/9af20410fa.js"></script>
 </head>
 <body>
-	<!-- <audio id="sound" autoplay="autoplay" src="abba.mp3"></audio>  -->
-	<div class="intro-page" id="intro-page" style="display: none;"> <!-- display: none; -->
+	 <audio id="sound" autoplay="autoplay" src="abba.mp3"></audio>  
+	<div class="intro-page" id="intro-page" style=""> <!-- display: none; -->
 		<div class="intro-txt">
 			<h1>Logo here!</h1>
 			<h2>Turn up your sound <i id="icon" class="fa fa-volume-down" aria-hidden="true"></i></h2>
@@ -43,7 +43,7 @@
 				<?php include 'src/img/chatbubble.svg'; ?>
 			</div> <!-- .svg-bubble -->
 			<div class="svg-cat">
-				<?php //include 'src/img/cat.svg'; ?>
+				<?php include 'src/img/cat.svg'; ?>
 			</div> <!-- .svg-cat -->
 		</div> <!-- #home-page, .home-page, .pages -->
 
