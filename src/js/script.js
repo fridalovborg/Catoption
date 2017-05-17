@@ -5,6 +5,13 @@
 // 	tl.to('.home-page', 2, {css:{backgroundImage:'linear-gradient(to left, rgb(255, 179, 255), rgb(255, 179, 179)', yoyo: true, repeat: -1}});
 // }, 50);
 // TweenLite.to($(this), 1, { css:{ backgroundImage: '-moz-linear-gradient(top, #3e3e40, #252122)'} });
+
+if ($(window).height() <= 400) {
+	$('.svg-cat').css('width', '50%');
+	$('.svg-bubble').css('width', '25%');
+	$('.svg-bubble').css('top', '20%');
+}
+
 /* ----------------------------------------------------------------------------
 			HISTORY LINK
 ---------------------------------------------------------------------------- */

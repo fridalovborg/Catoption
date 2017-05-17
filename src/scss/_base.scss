@@ -78,7 +78,6 @@ a:hover {
 ---------------------------------------------------------------------------- */
 .pages {
 	width: 100%;
-	min-height: 100vh;
 	text-align: center;
 	box-sizing: border-box;
 }
@@ -91,7 +90,7 @@ a:hover {
 	background: linear-gradient(to right,  rgb(255, 179, 179), rgb(255, 179, 255)); //test
 	color: #fff780;
 	position: relative;
-	// height: 100vh;
+	height: 100vh;
 }
 
 .svg-cat {
@@ -119,6 +118,7 @@ a:hover {
 .insta-page {
 	background-color: #f2f2f2; 
 	color: #ffa680;
+	min-height: 100vh;
 }
 
 .img-container {
@@ -137,13 +137,13 @@ a:hover {
 	background-color: bisque;
 	color: salmon;
 	padding-top: 25%;
-	// height: 100vh;
+	min-height: 100vh;
 }
 
 .the-map {
 	position: relative;
 	top: 10%;
-	height: 80vh;
+	height: 70vh;
 	width: 90%;
 	overflow: hidden;
 }
