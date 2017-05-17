@@ -1,6 +1,4 @@
-var map, infoWindow;
-
-var an = google.maps.Animation.DROP;
+var map, infoWindow, an;
 
 function initMap() {
 	map = new google.maps.Map(document.getElementById('the-map'), {
@@ -19,7 +17,7 @@ function initMap() {
 				lat: position.coords.latitude,
 				lng: position.coords.longitude
 			};
-
+			an = google.maps.Animation.DROP;
 			// MY POSITIONS MARKER
 			if ($myMarker) {
 				$myMarker.setPosition(pos);
@@ -69,6 +67,7 @@ function showPlaces(results, status) {
 }
 
 function addMarker(place) {
+	an = google.maps.Animation.DROP;
 	var marker = new google.maps.Marker({
 		map: map,
 		animation: an,
