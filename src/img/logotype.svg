@@ -2,12 +2,12 @@
   <defs>
     <style>
       .logo-1 {
-        fill: #382216;
+        fill: #ffffff;  <!--382216-->
       }
 
       .logo-2 {
         fill: none;
-        stroke: #382216;
+        stroke: #ffffff;
         stroke-miterlimit: 10;
         stroke-width: 4px;
       }

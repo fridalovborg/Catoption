@@ -8,8 +8,6 @@
     display: $display;
    
     // Styling of Flex Flow Direction - applies to: flex containers
-    // row | row-reverse | column | column-reverse
-    // nowrap | wrap | wrap-reverse
     -webkit-flex-flow: $directionWrap;
     flex-flow: $directionWrap;
 
@@ -19,4 +17,28 @@
     -webkit-align-items: $align-items;
 	align-items: $align-items;
 }
+
+@mixin linear-gradient($degrees, $color1, $color2, $color3) {
+    background: -webkit-linear-gradient($degrees, $color1, $color2, $color3); /* For Safari */
+    background: -o-linear-gradient($degrees, $color1, $color2, $color3); /* For Opera */
+    background: -moz-linear-gradient($degrees, $color1, $color2, $color3); /* For Firefox */
+    background: linear-gradient($degrees, $color1, $color2, $color3); /* Standard syntax */
+}
+
+@mixin bg-animation($str){
+    -webkit-animation: #{$str};
+    -moz-animation: #{$str};
+    -ms-animation: #{$str};
+    -o-animation: #{$str};
+    animation: #{$str};      
+}   
+
+@mixin keyframes($animationName) {
+    @-webkit-keyframes #{$animationName} { @content; }
+    @-moz-keyframes #{$animationName} { @content; }
+    @-o-keyframes #{$animationName} { @content; }
+    @keyframes #{$animationName} { @content; }
+}
+
+
 
