@@ -58,6 +58,10 @@ header {
 /* ----------------------------------------------------------------------------
 			INSTAGRAM PAGE
 ---------------------------------------------------------------------------- */
+.insta-page {
+	padding-top: 8%;
+}
+
 .img-container {
 	// padding-top: 5%;
 
@@ -71,12 +75,12 @@ header {
 ---------------------------------------------------------------------------- */
 .map-page {
 	//detta bör kanske ligga på ev heading? och generellt på all pages
-	padding-top: 10%; 
+	padding-top: 8%; 
 }
 
 .the-map {
 	position: relative;
-	top: 15%;
+	// top: 15%;
 	width: 80%;
 	overflow: hidden;
 }
