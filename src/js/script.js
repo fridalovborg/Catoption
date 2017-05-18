@@ -113,13 +113,13 @@ setInterval(function() {
 }, 800);
 
 // Kommentar UNDER TIDEN - RADERA EJ DETTA!!
-// setTimeout(function() {
-// 	$('#main-page').show();
-// 	$('#intro-page').fadeOut();
-// 	//clearInterval(interval);
-// 	anim.kill();
-// 	$('#sound-btn').fadeIn('slow');
-// }, 4000);
+setTimeout(function() {
+	$('#main-page').show();
+	$('#intro-page').fadeOut();
+	//clearInterval(interval);
+	anim.kill();
+	$('#sound-btn').fadeIn('slow');
+}, 4000);
 
 /* ----------------------------------------------------------------------------
 			BACKGROUND COLOR FADE ANIMATION
@@ -186,13 +186,13 @@ setInterval(function() {
 /* ----------------------------------------------------------------------------
 			AUDIO BUTTON
 ---------------------------------------------------------------------------- */
-const audioBtn = document.querySelector('.audio-btn');
-const player = document.querySelector('#sound');
+const audioBtn = document.querySelector('.audio-btn'); // knappen som ska slå av/på bakgrundsmusiken
+const player = document.querySelector('#sound'); // audio-elementet med ljufilen 
 
-var audLoop = document.getElementById('sound');
+var audLoop = document.getElementById('sound'); 
 
-//audLoop.loop = true;
-//audLoop.load(); 
+audLoop.loop = true;
+audLoop.load(); 
 
 audioBtn.addEventListener('click', function() {
 
