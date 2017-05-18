@@ -15,7 +15,7 @@ e?e.setPosition(o):e=new google.maps.Marker({position:o,animation:an,map:map}),
 // INFO BOX FOR MY POSITION
 google.maps.event.addListener(e,"click",function(){var e="<strong>You are here!</strong><br>";infoWindow.setContent(e),infoWindow.open(map,this)}),map.setCenter(o);var n={location:o,radius:"50000",keyword:"cat_shelter"};new google.maps.places.PlacesService(map).nearbySearch(n,showPlaces)},function(){handleLocationError(!0,infoWindow,map.getCenter())}):
 // BROWSER DO NOT SUPPORT GEOLOCATION
-handleLocationError(!1,infoWindow,map.getCenter())}function showPlaces(e,t){if(t==google.maps.places.PlacesServiceStatus.OK)for(var o=0;o<e.length;o++)addMarker(e[o]),console.log(e[o])}function addMarker(e){an=google.maps.Animation.DROP;var t=new google.maps.Marker({map:map,animation:an,position:e.geometry.location,icon:"../src/img/icon.png"});google.maps.event.addListener(t,"click",function(){var t="<strong>"+e.name+"</strong><br>";t+=e.vicinity,infoWindow.setContent(t),infoWindow.open(map,this)})}/*links.forEach(function(link) {
+handleLocationError(!1,infoWindow,map.getCenter())}function showPlaces(e,t){if(t==google.maps.places.PlacesServiceStatus.OK)for(var o=0;o<e.length;o++)addMarker(e[o]),console.log(e[o])}function addMarker(e){an=google.maps.Animation.DROP;var t=new google.maps.Marker({map:map,animation:an,position:e.geometry.location,icon:"jskampanj/img/icon.png"});google.maps.event.addListener(t,"click",function(){var t="<strong>"+e.name+"</strong><br>";t+=e.vicinity,infoWindow.setContent(t),infoWindow.open(map,this)})}/*links.forEach(function(link) {
 
 	link.addEventListener('click', function(e) {
 		var data = e.target.getAttribute('href');
@@ -86,14 +86,16 @@ tails.addEventListener("click",angryCat),navigator.userAgent.match(/Trident\/7\.
 e.stopPropagation()},!1);setInterval(getIGImages,6e4),window.addEventListener("load",getIGImages);/* ----------------------------------------------------------------------------
 			FIRST PAGE
 ---------------------------------------------------------------------------- */
-//var tl = TweenMax;
-//var audioTxt = document.querySelector('.intro-txt');
-//var anim = tl.to(audioTxt, 0.8, {scaleX: 1.2, scaleY: 1.2, repeat: -1, yoyo: true});
-var icon=document.getElementById("icon");setInterval(function(){$(icon).toggleClass("fa-volume-down fa-volume-up")},800),
+var tl=TweenMax,audioTxt=document.querySelector(".pulse-txt"),anim=tl.to(audioTxt,.8,{scaleX:1.2,scaleY:1.2,repeat:-1,yoyo:!0}),icon=document.getElementById("icon");setInterval(function(){$(icon).toggleClass("fa-volume-down fa-volume-up")},800);
 // Kommentar UNDER TIDEN - RADERA EJ DETTA!!
-setTimeout(function(){$("#main-page").show(),$("#intro-page").fadeOut(),
-//clearInterval(interval);
-anim.kill(),$("#sound-btn").fadeIn("slow")},4e3);/* ----------------------------------------------------------------------------
+// setTimeout(function() {
+// 	$('#main-page').show();
+// 	$('#intro-page').fadeOut();
+// 	//clearInterval(interval);
+// 	anim.kill();
+// 	$('#sound-btn').fadeIn('slow');
+// }, 4000);
+/* ----------------------------------------------------------------------------
 			BACKGROUND COLOR FADE ANIMATION
 ---------------------------------------------------------------------------- */
 // var colors = new Array(
