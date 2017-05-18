@@ -48,6 +48,13 @@ function chatBubblePop() {
 	}, 8000);
 }
 
+//makes the cats tail sway
+function tailMoving() {
+	setInterval(function() {
+		tl.staggerFromTo(tailAnimation, 1, {rotation: 0, transformOrigin: "center center"}, {rotation: -25, transformOrigin: "center center", yoyo: true, repeat: 1} );
+	}, 4000);
+}
+
 //when document has loaded, the head starts moving to the music and nose+whiskers start twitching
 $(document).ready(function() {
 	tl.fromTo(headLayers, 0.8, {x:-15, y:0}, {x:15, y:0, yoyo: true, repeat: -1 });
@@ -55,9 +62,8 @@ $(document).ready(function() {
 	noseAnimation(whiskers);
 	eyeBlink();
 	chatBubblePop();
-
-	//Svansanimering. blir fult!!!
-	//tl.staggerFromTo(tailAnimation, 1, {alpha: 0}, {alpha: 1, yoyo: true, repeat: -1}, 0.9);
+	tailMoving();
+	
 });
 
 paw.addEventListener('click', highfivePaw);
