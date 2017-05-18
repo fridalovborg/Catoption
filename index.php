@@ -12,7 +12,7 @@
 	<script src="https://use.fontawesome.com/9af20410fa.js"></script>
 </head>
 <body>
-	<!-- <audio id="sound" autoplay="autoplay" src="abba.mp3"></audio>  -->  
+	<audio id="sound" autoplay="autoplay" src="abba.mp3"></audio>   
 	<div class="intro-page" id="intro-page" style="display: none;"> <!-- display: none; -->
 		<div class="intro-txt">
 			<div class="cat-logotype"><?php include 'src/img/logotype.svg'; ?></div>
