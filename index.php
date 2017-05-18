@@ -46,10 +46,14 @@
 		</div> <!-- #home-page, .home-page, .pages -->
 
 		<div id="insta-page" class="insta-page pages">
+			<h2>Adopt - don't shop!</h2>
+			<h3>Use #catoption to show your support and get featured below.</h3>
 			<div id="img-container" class="img-container"></div> <!-- .img-container -->
 		</div> <!-- #insta-page, .insta-page, .pages -->
 
 		<div id="map-page" data-anchor="map" class="map-page pages">
+			<h2>Wanna adopt?</h2>
+			<h3>Find the nearest cat shelter below!</h3>
 			<div id="the-map" class="the-map"></div> <!-- .the-map -->
 		</div> <!-- #map-page, .map-page, .pages -->
 	</main> <!-- #main-page -->
