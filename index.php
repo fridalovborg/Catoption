@@ -13,9 +13,9 @@
 </head>
 <body>
 	<audio id="sound" autoplay="autoplay" src="abba.mp3"></audio>   
-	<div class="intro-page" id="intro-page" style="display: none;"> <!-- display: none; -->
+	<div class="intro-page" id="intro-page" style=""> <!-- display: none; -->
 		<div class="intro-txt">
-			<div class="cat-logotype"><?php include 'src/img/logotype.svg'; ?></div>
+			<div class="cat-logotype"> <?php include 'src/img/logotype.svg'; ?> </div>
 			<h2 class="pulse-txt">Turn up your sound <i id="icon" class="fa fa-volume-down" aria-hidden="true"></i></h2>
 		</div>
 	</div>

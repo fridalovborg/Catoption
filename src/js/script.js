@@ -113,13 +113,13 @@ setInterval(function() {
 }, 800);
 
 // Kommentar UNDER TIDEN - RADERA EJ DETTA!!
-// setTimeout(function() {
-// 	$('#main-page').show();
-// 	$('#intro-page').fadeOut();
-// 	//clearInterval(interval);
-// 	anim.kill();
-// 	$('#sound-btn').fadeIn('slow');
-// }, 4000);
+setTimeout(function() {
+	$('#main-page').show();
+	$('#intro-page').fadeOut();
+	//clearInterval(interval);
+	anim.kill();
+	$('#sound-btn').fadeIn('slow');
+}, 4000);
 
 /* ----------------------------------------------------------------------------
 			BACKGROUND COLOR FADE ANIMATION
