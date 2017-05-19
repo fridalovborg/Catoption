@@ -108,9 +108,13 @@ catBody.addEventListener('click', function() {
 	var audio = new Audio('/../../audio/catpurr.mp3');
 	audio.play();
 
-	//addValue();
+	//addValue(); //TA EJ BORT
 });
 
+// if (tails) {
+// 	catBody.kill();
+	
+// }
 
 // FRÅGA-Jenni: om att göra på detta sättet eller sättet ovan: 
 
