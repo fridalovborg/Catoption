@@ -185,3 +185,19 @@ h3 {
 .audio-btn {
 	margin-top: -6px;
 }
+
+/* ----------------------------------------------------------------------------
+			PAT COUNTER
+---------------------------------------------------------------------------- */
+.the-counter {
+	position: fixed;
+	bottom: 10px;
+	left: 10px;
+
+	h4 {
+		display: inline;
+		font-size: 1.2em;
+		color: #FFF;
+		text-shadow: 2px 2px 4px #666;
+	}
+}

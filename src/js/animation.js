@@ -73,6 +73,8 @@ function highfivePaw() {
 
 	var hfSound = new Audio('../audio/highfive.m4a');
 	hfSound.play();
+
+	//addValue();
 }
 
 //scales the cats paw when user clicks it, making it look like a high five
@@ -97,14 +99,16 @@ function highfivePaw() {
 // 	audio.play();
 // }
 
-catBody.addEventListener("click", function() {
-	tl.staggerFromTo([eyebrowRight, mouthRight], 2, {rotation: 0, transformOrigin: "center center"}, {rotation: -30, transformOrigin: "center center", yoyo: true, repeat: 1} );
-	tl.staggerFromTo([eyebrowLeft, mouthLeft], 2, {rotation: 0, transformOrigin: "center center"}, {rotation: 40, transformOrigin: "center center", yoyo: true, repeat: 1} );
+catBody.addEventListener('click', function() {
+	tl.staggerFromTo([eyebrowRight, mouthRight], 2, {rotation: 0, transformOrigin: 'center center'}, {rotation: -30, transformOrigin: "center center", yoyo: true, repeat: 1} );
+	tl.staggerFromTo([eyebrowLeft, mouthLeft], 2, {rotation: 0, transformOrigin: 'center center'}, {rotation: 40, transformOrigin: "center center", yoyo: true, repeat: 1} );
 	tl.fromTo([rightEye, leftEye], 0.5, {alpha: 1}, {alpha:0, yoyo: true, repeat: 1, repeatDelay: 2});
 	tl.fromTo([eyesClosed], 0.5, {alpha: 0}, {alpha:1, yoyo: true, repeat: 1, repeatDelay: 2});
 
-	var audio = new Audio("../audio/catpurr.mp3");
+	var audio = new Audio('/../../audio/catpurr.mp3');
 	audio.play();
+
+	//addValue();
 });
 
 

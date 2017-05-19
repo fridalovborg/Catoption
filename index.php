@@ -41,7 +41,7 @@
 				<?php include 'src/img/chatbubble.svg'; ?>
 			</div> <!-- .svg-bubble -->
 			<div class="svg-cat">
-				<?php include 'src/img/cat.svg'; ?>
+				<?php require __DIR__ . '/src/img/cat.svg'; // skriva såhär? ?> 
 			</div> <!-- .svg-cat -->
 		</div> <!-- #home-page, .home-page, .pages -->
 
@@ -56,6 +56,10 @@
 			<h3>Find the nearest cat shelter below!</h3>
 			<div id="the-map" class="the-map"></div> <!-- .the-map -->
 		</div> <!-- #map-page, .map-page, .pages -->
+		<div class="the-counter">
+			<!-- <button onclick="addValue()">Click here</button> -->
+			<h4 id="counter">1236</h4><h4> PAT THE CAT</h4>
+		</div>
 	</main> <!-- #main-page -->
 </body>
 <script src="https://code.jquery.com/jquery-3.2.0.min.js"></script>
@@ -64,5 +68,7 @@
 <script src="src/js/animation.js"></script>
 <script src="src/js/map.js"></script>
 <script src="src/js/ie.js"></script>
+<script src="src/js/db/dbconn.js"></script>
+</script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD97mFy6-G4MJo09-7p6h9UmfWKhmRozSY&libraries=places&callback=initMap" type="text/javascript" async></script>
 </html>
