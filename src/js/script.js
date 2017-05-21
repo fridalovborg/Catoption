@@ -122,3 +122,13 @@ audioBtn.addEventListener('click', function() {
 		$(audioIcon).toggleClass("fa-volume-up fa-volume-off");
 	}
 });
+
+/* ----------------------------------------------------------------------------
+			IMG LIKE WHEN CLICK
+---------------------------------------------------------------------------- */
+function test() {
+	$(document).on('click', function (event) {
+         $target = $(event.target);   
+            $target.addClass('img-like'); // CHANGE TO HEART
+    });
+}

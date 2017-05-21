@@ -49,7 +49,7 @@
 		<div id="insta-page" data-anchor="instagram" class="insta-page pages">
 			<h2>Adopt - don't shop!</h2>
 			<h3>Use #catoption to show your support and get featured below.</h3>
-			<div id="img-container" class="img-container"></div> <!-- .img-container -->
+			<div onclick="test()" id="img-container" class="img-container"></div> <!-- .img-container -->
 		</div> <!-- #insta-page, .insta-page, .pages -->
 
 		<div id="map-page" data-anchor="map" class="map-page pages">

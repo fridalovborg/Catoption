@@ -159,6 +159,11 @@ h3 {
 	img {
 		width:50%;
 	}
+	
+	// Klass läggs till när interagering med instagrambilderna (var och en)!!
+	.img-like {
+		filter: grayscale(100%);
+	}
 }
 
 /* ----------------------------------------------------------------------------
