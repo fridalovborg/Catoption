@@ -72,7 +72,7 @@ function addMarker(place) {
 		map: map,
 		animation: an,
 		position: place.geometry.location,
-		icon: '../jskampanj/src/img/icon.png'
+		icon: '../img/icon.png'
 	});
 
 	google.maps.event.addListener(marker, 'click', function() {
