@@ -1,18 +1,15 @@
-// console.log('tja');
 var counter = $('#counter');
  
 $.ajax('src/js/db/output.php').done(function(data) {
 	var json = JSON.parse(data)[0].value;
-	resault(json);
+	result(json);
 });
 
-function resault(json) {
+function result(json) {
 	counter.text(json);
 }
 
 function addValue() {
-
-	//console.log('funkar');
 	counter.text(parseInt(counter.text()) + 1);
 
 	$.ajax({

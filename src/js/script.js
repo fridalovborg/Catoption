@@ -36,7 +36,7 @@ $(function () {
 	// 	}, false);
 	// }
 
-    var currentHash = "#home";
+    var currentHash = '#home';
     
     $(document).scroll(function () {
         $('.pages').each(function () {
@@ -46,7 +46,7 @@ $(function () {
             var hash = $(this).attr('data-anchor');
 
             if (distance < 30 && distance > -30 && currentHash != hash) {
-                console.log(hash);
+                // console.log(hash);
                 history.replaceState(null, null, hash);
                 currentHash = hash;
             }
@@ -68,6 +68,11 @@ function getIGImages() {
 	if (this.readyState === 4 && this.status === 200) {
 
 		document.getElementById('img-container').innerHTML = this.responseText;
+
+		$('.img-cont').on('click',function (event) {
+			console.log('hej');
+	        $(this).toggleClass('img-like');
+	    });
 		}
 		
 	});
@@ -126,9 +131,3 @@ audioBtn.addEventListener('click', function() {
 /* ----------------------------------------------------------------------------
 			IMG LIKE WHEN CLICK
 ---------------------------------------------------------------------------- */
-function test() {
-	$(document).on('click', function (event) {
-         $target = $(event.target);   
-            $target.addClass('img-like'); // CHANGE TO A HEART
-    });
-}

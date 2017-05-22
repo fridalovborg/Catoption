@@ -10,6 +10,7 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
 	<script src="https://use.fontawesome.com/9af20410fa.js"></script>
+	<link rel="stylesheet" href="src/img/font-awesome-4.7.0/css/font-awesome.css">
 </head>
 <body>
 	<!-- <audio id="sound" autoplay="autoplay" src="abba.mp3"></audio> -->
@@ -49,7 +50,8 @@
 		<div id="insta-page" data-anchor="instagram" class="insta-page pages">
 			<h2>Adopt - don't shop!</h2>
 			<h3>Use #catoption to show your support and get featured below.</h3>
-			<div onclick="test()" id="img-container" class="img-container"></div> <!-- .img-container -->
+			<div id="img-container" class="img-container"></div> <!-- .img-container -->
+
 		</div> <!-- #insta-page, .insta-page, .pages -->
 
 		<div id="map-page" data-anchor="map" class="map-page pages">

@@ -17,8 +17,9 @@ if ($lastCache + $timeout < time() ) { // Har det gått <timeout> tid?
 
 $data = json_decode(file_get_contents("cache.txt"));
 for ($i = 0; $i < 18; $i++) {
-	// echo '<i id="like-icon" class="fa fa-heart like-icon" aria-hidden="true"></i>';
+	echo '<div class="img-cont">';
     echo '<img id="likes" src="'.$data->tag->media->nodes[$i]->thumbnail_src.'">';
+    echo '</div>';
 }
 /*echo "<pre>";
 var_dump($data->tag->media->page_info->has_next_page);
