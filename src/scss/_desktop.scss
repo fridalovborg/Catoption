@@ -30,8 +30,15 @@
 .img-container {
 	// padding-top: 2%;
 
-	img {
+	// img {
+	// 	width: 16%;
+	// }
+	.img-cont {
 		width: 16%;
+
+		&.img-like::after {
+			font-size: 3em;
+		}
 	}
 }
 
