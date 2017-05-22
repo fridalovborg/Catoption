@@ -13,6 +13,8 @@
 	<link rel="stylesheet" href="src/img/font-awesome-4.7.0/css/font-awesome.css">
 </head>
 <body>
+	<audio id="paw-sound" preload="none" src="audio/highfive.m4a"></audio>
+	<audio id="purr" preload="none" src="audio/catpurr.mp3"></audio>
 	<!-- <audio id="sound" autoplay="autoplay" src="abba.mp3"></audio> -->
 	<div class="intro-page" id="intro-page" style="display: none;"> <!-- display: none; -->
 		<div class="intro-txt">

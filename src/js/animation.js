@@ -71,8 +71,11 @@ function highfivePaw() {
 	tl.fromTo(paw, 0.3, {scale: 1, x:0, y:0}, {scale:1.3, x:0, y:-15, yoyo: true, repeat: 1});
 	tl.fromTo($('#highfive-lines'), 0.5, {alpha:0}, {alpha:1, yoyo: true, repeat: 1});
 
-	var hfSound = new Audio('../audio/highfive.m4a');
-	hfSound.play();
+	$("#paw-sound").trigger('load');
+	$("#paw-sound").trigger('play');
+
+	// var hfSound = new Audio('../audio/highfive.m4a');
+	// hfSound.play();
 
 	//addValue();
 }
@@ -87,17 +90,19 @@ function highfivePaw() {
 // });
 
 //when stroking the cat (clicking on the catBody) 
-// catBody.addEventListener('click', pleasedCat);
+catBody.addEventListener('click', pleasedCat);
 
-// function pleasedCat() {
-// 	tl.staggerFromTo([eyebrowRight, mouthRight], 2, {rotation: 0, transformOrigin: 'center center'}, {rotation: -30, transformOrigin: 'center center', yoyo: true, repeat: 1} );
-// 	tl.staggerFromTo([eyebrowLeft, mouthLeft], 2, {rotation: 0, transformOrigin: 'center center'}, {rotation: 40, transformOrigin: 'center center', yoyo: true, repeat: 1} );
-// 	tl.fromTo([rightEye, leftEye], 0.5, {alpha: 1}, {alpha:0, yoyo: true, repeat: 1, repeatDelay: 2});
-// 	tl.fromTo([eyesClosed], 0.5, {alpha: 0}, {alpha:1, yoyo: true, repeat: 1, repeatDelay: 2});
+function pleasedCat() {
+	tl.staggerFromTo([eyebrowRight, mouthRight], 2, {rotation: 0, transformOrigin: 'center center'}, {rotation: -30, transformOrigin: 'center center', yoyo: true, repeat: 1} );
+	tl.staggerFromTo([eyebrowLeft, mouthLeft], 2, {rotation: 0, transformOrigin: 'center center'}, {rotation: 40, transformOrigin: 'center center', yoyo: true, repeat: 1} );
+	tl.fromTo([rightEye, leftEye], 0.5, {alpha: 1}, {alpha:0, yoyo: true, repeat: 1, repeatDelay: 2});
+	tl.fromTo([eyesClosed], 0.5, {alpha: 0}, {alpha:1, yoyo: true, repeat: 1, repeatDelay: 2});
 
-// 	var audio = new Audio('../audio/catpurr.mp3');
-// 	audio.play();
-// }
+	$("#purr").trigger('load');
+	$("#purr").trigger('play');
+
+	
+}
 
 catBody.addEventListener('click', function() {
 	tl.staggerFromTo([eyebrowRight, mouthRight], 2, {rotation: 0, transformOrigin: 'center center'}, {rotation: -30, transformOrigin: "center center", yoyo: true, repeat: 1} );
