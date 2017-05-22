@@ -129,6 +129,6 @@ audioBtn.addEventListener('click', function() {
 function test() {
 	$(document).on('click', function (event) {
          $target = $(event.target);   
-            $target.addClass('img-like'); // CHANGE TO HEART
+            $target.addClass('img-like'); // CHANGE TO A HEART
     });
 }

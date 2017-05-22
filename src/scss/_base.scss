@@ -155,15 +155,29 @@ h3 {
 .img-container {
 	@include flexbox(flex, row wrap, flex-start, center);
 	height: initial;
+	position: relative;
+	z-index: 0;
 
 	img {
-		width:50%;
+		width: 50%;
+		z-index: 20;
 	}
 	
 	// Klass läggs till när interagering med instagrambilderna (var och en)!!
 	.img-like {
 		filter: grayscale(100%);
 	}
+
+	// .like-icon {
+	// 	z-index: 100;
+	// 	font-size: 4em;
+	// }
+
+	// .like-icon:before {
+	// 	z-index: 40;
+	// 	position: absolute;
+	// 	padding-left: 35%;
+	// }
 }
 
 /* ----------------------------------------------------------------------------
