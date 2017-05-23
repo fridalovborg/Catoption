@@ -79,17 +79,17 @@ iconInterval = setInterval(function() {
 	$(icon).toggleClass('fa-volume-down fa-volume-up');
 }, 800);
 
-// setTimeout(function() {
-// 	$('#intro-page').hide();
-// 	$('#main-page').show();
-// 	clearInterval(iconInterval);
-// 	animTxt.kill(); 
-// 	$('#sound-btn').fadeIn('slow');
-// 	$('#cnt').fadeIn('slow');
+setTimeout(function() {
+	$('#intro-page').hide();
+	$('#main-page').show();
+	clearInterval(iconInterval);
+	animTxt.kill(); 
+	$('#sound-btn').fadeIn('slow');
+	$('#cnt').fadeIn('slow');
 
-// 	var scrollto = window.location.hash;
-// 	scrollToHash(scrollto);
-// }, 4000);
+	var scrollto = window.location.hash;
+	scrollToHash(scrollto);
+}, 4000);
 
 /* ----------------------------------------------------------------------------
 			AUDIO & AUDIO BUTTON
