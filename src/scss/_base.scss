@@ -85,11 +85,17 @@ a {
 	transition: 600ms all;
 	padding-bottom: 6px;
 	cursor: pointer;
-	
 }
 
 a:hover {
 	border-bottom: 2px solid rgba(255,255,255, 1);
+}
+
+/* ----------------------------------------------------------------------------
+			AUDIO
+---------------------------------------------------------------------------- */
+.audio-btn {
+	margin-top: -6px;
 }
 
 /* ----------------------------------------------------------------------------
@@ -135,6 +141,25 @@ h3 {
 	opacity: 0;
 }
 
+#cnt {
+	display: none;
+}
+
+.the-counter {
+	position: absolute;
+	padding: 0 0 2% 5%;
+	text-align: left;
+	bottom: 0;
+	left: 0;
+
+	h4 {
+		display: inline;
+		font-size: 1.2em;
+		color: $linkcolor;
+		text-shadow: 2px 2px 4px $shadowcolor;
+	}
+}
+// TA BORT DE 3 SISTA SEN??? JENNIFER
 #highfive-lines, #semi-closed, #eyes-closed, #patme, #highfiveme, #adoptme {
 	opacity: 0;
 }
@@ -190,33 +215,4 @@ h3 {
 	height: 80vh;
 	width: 100%;
 	overflow: hidden;
-}
-
-/* ----------------------------------------------------------------------------
-			AUDIO
----------------------------------------------------------------------------- */
-.audio-btn {
-	margin-top: -6px;
-}
-
-/* ----------------------------------------------------------------------------
-			PAT COUNTER
----------------------------------------------------------------------------- */
-#cnt {
-	display: none;
-}
-
-.the-counter {
-	position: absolute;
-	padding: 0 0 2% 5%;
-	text-align: left;
-	bottom: 0;
-	left: 0;
-
-	h4 {
-		display: inline;
-		font-size: 1.2em;
-		color: $linkcolor;
-		text-shadow: 2px 2px 4px $shadowcolor;
-	}
 }
