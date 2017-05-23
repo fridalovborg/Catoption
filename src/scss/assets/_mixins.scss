@@ -1,5 +1,5 @@
 /*------------------------------------------------------------------------------
-                            Flexbox-mixin
+                           FLEXBOX MIXINS
 ------------------------------------------------------------------------------*/
 @mixin flexbox($display, $directionWrap, $justify-content, $align-items) {
     display: -webkit-flex;
@@ -39,6 +39,3 @@
     @-o-keyframes #{$animationName} { @content; }
     @keyframes #{$animationName} { @content; }
 }
-
-
-

@@ -86,9 +86,9 @@ $(document).ready(function() {
 	chatBubblePop();
 	tailMoving();	
 
-	$(document).on('click', function() {
-        player.play();
-    });
+	// $(document).on('click', function() {
+ //        player.play();
+ //    });
 
 
 //	$('#paw').css('opacity', '0');

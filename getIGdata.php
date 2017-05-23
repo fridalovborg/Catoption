@@ -1,9 +1,9 @@
 <?php
-/**
-* @TODO: Lägg till logik för att hantera tömning av cache / hantering av borttagen fil.
-*/
-$timeout = 1; // Timeout in seconds
-$lastCache = file_get_contents("cache_time.txt"); // När uppdaterades senast cachen?
+/* ----------------------------------------------------------------------------
+                INSTAGRAM API
+---------------------------------------------------------------------------- */
+$timeout = 1;
+$lastCache = file_get_contents("cache_time.txt");
 
 if ($lastCache + $timeout < time() ) { // Har det gått <timeout> tid?
     file_put_contents("cache_time.txt", time());
@@ -20,8 +20,4 @@ for ($i = 0; $i < 18; $i++) {
 	echo '<div class="img-cont">';
     echo '<img id="likes" src="'.$data->tag->media->nodes[$i]->thumbnail_src.'">';
     echo '</div>';
-}
-/*echo "<pre>";
-var_dump($data->tag->media->page_info->has_next_page);
-echo "</pre>";
-*/?>
+} ?>
