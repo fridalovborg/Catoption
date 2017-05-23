@@ -81,9 +81,9 @@ $(document).ready(function() {
 	tailMoving();	
 	bubble();
 
-	$(document).on('click', function() {
-        player.play();
-    });
+	// $(document).on('click', function() {
+ //        player.play();
+ //    });
 
 });
 

@@ -62,7 +62,7 @@ use this for updating the images of instagram page every minute.
 function getIGImages() {
 	// CREATING OBJECT
 	var xhr = new XMLHttpRequest();
-	xhr.open("GET", "getIGdata.php?foo="+Math.random(), true);
+	xhr.open('GET', 'get_insta.php?foo='+Math.random(), true);
 
 	xhr.addEventListener('readystatechange', function(e) {
 		console.log(this);
@@ -93,14 +93,14 @@ var animTxt = TweenMax.to(audioTxt, 0.8, {scaleX: 1.2, scaleY: 1.2, repeat: -1, 
 
 // INTERVAL OF VOLUME ICON
 var icon = document.getElementById('icon');
-setInterval(function() {
-	$(icon).toggleClass("fa-volume-down fa-volume-up");
+iconInterval = setInterval(function() {
+	$(icon).toggleClass('fa-volume-down fa-volume-up');
 }, 800);
 
 setTimeout(function() {
+	$('#intro-page').hide();
 	$('#main-page').show();
-	$('#intro-page').fadeOut();
-	//clearInterval(interval); // Ta bort sen??
+	clearInterval(iconInterval);
 	animTxt.kill(); 
 	$('#sound-btn').fadeIn('slow');
 	$('#cnt').fadeIn('slow');
@@ -109,21 +109,20 @@ setTimeout(function() {
 /* ----------------------------------------------------------------------------
 			AUDIO & AUDIO BUTTON
 ---------------------------------------------------------------------------- */
-const audioBtn = document.querySelector('.audio-btn');
 const player = document.querySelector('#sound');
 
-function play() {
-	player.play();
-}
+function audioBtn() {
+	if ($(window).width() < 740) {
+	   player.play();
+	}
 
-// audioBtn.addEventListener('click', function() {
-// 	var audioIcon = document.getElementById('sound-icon');
+	var audioIcon = document.getElementById('sound-icon');
 
-// 	if(!player.paused) {
-// 		player.pause();
-// 		$(audioIcon).toggleClass("fa-volume-off fa-volume-up");
-// 	} else {
-// 		player.play();
-// 		$(audioIcon).toggleClass("fa-volume-up fa-volume-off");
-// 	}
-// });
+	if(!player.paused) {
+		player.pause();
+		$(audioIcon).toggleClass('fa-volume-off fa-volume-up');
+	} else {
+		player.play();
+		$(audioIcon).toggleClass('fa-volume-up fa-volume-off');
+	}
+};

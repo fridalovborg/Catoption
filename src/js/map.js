@@ -79,7 +79,7 @@ function addMarker(place) {
 	});
 
 	google.maps.event.addListener(marker, 'click', function() {
-		var txt = "<strong>" + place.name + "</strong><br>";
+		var txt = '<strong>' + place.name + '</strong><br>';
 		txt += place.vicinity;
 
 		infoWindow.setContent(txt);

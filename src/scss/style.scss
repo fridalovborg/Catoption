@@ -1,6 +1,7 @@
 @import "assets/_mixins";
-@import 'base';
 @import 'vars/vars';
+@import 'base';
+
 
 // LANSCAPE MODE
 @media only screen 
@@ -10,11 +11,11 @@
 	and (orientation: landscape) {
 		@import 'landscape';
 }
-
+// TABLET 
 @media screen and (min-width: 740px) {
 	@import 'tablets';
 }
-
+// DESKTOP
 @media screen and (min-width: 1080px) {
 	@import 'desktop';
 }
