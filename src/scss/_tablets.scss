@@ -4,13 +4,13 @@
 
 .intro-txt {
 	padding-top: 25%;
-		
+	
+	.cat-logotype {
+		width: 25%;
+		height: 20%;
+	}
 }
-
-.cat-logotype {
-	width: 25%;
-	height: 20%;
-}	
+	
 
 
 /* ----------------------------------------------------------------------------
@@ -94,6 +94,8 @@ header {
 			PAT COUNTER
 ---------------------------------------------------------------------------- */
 .the-counter {
+	padding-left: 3%;
+
 	h4 {
 		font-size: 2em;
 	}
