@@ -60,7 +60,7 @@
 </body>
 <script src="https://code.jquery.com/jquery-3.2.0.min.js"></script>
 <script src="greensock/src/minified/TweenMax.min.js"></script>
-<script src="src/js/script.js"></script>
+<script src="src/js/main.js"></script>
 <script src="src/js/animation.js"></script>
 <script src="src/js/map.js"></script>
 <script src="src/js/ie.js"></script>
