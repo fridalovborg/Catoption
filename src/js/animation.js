@@ -1,10 +1,3 @@
-/* PROBLEM:
-1. svansen blir ful när den animeras. går detta att lösa på något sätt?
-4. de olika animationerna krockar, tex klappa kropp, svans och blinkning
-7. Fråga om vilken funktion en ska göra, se längst ner på sidan + varför funkar ljudet bara om en har olika av dessa?
-8. Fråga om varför vissa funktioner bara fungerar med $ och id och inte variablenamenet
-*/
-
 var tl = TweenMax;
 var headLayers = document.getElementById('head-layers');
 var nose = document.querySelectorAll('#nose path, #nose ellipse');
@@ -23,16 +16,26 @@ var eyesClosed = document.getElementById('eyes-closed');
 var tails = document.getElementById('tails');
 var tailAnimation = document.querySelectorAll('#tails path');
 
-var chatBubble = document.getElementsByClassName('svg-bubble');
+var chatBubbleWhole = document.getElementsByClassName('svg-bubble');
+var chatBubble = document.getElementById('chatbubble');
+var patMe = document.querySelectorAll('#patme path');
+var adoptMe = document.querySelectorAll('#adoptme path');
+var highfiveMe = document.querySelectorAll('#highfiveme path');
 
-//makes the nose and whiskers do a small rotation/shake every 5 seconds
+/* ----------------------------------------------------------------------------
+	NOSE
+	- makes the nose and whiskers do a small rotation/shake every 5 seconds
+---------------------------------------------------------------------------- */
 function noseAnimation(el) {
 	setInterval(function() {
 		tl.staggerFromTo(el, 0.2, {rotation: 0, transformOrigin: 'center center'}, {rotation: 10, transformOrigin: 'center center', yoyo: true, repeat: 1} );
 	}, 5000);
 }
 
-//makes the eyes blink every 4 seconds
+/* ----------------------------------------------------------------------------
+	EYES
+	- makes the eyes blink every 4 seconds
+---------------------------------------------------------------------------- */
 var eyeBlinkInterval;
 function eyeBlink() {
 	eyeBlinkInterval = window.setInterval(function() {
@@ -41,31 +44,75 @@ function eyeBlink() {
 	}, 4000);
 }
 
-//makes the chatBubble appear every 8 seconds
+/* ----------------------------------------------------------------------------
+	CHATBUBBLE
+	- makes the chatBubble appear every 8 seconds
+
+	
+
+
+---------------------------------------------------------------------------- */
 function chatBubblePop() {
 	setInterval(function() {
 		tl.fromTo(chatBubble, 0.7, {alpha: 0}, {alpha:1, yoyo: true, repeat: 1, repeatDelay: 1});
-	}, 8000);
+
+		setInterval(function() {
+			tl.fromTo(patMe, 0.7, {alpha: 0}, {alpha:1, yoyo: true, repeat: 1, repeatDelay: 1});
+		}, 3000);
+
+		setInterval(function() {
+			tl.fromTo(adoptMe, 0.7, {alpha: 0}, {alpha:1, yoyo: true, repeat: 1, repeatDelay: 1});
+		}, 6000);
+
+		setInterval(function() {
+			tl.fromTo(highfiveMe, 0.7, {alpha: 0}, {alpha:1, yoyo: true, repeat: 1, repeatDelay: 1});
+		}, 9000);
+
+	}, 3000);
 }
 
-//makes the cats tail sway
+/* ----------------------------------------------------------------------------
+	TAIL IS MOVING
+	- makes the cats tail sway
+---------------------------------------------------------------------------- */
 function tailMoving() {
 	setInterval(function() {
 		tl.staggerFromTo(tailAnimation, 1, {rotation: 0, transformOrigin: "center center"}, {rotation: -25, transformOrigin: "center center", yoyo: true, repeat: 1} );
 	}, 4000);
 }
 
-//when document has loaded, the head starts moving to the music and nose+whiskers start twitching
+/* ----------------------------------------------------------------------------
+	HEAD
+	- when document has loaded, the head starts moving to the music 
+	- nose+whiskers start twitching
+---------------------------------------------------------------------------- */
 $(document).ready(function() {
 	tl.fromTo(headLayers, 0.8, {x:-15, y:0}, {x:15, y:0, yoyo: true, repeat: -1 });
 	noseAnimation(nose);
 	noseAnimation(whiskers);
 	eyeBlink();
 	chatBubblePop();
-	tailMoving();
-	
+	tailMoving();	
+
+	$(document).on('click', function() {
+        player.play();
+    });
+
+
+//	$('#paw').css('opacity', '0');
+patMe.css('opacity', '0');
+highfiveMe.css('opacity', '0');
+adoptMe.css('opacity', '0');
+
+
 });
 
+/* ----------------------------------------------------------------------------
+	PAW
+	- scales the paw and adds highfive lines when user clicks the cats paw
+	- triggers and plays highfive sounds
+	- adds +1 to the pay the cat counter
+---------------------------------------------------------------------------- */
 paw.addEventListener('click', highfivePaw);
 function highfivePaw() {
 	tl.fromTo(paw, 0.3, {scale: 1, x:0, y:0}, {scale:1.3, x:0, y:-15, yoyo: true, repeat: 1});
@@ -74,22 +121,16 @@ function highfivePaw() {
 	$("#paw-sound").trigger('load');
 	$("#paw-sound").trigger('play');
 
-	// var hfSound = new Audio('../audio/highfive.m4a');
-	// hfSound.play();
-
-	addValue();
+	addValue(); 
 }
 
-//scales the cats paw when user clicks it, making it look like a high five
-// paw.addEventListener("click", function(){
-// 	tl.fromTo(paw, 0.3, {scale: 1, x:0, y:0}, {scale:1.3, x:0, y:-15, yoyo: true, repeat: 1});
-// 	tl.fromTo($('#highfive-lines'), 0.5, {alpha:0}, {alpha:1, yoyo: true, repeat: 1});
-
-// 	var hfSound = new Audio("../audio/highfive.m4a");
-// 	hfSound.play();
-// });
-
-//when stroking the cat (clicking on the catBody) 
+/* ----------------------------------------------------------------------------
+	BODY
+	- when stroking the cat (clicking on the catBody), the eyebrows rotate
+	  and eyes goes from open to closed
+	- cat purring sounds triggers and plays
+	- adds +1 to the pay the cat counter  
+---------------------------------------------------------------------------- */
 catBody.addEventListener('click', pleasedCat);
 function pleasedCat() {
 	tl.staggerFromTo([eyebrowRight, mouthRight], 2, {rotation: 0, transformOrigin: 'center center'}, {rotation: -30, transformOrigin: 'center center', yoyo: true, repeat: 1} );
@@ -100,30 +141,14 @@ function pleasedCat() {
 	$("#purr").trigger('load');
 	$("#purr").trigger('play');
 
-	
+	addValue();
 }
 
-catBody.addEventListener('click', function() {
-	tl.staggerFromTo([eyebrowRight, mouthRight], 2, {rotation: 0, transformOrigin: 'center center'}, {rotation: -30, transformOrigin: "center center", yoyo: true, repeat: 1} );
-	tl.staggerFromTo([eyebrowLeft, mouthLeft], 2, {rotation: 0, transformOrigin: 'center center'}, {rotation: 40, transformOrigin: "center center", yoyo: true, repeat: 1} );
-	tl.fromTo([rightEye, leftEye], 0.5, {alpha: 1}, {alpha:0, yoyo: true, repeat: 1, repeatDelay: 2});
-	tl.fromTo([eyesClosed], 0.5, {alpha: 0}, {alpha:1, yoyo: true, repeat: 1, repeatDelay: 2});
-
-	var audio = new Audio('/../../audio/catpurr.mp3');
-	audio.play();
-
-	addValue(); //TA EJ BORT
-});
-
-// if (tails) {
-// 	catBody.kill();
-	
-// }
-
-// FRÅGA-Jenni: om att göra på detta sättet eller sättet ovan: 
-
-
-//when touching/clicking on the cats tail
+/* ----------------------------------------------------------------------------
+	TAIL PULL
+	- when touching/clicking on the cats tail, the cats eye become semiclosed,
+	  and eyebrows rotate to make an angry face
+---------------------------------------------------------------------------- */
 tails.addEventListener('click', angryCat);
 function angryCat() {
 /*	window.clearInterval(eyeBlinkInterval);
@@ -131,11 +156,6 @@ function angryCat() {
 		eyeBlink();
 	}, 4000);
 */
-
-if(TweenMax.isTweening(eyeBlink)) {
-		return;
-	}
-
 	tl.fromTo(semiClosed, 0.5, {alpha: 0}, {alpha:1, yoyo: true, repeat: 1, repeatDelay: 2});
 	tl.staggerFromTo($('#eyebrow-right'), 1, {rotation: 0, transformOrigin: 'center center'}, {rotation: -50, transformOrigin: 'center center', yoyo: true, repeat: 1, repeatDelay: 0.5});
 	tl.staggerFromTo($('#eyebrow-left'), 1, {rotation: 0, transformOrigin: 'center center'}, {rotation: 60, transformOrigin: 'center center', yoyo: true, repeat: 1, repeatDelay: 0.5});
