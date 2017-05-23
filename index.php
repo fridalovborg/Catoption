@@ -16,7 +16,7 @@
 <body>
 	<audio id="paw-sound" preload="none" src="audio/highfive.m4a"></audio>
 	<audio id="purr" preload="none" src="audio/catpurr.mp3"></audio>
-	 <audio id="sound" autoplay="autoplay" src="abba.mp3"></audio> 
+	<audio id="sound" autoplay="autoplay" src="abba.mp3"></audio> 
 	<div class="intro-page" id="intro-page" style=""> <!-- display: none; -->
 		<div class="intro-txt">
 			<div class="cat-logotype"> <?php include 'src/img/logotype.svg'; ?> </div>
@@ -48,6 +48,9 @@
 			<div class="svg-cat">
 				<?php include 'src/img/cat.svg'; // require __DIR__ . skriva såhär? ?> 
 			</div> <!-- .svg-cat -->
+			<div id="cnt" class="the-counter">
+				<h4 id="counter"></h4><h4> PAT THE CAT</h4> 
+			</div>
 		</div> <!-- #home-page, .home-page, .pages -->
 
 		<div id="insta-page" data-anchor="instagram" class="insta-page pages">
@@ -62,9 +65,6 @@
 			<h3>Find the nearest cat shelter below!</h3>
 			<div id="the-map" class="the-map"></div> <!-- .the-map -->
 		</div> <!-- #map-page, .map-page, .pages -->
-		<div id="cnt" class="the-counter">
-			<h4 id="counter"></h4><h4> PAT THE CAT</h4> 
-		</div>
 	</main> <!-- #main-page -->
 </body>
 <script src="https://code.jquery.com/jquery-3.2.0.min.js"></script>
@@ -73,7 +73,8 @@
 <script src="src/js/animation.js"></script>
 <script src="src/js/map.js"></script>
 <script src="src/js/ie.js"></script>
-<!-- <script src="src/js/db/dbconn.js"></script> Utkommenterad sålänge --> 
+ <script src="src/js/db/dbconn.js"></script> 
+ <!--Utkommenterad sålänge  -->
 </script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD97mFy6-G4MJo09-7p6h9UmfWKhmRozSY&libraries=places&callback=initMap" type="text/javascript" async></script>
 </html>
