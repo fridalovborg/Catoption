@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="description" content="Catoption - adopt dont shop">
 	<meta name="author" content="Catoption Team">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<link rel="icon" type="image/png" sizes="96x96" href="src/img/favicon.png">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Catoption</title>
@@ -62,7 +63,7 @@
 			<div id="the-map" class="the-map"></div> <!-- .the-map -->
 		</div> <!-- #map-page, .map-page, .pages -->
 		<div id="cnt" class="the-counter">
-			<h4 id="counter">1234</h4><h4> PAT THE CAT</h4> 
+			<h4 id="counter"></h4><h4> PAT THE CAT</h4> 
 		</div>
 	</main> <!-- #main-page -->
 </body>
