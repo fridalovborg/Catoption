@@ -64,12 +64,6 @@ header {
 }
 
 .img-container {
-	// padding-top: 5%;
-
-	// img {
-	// 	width: 33.3%;
-	// }
-
 	.img-cont {
 		width: 33.3%;
 
@@ -80,13 +74,11 @@ header {
 			MAP PAGE
 ---------------------------------------------------------------------------- */
 .map-page {
-	//detta bör kanske ligga på ev heading? och generellt på all pages
 	padding-top: 8%; 
 }
 
 .the-map {
 	position: relative;
-	// top: 15%;
 	width: 80%;
 	overflow: hidden;
 }

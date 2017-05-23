@@ -1,5 +1,5 @@
 /*------------------------------------------------------------------------------
-                           FLEXBOX MIXINS
+                           FLEXBOX MIXIN
 ------------------------------------------------------------------------------*/
 @mixin flexbox($display, $directionWrap, $justify-content, $align-items) {
     display: -webkit-flex;
@@ -7,7 +7,6 @@
     display: -webkit-flex;
     display: $display;
    
-    // Styling of Flex Flow Direction - applies to: flex containers
     -webkit-flex-flow: $directionWrap;
     flex-flow: $directionWrap;
 
@@ -18,6 +17,9 @@
 	align-items: $align-items;
 }
 
+/*------------------------------------------------------------------------------
+                        LINEAR-GRADIENT MIXIN
+------------------------------------------------------------------------------*/
 @mixin linear-gradient($degrees, $color1, $color2, $color3) {
     background: -webkit-linear-gradient($degrees, $color1, $color2, $color3); /* For Safari */
     background: -o-linear-gradient($degrees, $color1, $color2, $color3); /* For Opera */
@@ -25,6 +27,9 @@
     background: linear-gradient($degrees, $color1, $color2, $color3); /* Standard syntax */
 }
 
+/*------------------------------------------------------------------------------
+                        ANIMATION MIXIN
+------------------------------------------------------------------------------*/
 @mixin bg-animation($str){
     -webkit-animation: #{$str};
     -moz-animation: #{$str};
