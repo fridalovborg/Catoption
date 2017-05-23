@@ -77,7 +77,7 @@ function highfivePaw() {
 	// var hfSound = new Audio('../audio/highfive.m4a');
 	// hfSound.play();
 
-	//addValue();
+	addValue();
 }
 
 //scales the cats paw when user clicks it, making it look like a high five
@@ -91,7 +91,6 @@ function highfivePaw() {
 
 //when stroking the cat (clicking on the catBody) 
 catBody.addEventListener('click', pleasedCat);
-
 function pleasedCat() {
 	tl.staggerFromTo([eyebrowRight, mouthRight], 2, {rotation: 0, transformOrigin: 'center center'}, {rotation: -30, transformOrigin: 'center center', yoyo: true, repeat: 1} );
 	tl.staggerFromTo([eyebrowLeft, mouthLeft], 2, {rotation: 0, transformOrigin: 'center center'}, {rotation: 40, transformOrigin: 'center center', yoyo: true, repeat: 1} );
@@ -113,7 +112,7 @@ catBody.addEventListener('click', function() {
 	var audio = new Audio('/../../audio/catpurr.mp3');
 	audio.play();
 
-	//addValue(); //TA EJ BORT
+	addValue(); //TA EJ BORT
 });
 
 // if (tails) {
@@ -127,10 +126,15 @@ catBody.addEventListener('click', function() {
 //when touching/clicking on the cats tail
 tails.addEventListener('click', angryCat);
 function angryCat() {
-	window.clearInterval(eyeBlinkInterval);
+/*	window.clearInterval(eyeBlinkInterval);
 	setTimeout(function() {
 		eyeBlink();
-	}, 3000);
+	}, 4000);
+*/
+
+if(TweenMax.isTweening(eyeBlink)) {
+		return;
+	}
 
 	tl.fromTo(semiClosed, 0.5, {alpha: 0}, {alpha:1, yoyo: true, repeat: 1, repeatDelay: 2});
 	tl.staggerFromTo($('#eyebrow-right'), 1, {rotation: 0, transformOrigin: 'center center'}, {rotation: -50, transformOrigin: 'center center', yoyo: true, repeat: 1, repeatDelay: 0.5});
