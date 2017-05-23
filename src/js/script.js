@@ -56,50 +56,52 @@ $(function () {
 
 /* ----------------------------------------------------------------------------
 			UPDATE IMAGES IN REALTIME
+- XMLHttpRequest updates part of the webpage without reloading the page. We
+use this for updating the images of instagram page every minute. 
 ---------------------------------------------------------------------------- */
 function getIGImages() {
-
+	// CREATING OBJECT
 	var xhr = new XMLHttpRequest();
 	xhr.open("GET", "getIGdata.php?foo="+Math.random(), true);
 
 	xhr.addEventListener('readystatechange', function(e) {
 		console.log(this);
+		// readyState PROPERTY IS 4 & status PROPERTY IS 200, RESPONSE IS READY
+		if (this.readyState === 4 && this.status === 200) {
+			// IMG AND REPLACE CONTAINER
+			document.getElementById('img-container').innerHTML = this.responseText;
 
-	if (this.readyState === 4 && this.status === 200) {
-
-		document.getElementById('img-container').innerHTML = this.responseText;
-
-		$('.img-cont').on('click',function (event) {
-			console.log('hej');
-	        $(this).toggleClass('img-like');
-	    });
+			// LIKE FUNCTION WHEN CLIKCING ON IMG
+			$('.img-cont').on('click',function (event) {
+		        $(this).toggleClass('img-like');
+		    });
 		}
-		
-	});
-
+	}); 
 	xhr.send();
 }
-setInterval(getIGImages, 60000);
-window.addEventListener('load', getIGImages);
+setInterval(getIGImages, 60000); // INTERVAL OF NEW IMAGES EVERY MINUTE
+window.addEventListener('load', getIGImages); // FIRST SET OF IMAGES WHEN WINDOW LOADS
 
 /* ----------------------------------------------------------------------------
-			FIRST PAGE
+			INTRO PAGE 
+- TweenMax animation on introtext
+- toggle between volume icons
+- timeout function that clears the intropage and shows the homepage
 ---------------------------------------------------------------------------- */
-var tl = TweenMax;
 var audioTxt = document.querySelector('.pulse-txt');
-var anim = tl.to(audioTxt, 0.8, {scaleX: 1.2, scaleY: 1.2, repeat: -1, yoyo: true});
+var animTxt = TweenMax.to(audioTxt, 0.8, {scaleX: 1.2, scaleY: 1.2, repeat: -1, yoyo: true});
 
+// INTERVAL OF VOLUME ICON
 var icon = document.getElementById('icon');
 setInterval(function() {
 	$(icon).toggleClass("fa-volume-down fa-volume-up");
 }, 800);
 
-// Kommentar UNDER TIDEN - RADERA EJ DETTA!!
 setTimeout(function() {
 	$('#main-page').show();
 	$('#intro-page').fadeOut();
-	//clearInterval(interval);
-	anim.kill();
+	//clearInterval(interval); // Ta bort sen??
+	animTxt.kill(); 
 	$('#sound-btn').fadeIn('slow');
 	$('#cnt').fadeIn('slow');
 }, 4000);
@@ -107,16 +109,10 @@ setTimeout(function() {
 /* ----------------------------------------------------------------------------
 			AUDIO BUTTON
 ---------------------------------------------------------------------------- */
-const audioBtn = document.querySelector('.audio-btn'); // knappen som ska slå av/på bakgrundsmusiken
-const player = document.querySelector('#sound'); // audio-elementet med ljufilen 
-player.play(); // Testa om musiken är på från början nu i mobil? Pga blev tvärt om i mobilen.  
-
-//var audLoop = document.getElementById('sound'); // Byta ut till player?  eller ta bort helt
-//audLoop.loop = true;
-//audLoop.load();
+const audioBtn = document.querySelector('.audio-btn');
+const player = document.querySelector('#sound');
 
 audioBtn.addEventListener('click', function() {
-
 	var audioIcon = document.getElementById('sound-icon');
 
 	if(!player.paused) {

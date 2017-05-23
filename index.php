@@ -16,7 +16,7 @@
 <body>
 	<audio id="paw-sound" preload="none" src="audio/highfive.m4a"></audio>
 	<audio id="purr" preload="none" src="audio/catpurr.mp3"></audio>
-	<audio id="sound" autoplay="autoplay" src="abba.mp3"></audio> 
+	<audio id="sound" src="abba.mp3" autoplay loop></audio> 
 	<div class="intro-page" id="intro-page" style=""> <!-- display: none; -->
 		<div class="intro-txt">
 			<div class="cat-logotype"> <?php include 'src/img/logotype.svg'; ?> </div>
@@ -25,22 +25,14 @@
 	</div>
 	<main id="main-page">
 		<header>
-			<!-- TODO: Byta ut <a> mot h1, i osv. -->
 			<a onclick="navHome()" class="home">#CATOPTION</a>
 			<div class="header">
-				<div id="sound-btn" class="audio-btn"><i id="sound-icon" class="fa fa-volume-off"></i></div> <!--tidigare h3-->
+				<div id="sound-btn" class="audio-btn"><i id="sound-icon" class="fa fa-volume-off"></i></div>
 				<a onclick="navInsta()" class="instagram"><i class="fa fa-instagram"></i></a>
 				<a onclick="navMap()" class="map"><i class="fa fa-map-marker"></i></a>
-				
-				<!-- TA INTE BORT NÅGONTING / FRIDA -->
-				<!-- <h2><i class="fa fa-volume-off"></i></h2>
-				<h2 onclick="navInsta()" class="instagram"><i class="fa fa-instagram"></i></h2> 
-				<h2 onclick="navMap()" class="map"><i class="fa fa-map-marker"></i></h2> -->
-
 			</div> <!-- .header -->
 		</header>
-		
-		<!--addera data-anchor="home" samt a href #home i meny-->
+
 		<div id="home-page" data-anchor="home" class="home-page pages">
 			<div class="svg-bubble">
 				<?php include 'src/img/chatbubble.svg'; ?>
@@ -50,14 +42,13 @@
 			</div> <!-- .svg-cat -->
 			<div id="cnt" class="the-counter">
 				<h4 id="counter"></h4><h4> PAT THE CAT</h4> 
-			</div>
+			</div> <!-- #cnt, .the-counter -->
 		</div> <!-- #home-page, .home-page, .pages -->
 
 		<div id="insta-page" data-anchor="instagram" class="insta-page pages">
 			<h2>Adopt - don't shop!</h2>
 			<h3>Use #catoption to show your support and get featured below.</h3>
 			<div id="img-container" class="img-container"></div> <!-- .img-container -->
-
 		</div> <!-- #insta-page, .insta-page, .pages -->
 
 		<div id="map-page" data-anchor="map" class="map-page pages">
@@ -73,8 +64,7 @@
 <script src="src/js/animation.js"></script>
 <script src="src/js/map.js"></script>
 <script src="src/js/ie.js"></script>
- <script src="src/js/db/dbconn.js"></script> 
- <!--Utkommenterad sålänge  -->
+<script src="src/js/db/dbconn.js"></script>
 </script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD97mFy6-G4MJo09-7p6h9UmfWKhmRozSY&libraries=places&callback=initMap" type="text/javascript" async></script>
 </html>
