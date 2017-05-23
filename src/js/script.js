@@ -109,21 +109,20 @@ setTimeout(function() {
 /* ----------------------------------------------------------------------------
 			AUDIO & AUDIO BUTTON
 ---------------------------------------------------------------------------- */
-const audioBtn = document.querySelector('.audio-btn');
 const player = document.querySelector('#sound');
 
-function play() {
-	player.play();
-}
+function audioBtn() {
+	if ($(window).width() < 740) {
+	   player.play();
+	}
 
-// audioBtn.addEventListener('click', function() {
-// 	var audioIcon = document.getElementById('sound-icon');
+	var audioIcon = document.getElementById('sound-icon');
 
-// 	if(!player.paused) {
-// 		player.pause();
-// 		$(audioIcon).toggleClass("fa-volume-off fa-volume-up");
-// 	} else {
-// 		player.play();
-// 		$(audioIcon).toggleClass("fa-volume-up fa-volume-off");
-// 	}
-// });
+	if(!player.paused) {
+		player.pause();
+		$(audioIcon).toggleClass("fa-volume-off fa-volume-up");
+	} else {
+		player.play();
+		$(audioIcon).toggleClass("fa-volume-up fa-volume-off");
+	}
+};

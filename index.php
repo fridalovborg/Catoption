@@ -13,7 +13,7 @@
 	<script src="https://use.fontawesome.com/9af20410fa.js"></script>
 	<link rel="stylesheet" href="src/img/font-awesome-4.7.0/css/font-awesome.css">
 </head>
-<body onclick="play()">
+<body>
 	<audio id="paw-sound" preload="none" src="audio/highfive.m4a"></audio>
 	<audio id="purr" preload="none" src="audio/catpurr.mp3"></audio>
 	<audio id="sound" src="abba.mp3" autoplay loop></audio> 
@@ -27,7 +27,7 @@
 		<header>
 			<a onclick="navHome()" class="home">#CATOPTION</a>
 			<div class="header">
-				<div id="sound-btn" class="audio-btn"><i id="sound-icon" class="fa fa-volume-off"></i></div>
+				<div id="sound-btn" onclick="audioBtn()" class="audio-btn"><i id="sound-icon" class="fa fa-volume-off"></i></div>
 				<a onclick="navInsta()" class="instagram"><i class="fa fa-instagram"></i></a>
 				<a onclick="navMap()" class="map"><i class="fa fa-map-marker"></i></a>
 			</div> <!-- .header -->
