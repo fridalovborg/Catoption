@@ -17,7 +17,7 @@
 	<audio id="paw-sound" preload="none" src="audio/highfive.m4a"></audio>
 	<audio id="purr" preload="none" src="audio/catpurr.mp3"></audio>
 	<audio id="sound" src="abba.mp3" autoplay loop></audio> 
-	<div class="intro-page" id="intro-page" style=""> <!-- display: none; -->
+	<div class="intro-page" id="intro-page" style="display: none;"> <!-- display: none; -->
 		<div class="intro-txt">
 			<div class="cat-logotype"> <?php include 'src/img/logotype.svg'; ?> </div>
 			<h2 class="pulse-txt">Turn up your sound <i id="icon" class="fa fa-volume-down" aria-hidden="true"></i></h2>
@@ -26,14 +26,14 @@
 	<main id="main-page">
 		<header>
 			<a href="#home" class="home">#CATOPTION</a>
-			<div class="header">
+			<!-- <div class="header"> -->
 				<div id="sound-btn" onclick="audioBtn()" class="audio-btn"><i id="sound-icon" class="fa fa-volume-off"></i></div>
-				<a href="#instagram" class="instagram"><i class="fa fa-instagram"></i></a>
-				<a href="#map" class="map"><i class="fa fa-map-marker"></i></a>
-			</div> <!-- .header -->
+				<a href="#instagram" class="instagram fa"></a>
+				<a href="#map" class="map fa"></a>
+			<!-- </div> --> <!-- .header -->
 		</header>
 
-		<div id="home" data-anchor="home" class="home-page pages">
+		<div id="home" class="home-page pages">
 			<div class="svg-bubble" id="bubble-div">
                 <div id="bubble1"><?php include 'src/img/chatbubble.svg'; ?></div>
                 <div id="bubble2"><?php include 'src/img/chatbubble2.svg'; ?></div>
@@ -47,13 +47,13 @@
 			</div> <!-- #cnt, .the-counter -->
 		</div> <!-- #home-page, .home-page, .pages -->
 	
-		<div id="instagram" data-anchor="instagram" class="insta-page pages">
+		<div id="instagram" class="insta-page pages">
 			<h2>Adopt - don't shop!</h2>
 			<h3>Use #catoption to show your support and get featured below.</h3>
 			<div id="img-container" class="img-container"></div> <!-- .img-container -->
 		</div> <!-- #insta-page, .insta-page, .pages -->
 
-		<div id="map" data-anchor="map" class="map-page pages">
+		<div id="map" class="map-page pages">
 			<h2>Wanna adopt?</h2>
 			<h3>Find the nearest cat shelter below!</h3>
 			<div id="the-map" class="the-map"></div> <!-- .the-map -->

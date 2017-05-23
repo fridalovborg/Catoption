@@ -1,64 +1,40 @@
 /* ----------------------------------------------------------------------------
-			SCROLL EFFECT
----------------------------------------------------------------------------- */
-// function navHome() {
-//     $('html, body').animate({ scrollTop: $('#home-page').offset().top }, 'slow');
-//     return false;
-// }
-
-// function navInsta() {
-//     $('html, body').animate({ scrollTop: $('#insta-page').offset().top }, 'slow');
-//     return false;
-// }
-
-// function navMap() {
-//     $('html, body').animate({ scrollTop: $('#map-page').offset().top }, 'slow');
-//     return false;
-// }
-
-
-function scrollToHash(hash) {
-    $('html, body').animate({ scrollTop: $(hash).offset().top }, 'slow');
-    return false;
-}
-
-// scrollToHash("#insta-page");
-
-
-
-/* ----------------------------------------------------------------------------
-			HISTORY LINK - TODO: SLÅ SAMMAN MED SCROLL EFFECT
+			LINK HASH
 ---------------------------------------------------------------------------- */
 $(function () {
-	var links = document.querySelectorAll('href');
+	var links = document.querySelectorAll('a');
 
 	for (var i = 0; i < links.length; i++) {
 		links[i].addEventListener('click', function(e) {
 			var data = e.target.getAttribute('href');
 		    e.preventDefault();
-			// history.pushState(null, null, data);
 			scrollToHash(data);
 			e.stopPropagation();
 		}, false);
 	}
 
-    var currentHash = '#home';
-    
+    var currentHash;
     $(document).scroll(function () {
         $('.pages').each(function () {
             var top = window.pageYOffset;
             var distance = top - $(this).offset().top;
-            // var hash = $(this).attr('href');
-            var hash = $(this).attr('data-anchor');
+            var hash = $(this).attr('id');
 
             if (distance < 30 && distance > -30 && currentHash != hash) {
-                // console.log(hash);
-                history.pushState(null, null, hash);
+                history.pushState(null, null, '#' + hash);
                 currentHash = hash;
             }
         });
     });
 });
+
+/* ----------------------------------------------------------------------------
+			SCROLL EFFECT TO HASH
+---------------------------------------------------------------------------- */
+function scrollToHash(hash) {
+    $('html, body').animate({ scrollTop: $(hash).offset().top }, 'slow');
+    return false;
+}
 
 /* ----------------------------------------------------------------------------
 			UPDATE IMAGES IN REALTIME
@@ -103,14 +79,17 @@ iconInterval = setInterval(function() {
 	$(icon).toggleClass('fa-volume-down fa-volume-up');
 }, 800);
 
-setTimeout(function() {
-	$('#intro-page').hide();
-	$('#main-page').show();
-	clearInterval(iconInterval);
-	animTxt.kill(); 
-	$('#sound-btn').fadeIn('slow');
-	$('#cnt').fadeIn('slow');
-}, 4000);
+// setTimeout(function() {
+// 	$('#intro-page').hide();
+// 	$('#main-page').show();
+// 	clearInterval(iconInterval);
+// 	animTxt.kill(); 
+// 	$('#sound-btn').fadeIn('slow');
+// 	$('#cnt').fadeIn('slow');
+
+// 	var scrollto = window.location.hash;
+// 	scrollToHash(scrollto);
+// }, 4000);
 
 /* ----------------------------------------------------------------------------
 			AUDIO & AUDIO BUTTON
@@ -118,9 +97,9 @@ setTimeout(function() {
 const player = document.querySelector('#sound');
 
 function audioBtn() {
-	if ($(window).width() < 740) {
-	   player.play();
-	}
+	// if ($(window).width() < 740) {
+	//    player.play();
+	// } TA BORT ???
 
 	var audioIcon = document.getElementById('sound-icon');
 
