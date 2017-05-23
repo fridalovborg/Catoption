@@ -134,11 +134,11 @@ h3 {
 }
 
 .svg-bubble {
-	width: 40%;
-	position: absolute;
-	top: 10%;
-	left: 8%;
-	opacity: 0;
+    width: 40%;
+    position: absolute;
+    top: 10%;
+    left: 8%;
+    //opacity: 0;
 }
 
 #cnt {
@@ -159,9 +159,9 @@ h3 {
 		text-shadow: 2px 2px 4px $shadowcolor;
 	}
 }
-// TA BORT DE 3 SISTA SEN??? JENNIFER
-#highfive-lines, #semi-closed, #eyes-closed, #patme, #highfiveme, #adoptme {
-	opacity: 0;
+
+#highfive-lines, #semi-closed, #eyes-closed {
+    opacity: 0;
 }
 
 /* ----------------------------------------------------------------------------

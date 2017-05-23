@@ -25,18 +25,20 @@
 	</div>
 	<main id="main-page">
 		<header>
-			<a onclick="navHome()" class="home">#CATOPTION</a>
+			<a href="#home" class="home">#CATOPTION</a>
 			<div class="header">
 				<div id="sound-btn" onclick="audioBtn()" class="audio-btn"><i id="sound-icon" class="fa fa-volume-off"></i></div>
-				<a onclick="navInsta()" class="instagram"><i class="fa fa-instagram"></i></a>
-				<a onclick="navMap()" class="map"><i class="fa fa-map-marker"></i></a>
+				<a href="#instagram" class="instagram"><i class="fa fa-instagram"></i></a>
+				<a href="#map" class="map"><i class="fa fa-map-marker"></i></a>
 			</div> <!-- .header -->
 		</header>
 
-		<div id="home-page" data-anchor="home" class="home-page pages">
-			<div class="svg-bubble">
-				<?php include 'src/img/chatbubble.svg'; ?>
-			</div> <!-- .svg-bubble -->
+		<div id="home" data-anchor="home" class="home-page pages">
+			<div class="svg-bubble" id="bubble-div">
+                <div id="bubble1"><?php include 'src/img/chatbubble.svg'; ?></div>
+                <div id="bubble2"><?php include 'src/img/chatbubble2.svg'; ?></div>
+                <div id="bubble3"><?php include 'src/img/chatbubble3.svg'; ?></div>
+            </div> <!-- .svg-bubble -->
 			<div class="svg-cat">
 				<?php include 'src/img/cat.svg'; // require __DIR__ . skriva såhär? ?> 
 			</div> <!-- .svg-cat -->
@@ -44,14 +46,14 @@
 				<h4 id="counter"></h4><h4> PAT THE CAT</h4> 
 			</div> <!-- #cnt, .the-counter -->
 		</div> <!-- #home-page, .home-page, .pages -->
-
-		<div id="insta-page" data-anchor="instagram" class="insta-page pages">
+	
+		<div id="instagram" data-anchor="instagram" class="insta-page pages">
 			<h2>Adopt - don't shop!</h2>
 			<h3>Use #catoption to show your support and get featured below.</h3>
 			<div id="img-container" class="img-container"></div> <!-- .img-container -->
 		</div> <!-- #insta-page, .insta-page, .pages -->
 
-		<div id="map-page" data-anchor="map" class="map-page pages">
+		<div id="map" data-anchor="map" class="map-page pages">
 			<h2>Wanna adopt?</h2>
 			<h3>Find the nearest cat shelter below!</h3>
 			<div id="the-map" class="the-map"></div> <!-- .the-map -->

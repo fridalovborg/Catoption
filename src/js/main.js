@@ -1,40 +1,46 @@
 /* ----------------------------------------------------------------------------
 			SCROLL EFFECT
 ---------------------------------------------------------------------------- */
-function navHome() {
-    $('html, body').animate({ scrollTop: $('#home-page').offset().top }, 'slow');
+// function navHome() {
+//     $('html, body').animate({ scrollTop: $('#home-page').offset().top }, 'slow');
+//     return false;
+// }
+
+// function navInsta() {
+//     $('html, body').animate({ scrollTop: $('#insta-page').offset().top }, 'slow');
+//     return false;
+// }
+
+// function navMap() {
+//     $('html, body').animate({ scrollTop: $('#map-page').offset().top }, 'slow');
+//     return false;
+// }
+
+
+function scrollToHash(hash) {
+    $('html, body').animate({ scrollTop: $(hash).offset().top }, 'slow');
     return false;
 }
 
-function navInsta() {
-    $('html, body').animate({ scrollTop: $('#insta-page').offset().top }, 'slow');
-    return false;
-}
+// scrollToHash("#insta-page");
 
-function navMap() {
-    $('html, body').animate({ scrollTop: $('#map-page').offset().top }, 'slow');
-    return false;
-}
+
 
 /* ----------------------------------------------------------------------------
 			HISTORY LINK - TODO: SLÅ SAMMAN MED SCROLL EFFECT
 ---------------------------------------------------------------------------- */
 $(function () {
+	var links = document.querySelectorAll('href');
 
-	// BEHÖVS EJ LÄNGRE???
-	// Gör dock att en kan backa och gå framåt...
-
-	// var links = document.querySelectorAll('href');
-
-	// for (var i = 0; i < links.length; i++) {
-	// 	links[i].addEventListener('click', function(e) {
-	// 		var data = e.target.getAttribute('href');
-	// 	    e.preventDefault();
-	// 		history.replaceState(null, null, data);
-
-	// 		e.stopPropagation();
-	// 	}, false);
-	// }
+	for (var i = 0; i < links.length; i++) {
+		links[i].addEventListener('click', function(e) {
+			var data = e.target.getAttribute('href');
+		    e.preventDefault();
+			// history.pushState(null, null, data);
+			scrollToHash(data);
+			e.stopPropagation();
+		}, false);
+	}
 
     var currentHash = '#home';
     
@@ -47,7 +53,7 @@ $(function () {
 
             if (distance < 30 && distance > -30 && currentHash != hash) {
                 // console.log(hash);
-                history.replaceState(null, null, hash);
+                history.pushState(null, null, hash);
                 currentHash = hash;
             }
         });
