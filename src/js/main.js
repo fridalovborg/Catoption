@@ -93,14 +93,14 @@ var animTxt = TweenMax.to(audioTxt, 0.8, {scaleX: 1.2, scaleY: 1.2, repeat: -1, 
 
 // INTERVAL OF VOLUME ICON
 var icon = document.getElementById('icon');
-setInterval(function() {
+iconInterval = setInterval(function() {
 	$(icon).toggleClass("fa-volume-down fa-volume-up");
 }, 800);
 
 setTimeout(function() {
+	$('#intro-page').hide();
 	$('#main-page').show();
-	$('#intro-page').fadeOut();
-	//clearInterval(interval); // Ta bort sen??
+	clearInterval(iconInterval);
 	animTxt.kill(); 
 	$('#sound-btn').fadeIn('slow');
 	$('#cnt').fadeIn('slow');
