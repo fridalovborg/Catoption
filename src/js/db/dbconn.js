@@ -1,3 +1,6 @@
+/* ----------------------------------------------------------------------------
+			AJAX DATABASE CONNECTION GET AND POST
+---------------------------------------------------------------------------- */
 var counter = $('#counter');
  
 $.ajax('src/js/db/output.php').done(function(data) {
@@ -5,10 +8,12 @@ $.ajax('src/js/db/output.php').done(function(data) {
 	result(json);
 });
 
+// THE RESULT OF JSON GET VALUE
 function result(json) {
 	counter.text(json);
 }
 
+// ADD 1 EACH CLICK ON THE CAT
 function addValue() {
 	counter.text(parseInt(counter.text()) + 1);
 
