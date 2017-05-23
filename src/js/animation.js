@@ -52,24 +52,16 @@ function eyeBlink() {
 
 
 ---------------------------------------------------------------------------- */
-function chatBubblePop() {
+/*function chatBubblePop() {
 	setInterval(function() {
-		tl.fromTo(chatBubble, 0.7, {alpha: 0}, {alpha:1, yoyo: true, repeat: 1, repeatDelay: 1});
+		tl.fromTo(chatBubbleWhole, 0.7, {alpha: 0}, {alpha:1, yoyo: true, repeat: 1, repeatDelay: 1});
 
-		setInterval(function() {
-			tl.fromTo(patMe, 0.7, {alpha: 0}, {alpha:1, yoyo: true, repeat: 1, repeatDelay: 1});
-		}, 3000);
-
-		setInterval(function() {
-			tl.fromTo(adoptMe, 0.7, {alpha: 0}, {alpha:1, yoyo: true, repeat: 1, repeatDelay: 1});
-		}, 6000);
-
-		setInterval(function() {
-			tl.fromTo(highfiveMe, 0.7, {alpha: 0}, {alpha:1, yoyo: true, repeat: 1, repeatDelay: 1});
-		}, 9000);
-
+			tl.fromTo(patMe, 0.7, {alpha: 0}, {alpha:1, yoyo: true, repeat: 1, repeatDelay: 1, delay: 3});
+			tl.fromTo(adoptMe, 0.7, {alpha: 0}, {alpha:1, yoyo: true, repeat: 1, repeatDelay: 1, delay: 6});
+			tl.fromTo(highfiveMe, 0.7, {alpha: 0}, {alpha:1, yoyo: true, repeat: 1, repeatDelay: 1, delay: 9});
+		
 	}, 3000);
-}
+}*/
 
 /* ----------------------------------------------------------------------------
 	TAIL IS MOVING
