@@ -16,7 +16,7 @@
 <body>
 	<audio id="paw-sound" preload="none" src="audio/highfive.m4a"></audio>
 	<audio id="purr" preload="none" src="audio/catpurr.mp3"></audio>
-	<audio id="sound" src="abba.mp3" autoplay loop></audio> 
+	<audio id="sound" src="audio/catsong.mp3" autoplay loop></audio> 
 	<div class="intro-page" id="intro-page" style=""> <!-- display: none; -->
 		<div class="intro-txt">
 			<div class="cat-logotype"> <?php include 'src/img/logotype.svg'; ?> </div>
@@ -26,11 +26,9 @@
 	<main id="main-page">
 		<header>
 			<a href="#home" class="home">#CATOPTION</a>
-			<!-- <div class="header"> -->
 				<div id="sound-btn" onclick="audioBtn()" class="audio-btn"><i id="sound-icon" class="fa fa-volume-off"></i></div>
 				<a href="#instagram" class="instagram fa"></a>
 				<a href="#map" class="map fa"></a>
-			<!-- </div> --> <!-- .header -->
 		</header>
 
 		<div id="home" class="home-page pages">
