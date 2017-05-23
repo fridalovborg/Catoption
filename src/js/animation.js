@@ -17,10 +17,24 @@ var tails = document.getElementById('tails');
 var tailAnimation = document.querySelectorAll('#tails path');
 
 var chatBubbleWhole = document.getElementsByClassName('svg-bubble');
-var chatBubble = document.getElementById('chatbubble');
-var patMe = document.querySelectorAll('#patme path');
-var adoptMe = document.querySelectorAll('#adoptme path');
-var highfiveMe = document.querySelectorAll('#highfiveme path');
+var bubble1 = document.getElementById('bubble1');
+var bubble2 = document.getElementById('bubble2');
+var bubble3 = document.getElementById('bubble3');
+var textInBubbleArray = [bubble1, bubble2, bubble3];
+/* ----------------------------------------------------------------------------
+	CHATBUBBLE
+	- makes the chatBubble appear every 4 seconds with a new message each time
+---------------------------------------------------------------------------- */
+var bubbleIndex = 0;
+setInterval(bubble, 4000);
+function bubble() {
+	
+	if (++bubbleIndex > textInBubbleArray.length -1) {
+		bubbleIndex = 0;
+	}
+	document.getElementById("bubble-div").innerHTML = textInBubbleArray[bubbleIndex].innerHTML;
+	tl.fromTo(chatBubbleWhole, 0.7, {alpha: 0}, {alpha:1, yoyo: true, repeat: 1, repeatDelay: 1});
+} 
 
 /* ----------------------------------------------------------------------------
 	NOSE
@@ -45,25 +59,6 @@ function eyeBlink() {
 }
 
 /* ----------------------------------------------------------------------------
-	CHATBUBBLE
-	- makes the chatBubble appear every 8 seconds
-
-	
-
-
----------------------------------------------------------------------------- */
-/*function chatBubblePop() {
-	setInterval(function() {
-		tl.fromTo(chatBubbleWhole, 0.7, {alpha: 0}, {alpha:1, yoyo: true, repeat: 1, repeatDelay: 1});
-
-			tl.fromTo(patMe, 0.7, {alpha: 0}, {alpha:1, yoyo: true, repeat: 1, repeatDelay: 1, delay: 3});
-			tl.fromTo(adoptMe, 0.7, {alpha: 0}, {alpha:1, yoyo: true, repeat: 1, repeatDelay: 1, delay: 6});
-			tl.fromTo(highfiveMe, 0.7, {alpha: 0}, {alpha:1, yoyo: true, repeat: 1, repeatDelay: 1, delay: 9});
-		
-	}, 3000);
-}*/
-
-/* ----------------------------------------------------------------------------
 	TAIL IS MOVING
 	- makes the cats tail sway
 ---------------------------------------------------------------------------- */
@@ -83,19 +78,12 @@ $(document).ready(function() {
 	noseAnimation(nose);
 	noseAnimation(whiskers);
 	eyeBlink();
-	chatBubblePop();
 	tailMoving();	
+	bubble();
 
 	// $(document).on('click', function() {
  //        player.play();
  //    });
-
-
-//	$('#paw').css('opacity', '0');
-patMe.css('opacity', '0');
-highfiveMe.css('opacity', '0');
-adoptMe.css('opacity', '0');
-
 
 });
 
