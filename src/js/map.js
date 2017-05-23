@@ -1,3 +1,7 @@
+/* ----------------------------------------------------------------------------
+			GOOGLE MAP
+- initmap() returns the map and its places, users position
+---------------------------------------------------------------------------- */
 var map, infoWindow, an;
 
 function initMap() {
@@ -8,9 +12,8 @@ function initMap() {
 
 	infoWindow = new google.maps.InfoWindow();
 	var $myMarker;
-
 	if (navigator.geolocation) {
-		navigator.geolocation.getCurrentPosition(function(position) { //getCurrentPosition
+		navigator.geolocation.getCurrentPosition(function(position) {
 
 			// MY POSITION COORDS
 			var pos = {
@@ -36,9 +39,9 @@ function initMap() {
 				infoWindow.setContent(txt);
 				infoWindow.open(map, this);
 			});
-
 			map.setCenter(pos);
-
+			
+			// CAT SHELTERS REQUEST
 			var request = {
 				location: pos,
 				radius: '50000',
@@ -56,7 +59,7 @@ function initMap() {
 		handleLocationError(false, infoWindow, map.getCenter());
 	}
 }
-
+// THE PLACES
 function showPlaces(results, status) {
 	if(status == google.maps.places.PlacesServiceStatus.OK) {
 		for(var i = 0; i<results.length; i++) {
@@ -65,7 +68,7 @@ function showPlaces(results, status) {
  		}
  	}
 }
-
+// MARKER/ICON TO PLACES
 function addMarker(place) {
 	an = google.maps.Animation.DROP;
 	var marker = new google.maps.Marker({
