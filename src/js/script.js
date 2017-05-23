@@ -107,23 +107,23 @@ setTimeout(function() {
 }, 4000);
 
 /* ----------------------------------------------------------------------------
-			AUDIO BUTTON
+			AUDIO & AUDIO BUTTON
 ---------------------------------------------------------------------------- */
 const audioBtn = document.querySelector('.audio-btn');
 const player = document.querySelector('#sound');
 
-audioBtn.addEventListener('click', function() {
-	var audioIcon = document.getElementById('sound-icon');
+function play() {
+	player.play();
+}
 
-	if(!player.paused) {
-		player.pause();
-		$(audioIcon).toggleClass("fa-volume-off fa-volume-up");
-	} else {
-		player.play();
-		$(audioIcon).toggleClass("fa-volume-up fa-volume-off");
-	}
-});
+// audioBtn.addEventListener('click', function() {
+// 	var audioIcon = document.getElementById('sound-icon');
 
-/* ----------------------------------------------------------------------------
-			IMG LIKE WHEN CLICK
----------------------------------------------------------------------------- */
+// 	if(!player.paused) {
+// 		player.pause();
+// 		$(audioIcon).toggleClass("fa-volume-off fa-volume-up");
+// 	} else {
+// 		player.play();
+// 		$(audioIcon).toggleClass("fa-volume-up fa-volume-off");
+// 	}
+// });

@@ -13,7 +13,7 @@
 	<script src="https://use.fontawesome.com/9af20410fa.js"></script>
 	<link rel="stylesheet" href="src/img/font-awesome-4.7.0/css/font-awesome.css">
 </head>
-<body>
+<body onclick="play()">
 	<audio id="paw-sound" preload="none" src="audio/highfive.m4a"></audio>
 	<audio id="purr" preload="none" src="audio/catpurr.mp3"></audio>
 	<audio id="sound" src="abba.mp3" autoplay loop></audio> 
