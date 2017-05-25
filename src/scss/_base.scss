@@ -8,6 +8,7 @@
 body {
 	font-family: 'Josefin Sans', sans-serif;
 	color: $fontcolor;
+	text-transform: uppercase;
 }
 
 #main-page {
@@ -59,26 +60,18 @@ header {
 	.home {
 		width: 65%;
 		box-sizing: border-box;
-		padding: 1% 0 0 5%;
 		text-decoration: none;
-		color: $linkcolor;
+		color: $fontcolor;
 		font-size: 1.8em;
 		text-shadow: 2px 2px 4px $shadowcolor;
 	}
 
-	// .header {
-	// 	width: 40%;
-	// 	@include flexbox(flex, row wrap, center, center);
-	// 	margin: 0;
-	// 	border: 1px solid red;
-
-		.fa {
-			font-size: 2.4em;
-			color: $linkcolor;
-			text-shadow: 2px 2px 4px $shadowcolor;
-			cursor: pointer;
-		}
-	//}
+	.fa {
+		font-size: 2.4em;
+		color: $fontcolor;
+		text-shadow: 2px 2px 4px $shadowcolor;
+		cursor: pointer;
+	}
 }
 
 a {
@@ -90,7 +83,7 @@ a {
 }
 
 a:hover {
-	border-bottom: 2px solid rgba(255,255,255, 1);
+	border-bottom: 2px solid rgba($fontcolor, 1);
 }
 
 .volume-off::after {
@@ -123,10 +116,13 @@ a:hover {
 
 h2 {
 	line-height: 2em;
+	font-weight: 600;
+	
 }
 
 h3 {
 	padding-bottom: 1.2em;
+	font-weight: 400;
 }
 
 /* ----------------------------------------------------------------------------
@@ -140,7 +136,7 @@ h3 {
 
 .svg-cat {
 	width: 100%;
-	padding-top: 43%;
+	padding-top: 50%;  //43
 	height: 75vh;
 	max-height: 75vh;
 	cursor: pointer;
@@ -150,7 +146,7 @@ h3 {
 .svg-bubble {
     width: 40%;
     position: absolute;
-    top: 10%;
+    top: 12%; //10
     left: 8%;
     //opacity: 0;
 }
@@ -161,7 +157,7 @@ h3 {
 
 .the-counter {
 	position: absolute;
-	padding: 0 0 2% 5%;
+	padding: 0 0 2% 3%;
 	text-align: left;
 	bottom: 0;
 	left: 0;
@@ -169,7 +165,7 @@ h3 {
 	h4 {
 		display: inline;
 		font-size: 1.2em;
-		color: $linkcolor;
+		color: $fontcolor;
 		text-shadow: 2px 2px 4px $shadowcolor;
 	}
 }
@@ -189,13 +185,17 @@ h3 {
 	background-color: $instabgc; 
 	min-height: 100vh;
 	padding-top: 25%;
+
+	h3 {
+		text-shadow: 2px 2px 20px #C47A73; 
+	}
 }
 
 .img-container {
 	@include flexbox(flex, row wrap, flex-start, center);
 	height: initial;
 	z-index: 0;
-	background-color: $linkcolor; 
+	background-color: $fontcolor; 
 
 	.img-cont {
 		width: 50%;
@@ -230,6 +230,10 @@ h3 {
 	background-color: $mapbgc;
 	padding-top: 25%;
 	min-height: 100vh;
+
+	h3 {
+		text-shadow: 2px 2px 20px #FDAE4E;
+	}
 }
 
 .the-map {
