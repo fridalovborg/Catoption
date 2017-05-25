@@ -39,17 +39,17 @@ document.getElementById("img-container").innerHTML=this.responseText,
 // LIKE FUNCTION WHEN CLIKCING ON IMG
 $(".img-cont").on("click",function(e){$(this).toggleClass("img-like")}))}),e.send()}function audioBtn(){$(window).width()<740&&player.play();var e=document.getElementById("sound-icon");player.paused?(player.play(),$(e).toggleClass("volume-up volume-off")):(player.pause(),$(e).toggleClass("volume-off volume-up"))}function initMap(){map=new google.maps.Map(document.getElementById("the-map"),{zoom:10,scrollwheel:!1}),infoWindow=new google.maps.InfoWindow;var e;navigator.geolocation?navigator.geolocation.getCurrentPosition(function(t){
 // MY POSITION COORDS
-var o={lat:t.coords.latitude,lng:t.coords.longitude};an=google.maps.Animation.DROP,
+var n={lat:t.coords.latitude,lng:t.coords.longitude};an=google.maps.Animation.DROP,
 // MY POSITIONS MARKER
-e?e.setPosition(o):e=new google.maps.Marker({position:o,animation:an,map:map}),
+e?e.setPosition(n):e=new google.maps.Marker({position:n,animation:an,map:map}),
 // INFO BOX FOR MY POSITION
-google.maps.event.addListener(e,"click",function(){var e="<strong>You are here!</strong><br>";infoWindow.setContent(e),infoWindow.open(map,this)}),map.setCenter(o);
+google.maps.event.addListener(e,"click",function(){var e="<strong>You are here!</strong><br>";infoWindow.setContent(e),infoWindow.open(map,this)}),map.setCenter(n);
 // CAT SHELTERS REQUEST
-var n={location:o,radius:"50000",keyword:"cat_shelter"};new google.maps.places.PlacesService(map).nearbySearch(n,showPlaces)},function(){handleLocationError(!0,infoWindow,map.getCenter())}):
+var o={location:n,radius:"50000",keyword:"cat_shelter"};new google.maps.places.PlacesService(map).nearbySearch(o,showPlaces)},function(){handleLocationError(!0,infoWindow,map.getCenter())}):
 // BROWSER DO NOT SUPPORT GEOLOCATION
 handleLocationError(!1,infoWindow,map.getCenter())}
 // THE PLACES
-function showPlaces(e,t){if(t==google.maps.places.PlacesServiceStatus.OK)for(var o=0;o<e.length;o++)addMarker(e[o]),console.log(e[o])}
+function showPlaces(e,t){if(t==google.maps.places.PlacesServiceStatus.OK)for(var n=0;n<e.length;n++)addMarker(e[n]),console.log(e[n])}
 // MARKER/ICON TO PLACES
 function addMarker(e){an=google.maps.Animation.DROP;var t=new google.maps.Marker({map:map,animation:an,position:e.geometry.location,icon:"src/img/icon.png"});google.maps.event.addListener(t,"click",function(){var t="<strong>"+e.name+"</strong><br>";t+=e.vicinity,infoWindow.setContent(t),infoWindow.open(map,this)})}
 // THE RESULT OF JSON GET VALUE
@@ -101,7 +101,7 @@ $(function(){for(var e=document.querySelectorAll("a"),t=0;t<e.length;t++)e[t].ad
 	* @param {Object} distance
 	* @return {Object} hash
 	*/
-var o;$(document).scroll(function(){$(".pages").each(function(){var e=window.pageYOffset,t=e-$(this).offset().top,n=$(this).attr("id");t<30&&t>-30&&o!=n&&(history.pushState(null,null,"#"+n),o=n)})})}),setInterval(getIGImages,6e4),// INTERVAL OF NEW IMAGES EVERY MINUTE
+var n;$(document).scroll(function(){$(".pages").each(function(){var e=window.pageYOffset,t=e-$(this).offset().top,o=$(this).attr("id");t<30&&t>-30&&n!=o&&(history.pushState(null,null,"#"+o),n=o)})})}),setInterval(getIGImages,6e4),// INTERVAL OF NEW IMAGES EVERY MINUTE
 window.addEventListener("load",getIGImages);// FIRST SET OF IMAGES WHEN WINDOW LOADS
 /* ----------------------------------------------------------------------------
 			INTRO PAGE 
@@ -109,7 +109,7 @@ window.addEventListener("load",getIGImages);// FIRST SET OF IMAGES WHEN WINDOW L
 - toggle between volume icons
 - timeout function that clears the intropage and shows the homepage
 ---------------------------------------------------------------------------- */
-var TweenMax,audioTxt=document.querySelector(".pulse-txt"),animTxt=TweenMax.to(audioTxt,.8,{scaleX:1.2,scaleY:1.2,repeat:-1,yoyo:!0}),icon=document.getElementById("icon");setInterval(function(){$(icon).toggleClass("volume-down volume-up")},800),setTimeout(function(){$("#intro-page").hide(),$("#main-page").show(),animTxt.kill(),$("#sound-btn").fadeIn("slow"),$("#cnt").fadeIn("slow"),scrollToHash(window.location.hash)},4e3);/* ----------------------------------------------------------------------------
+var TweenMax,audioTxt=document.querySelector(".pulse-txt"),animTxt=TweenMax.to(audioTxt,.8,{scaleX:1.2,scaleY:1.2,repeat:-1,yoyo:!0}),icon=document.getElementById("icon");setInterval(function(){$(icon).toggleClass("volume-down volume-up")},800);var hide="none",show="block",introPage=document.getElementById("intro-page"),mainPage=document.getElementById("main-page"),soundBtn=document.getElementById("sound-btn"),count=document.getElementById("cnt");setTimeout(function(){introPage.style.display=hide,mainPage.style.display=show,animTxt.kill(),soundBtn.style.display=show,count.style.display=show,scrollToHash(window.location.hash)},4e3);/* ----------------------------------------------------------------------------
 			AUDIO & AUDIO BUTTON
 ---------------------------------------------------------------------------- */
 /**

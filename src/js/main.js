@@ -101,12 +101,25 @@ setInterval(function() {
 	$(icon).toggleClass('volume-down volume-up');
 }, 800);
 
+var hide = "none",
+show = "block",
+introPage = document.getElementById('intro-page'),
+mainPage = document.getElementById('main-page'),
+soundBtn = document.getElementById('sound-btn'),
+count = document.getElementById('cnt');
+
 setTimeout(function() {
-	$('#intro-page').hide();
-	$('#main-page').show();
-	animTxt.kill(); 
-	$('#sound-btn').fadeIn('slow');
-	$('#cnt').fadeIn('slow');
+	introPage.style.display = hide;
+	mainPage.style.display = show;
+	animTxt.kill();
+	soundBtn.style.display = show;
+	count.style.display = show;
+
+// $('#intro-page').hide();
+// $('#main-page').show();
+// animTxt.kill(); 
+// $('#sound-btn').fadeIn('slow');
+// $('#cnt').fadeIn('slow');
 
 	var scrollto = window.location.hash;
 	scrollToHash(scrollto);
