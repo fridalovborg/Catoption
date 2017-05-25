@@ -192,10 +192,11 @@ h3 {
 }
 
 .img-container {
-	@include flexbox(flex, row wrap, flex-start, center);
+	@include flexbox(flex, row wrap, center, center);
 	height: initial;
 	z-index: 0;
-	background-color: $fontcolor; 
+	background-color: $instabgc; 
+	padding-bottom: 5%;
 
 	.img-cont {
 		width: 50%;
@@ -203,6 +204,8 @@ h3 {
 
 		img {
 			width: 100%;
+			box-sizing: border-box;
+			border: 5px solid $fontcolor;
 		}
 
 		&.img-like::after {
@@ -230,6 +233,7 @@ h3 {
 	background-color: $mapbgc;
 	padding-top: 25%;
 	min-height: 100vh;
+	padding-bottom: 5%;
 
 	h3 {
 		text-shadow: 2px 2px 20px #FDAE4E;
@@ -238,7 +242,7 @@ h3 {
 
 .the-map {
 	position: relative;
-	height: 80vh;
+	height: 60vh; //80
 	width: 100%;
 	overflow: hidden;
 }
