@@ -10,7 +10,6 @@
 	<title>Catoption</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
-	<script src="https://use.fontawesome.com/9af20410fa.js"></script>
 	<link rel="stylesheet" href="src/img/font-awesome-4.7.0/css/font-awesome.css">
 </head>
 <body>
@@ -20,15 +19,15 @@
 	<div class="intro-page" id="intro-page" style=""> <!-- display: none; -->
 		<div class="intro-txt">
 			<div class="cat-logotype"> <?php include 'src/img/logotype.svg'; ?> </div>
-			<h2 class="pulse-txt">Turn up your sound <i id="icon" class="fa fa-volume-down" aria-hidden="true"></i></h2>
+			<h2 class="pulse-txt">Turn up your sound <i id="icon" class="fa volume-down" aria-hidden="true"></i></h2>
 		</div>
 	</div>
 	<main id="main-page">
 		<header>
 			<a href="#home" class="home">#CATOPTION</a>
-				<div id="sound-btn" onclick="audioBtn()" class="audio-btn"><i id="sound-icon" class="fa fa-volume-off"></i></div>
-				<a href="#instagram" class="instagram fa"></a>
-				<a href="#map" class="map fa"></a>
+			<div id="sound-btn" onclick="audioBtn()" class="audio-btn"><i id="sound-icon" class="fa volume-off"></i></div>
+			<a href="#instagram" class="instagram fa"></a>
+			<a href="#map" class="map fa"></a>
 		</header>
 
 		<div id="home" class="home-page pages">
@@ -60,11 +59,12 @@
 </body>
 <script src="https://code.jquery.com/jquery-3.2.0.min.js"></script>
 <script src="greensock/src/minified/TweenMax.min.js"></script>
-<script src="src/js/main.js"></script>
+<script src="js/all.js"></script>
+<!-- <script src="src/js/main.js"></script>
 <script src="src/js/animation.js"></script>
 <script src="src/js/map.js"></script>
-<script src="src/js/ie.js"></script>
-<script src="src/js/db/dbconn.js"></script>
+<script src="src/js/ie.js"></script> -->
+<!-- <script src="src/js/db/dbconn.js"></script> -->
 </script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD97mFy6-G4MJo09-7p6h9UmfWKhmRozSY&libraries=places&callback=initMap" type="text/javascript" async></script>
 </html>
