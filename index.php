@@ -65,6 +65,6 @@
 <script src="src/js/map.js"></script>
 <script src="src/js/ie.js"></script> -->
 <!-- <script src="src/js/db/dbconn.js"></script> -->
-</script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD97mFy6-G4MJo09-7p6h9UmfWKhmRozSY&libraries=places&callback=initMap" type="text/javascript" async></script>
+</script>
 </html>

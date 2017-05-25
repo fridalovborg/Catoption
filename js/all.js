@@ -6,30 +6,29 @@ function noseAnimation(e){setInterval(function(){tl.staggerFromTo(e,.2,{rotation
 	TAIL IS MOVING
 	- makes the cats tail sway
 ---------------------------------------------------------------------------- */
-function tailMoving(){setInterval(function(){tl.staggerFromTo(tailAnimation,1,{rotation:0,transformOrigin:"center center"},{rotation:-25,transformOrigin:"center center",yoyo:!0,repeat:1})},4e3)}function highfivePaw(){tl.fromTo(paw,.3,{scale:1,x:0,y:0},{scale:1.3,x:0,y:-15,yoyo:!0,repeat:1}),tl.fromTo($("#highfive-lines"),.5,{alpha:0},{alpha:1,yoyo:!0,repeat:1}),$("#paw-sound").trigger("load"),$("#paw-sound").trigger("play"),addValue()}function pleasedCat(){tl.staggerFromTo([eyebrowRight,mouthRight],2,{rotation:0,transformOrigin:"center center"},{rotation:-30,transformOrigin:"center center",yoyo:!0,repeat:1}),tl.staggerFromTo([eyebrowLeft,mouthLeft],2,{rotation:0,transformOrigin:"center center"},{rotation:40,transformOrigin:"center center",yoyo:!0,repeat:1}),tl.fromTo([rightEye,leftEye],.5,{alpha:1},{alpha:0,yoyo:!0,repeat:1,repeatDelay:2}),tl.fromTo([eyesClosed],.5,{alpha:0},{alpha:1,yoyo:!0,repeat:1,repeatDelay:2}),$("#purr").trigger("load"),$("#purr").trigger("play"),addValue()}function angryCat(){/*	window.clearInterval(eyeBlinkInterval);
-	setTimeout(function() {
-		eyeBlink();
-	}, 4000);
-*/
-tl.fromTo(semiClosed,.5,{alpha:0},{alpha:1,yoyo:!0,repeat:1,repeatDelay:2}),tl.staggerFromTo($("#eyebrow-right"),1,{rotation:0,transformOrigin:"center center"},{rotation:-50,transformOrigin:"center center",yoyo:!0,repeat:1,repeatDelay:.5}),tl.staggerFromTo($("#eyebrow-left"),1,{rotation:0,transformOrigin:"center center"},{rotation:60,transformOrigin:"center center",yoyo:!0,repeat:1,repeatDelay:.5})}/* ----------------------------------------------------------------------------
+function tailMoving(){setInterval(function(){tl.staggerFromTo(tailAnimation,1,{rotation:0,transformOrigin:"center center"},{rotation:-25,transformOrigin:"center center",yoyo:!0,repeat:1})},4e3)}function highfivePaw(){tl.fromTo(paw,.3,{scale:1,x:0,y:0},{scale:1.3,x:0,y:-15,yoyo:!0,repeat:1}),tl.fromTo($("#highfive-lines"),.5,{alpha:0},{alpha:1,yoyo:!0,repeat:1}),$("#paw-sound").trigger("load"),$("#paw-sound").trigger("play"),
+// PAT THE CAT DB COUNTER
+addValue()}function pleasedCat(){tl.staggerFromTo([eyebrowRight,mouthRight],2,{rotation:0,transformOrigin:"center center"},{rotation:-30,transformOrigin:"center center",yoyo:!0,repeat:1}),tl.staggerFromTo([eyebrowLeft,mouthLeft],2,{rotation:0,transformOrigin:"center center"},{rotation:40,transformOrigin:"center center",yoyo:!0,repeat:1}),tl.fromTo([rightEye,leftEye],.5,{alpha:1},{alpha:0,yoyo:!0,repeat:1,repeatDelay:2}),tl.fromTo([eyesClosed],.5,{alpha:0},{alpha:1,yoyo:!0,repeat:1,repeatDelay:2}),$("#purr").trigger("load"),$("#purr").trigger("play"),
+// PAT THE CAT DB COUNTER
+addValue()}function angryCat(){window.clearInterval(eyeBlinkInterval),setTimeout(function(){eyeBlink()},4e3),tl.fromTo(semiClosed,.5,{alpha:0},{alpha:1,yoyo:!0,repeat:1,repeatDelay:2}),tl.staggerFromTo($("#eyebrow-right"),1,{rotation:0,transformOrigin:"center center"},{rotation:-50,transformOrigin:"center center",yoyo:!0,repeat:1,repeatDelay:.5}),tl.staggerFromTo($("#eyebrow-left"),1,{rotation:0,transformOrigin:"center center"},{rotation:60,transformOrigin:"center center",yoyo:!0,repeat:1,repeatDelay:.5})}/* ----------------------------------------------------------------------------
 			SCROLL EFFECT TO HASH
 ---------------------------------------------------------------------------- */
 /**
- * Scrolls to hash top
- * @param {Object} hash
- * @param {Object} top
- * @return {Object} scrollToHash(hash), new position
- */
+* Scrolls to hash top
+* @param {Object} hash
+* @param {Object} top
+* @return {Object} scrollToHash(hash), new position
+*/
 function scrollToHash(e){return $("html, body").animate({scrollTop:$(e).offset().top},"slow"),!1}/* ----------------------------------------------------------------------------
 			UPDATE IMAGES IN REALTIME
 - XMLHttpRequest updates part of the webpage without reloading the page. We
 use this for updating the images of instagram page every minute. 
 ---------------------------------------------------------------------------- */
 /**
- * Update images from Instagram
- * @param {Object} xhr
- * @return {Object} getIGImages
- */
+* Update images from Instagram
+* @param {Object} xhr
+* @return {Object} getIGImages
+*/
 function getIGImages(){
 // CREATING OBJECT
 var e=new XMLHttpRequest;e.open("GET","get_insta.php?foo="+Math.random(),!0),e.addEventListener("readystatechange",function(e){
@@ -90,11 +89,11 @@ navigator.userAgent.match(/Trident\/7\./)&&($(".svg-cat").css("width","100%"),$(
 			LINK HASH
 ---------------------------------------------------------------------------- */
 /**
- * Link hash
- * @param {Object} links
- * @param {Object} data
- * @return {Object} scrollToHash(data)
- */
+* Link hash
+* @param {Object} links
+* @param {Object} data
+* @return {Object} scrollToHash(data)
+*/
 $(function(){for(var e=document.querySelectorAll("a"),t=0;t<e.length;t++)e[t].addEventListener("click",function(e){var t=e.target.getAttribute("href");e.preventDefault(),scrollToHash(t),e.stopPropagation()},!1);/**
 	* Scroll hash
 	* @param {Object} currentHash
@@ -110,15 +109,15 @@ window.addEventListener("load",getIGImages);// FIRST SET OF IMAGES WHEN WINDOW L
 - toggle between volume icons
 - timeout function that clears the intropage and shows the homepage
 ---------------------------------------------------------------------------- */
-var audioTxt=document.querySelector(".pulse-txt"),animTxt=TweenMax.to(audioTxt,.8,{scaleX:1.2,scaleY:1.2,repeat:-1,yoyo:!0}),icon=document.getElementById("icon");iconInterval=setInterval(function(){$(icon).toggleClass("volume-down volume-up")},800),setTimeout(function(){$("#intro-page").hide(),$("#main-page").show(),clearInterval(iconInterval),animTxt.kill(),$("#sound-btn").fadeIn("slow"),$("#cnt").fadeIn("slow"),scrollToHash(window.location.hash)},4e3);/* ----------------------------------------------------------------------------
+var TweenMax,audioTxt=document.querySelector(".pulse-txt"),animTxt=TweenMax.to(audioTxt,.8,{scaleX:1.2,scaleY:1.2,repeat:-1,yoyo:!0}),icon=document.getElementById("icon");setInterval(function(){$(icon).toggleClass("volume-down volume-up")},800),setTimeout(function(){$("#intro-page").hide(),$("#main-page").show(),animTxt.kill(),$("#sound-btn").fadeIn("slow"),$("#cnt").fadeIn("slow"),scrollToHash(window.location.hash)},4e3);/* ----------------------------------------------------------------------------
 			AUDIO & AUDIO BUTTON
 ---------------------------------------------------------------------------- */
 /**
- * Play music
- * @param {Object} player
- * @param {Object} audioIcon
- * @return {Object} audioBtn
- */
+* Play music
+* @param {Object} player
+* @param {Object} audioIcon
+* @return {Object} audioBtn
+*/
 const player=document.querySelector("#sound");/* ----------------------------------------------------------------------------
 			GOOGLE MAP
 - initmap() returns the map and its places, users position

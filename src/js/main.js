@@ -1,12 +1,12 @@
 /* ----------------------------------------------------------------------------
 			LINK HASH
 ---------------------------------------------------------------------------- */
- /**
- * Link hash
- * @param {Object} links
- * @param {Object} data
- * @return {Object} scrollToHash(data)
- */
+/**
+* Link hash
+* @param {Object} links
+* @param {Object} data
+* @return {Object} scrollToHash(data)
+*/
 $(function () {
 	var links = document.querySelectorAll('a');
 	for (var i = 0; i < links.length; i++) {
@@ -43,12 +43,12 @@ $(function () {
 /* ----------------------------------------------------------------------------
 			SCROLL EFFECT TO HASH
 ---------------------------------------------------------------------------- */
- /**
- * Scrolls to hash top
- * @param {Object} hash
- * @param {Object} top
- * @return {Object} scrollToHash(hash), new position
- */
+/**
+* Scrolls to hash top
+* @param {Object} hash
+* @param {Object} top
+* @return {Object} scrollToHash(hash), new position
+*/
 function scrollToHash(hash) {
     $('html, body').animate({ scrollTop: $(hash).offset().top }, 'slow');
     return false;
@@ -60,10 +60,10 @@ function scrollToHash(hash) {
 use this for updating the images of instagram page every minute. 
 ---------------------------------------------------------------------------- */
 /**
- * Update images from Instagram
- * @param {Object} xhr
- * @return {Object} getIGImages
- */
+* Update images from Instagram
+* @param {Object} xhr
+* @return {Object} getIGImages
+*/
 function getIGImages() {
 	// CREATING OBJECT
 	var xhr = new XMLHttpRequest();
@@ -91,19 +91,19 @@ window.addEventListener('load', getIGImages); // FIRST SET OF IMAGES WHEN WINDOW
 - toggle between volume icons
 - timeout function that clears the intropage and shows the homepage
 ---------------------------------------------------------------------------- */
+var TweenMax;
 var audioTxt = document.querySelector('.pulse-txt');
 var animTxt = TweenMax.to(audioTxt, 0.8, {scaleX: 1.2, scaleY: 1.2, repeat: -1, yoyo: true});
 
 // INTERVAL OF VOLUME ICON
 var icon = document.getElementById('icon');
-iconInterval = setInterval(function() {
+setInterval(function() {
 	$(icon).toggleClass('volume-down volume-up');
 }, 800);
 
 setTimeout(function() {
 	$('#intro-page').hide();
 	$('#main-page').show();
-	clearInterval(iconInterval);
 	animTxt.kill(); 
 	$('#sound-btn').fadeIn('slow');
 	$('#cnt').fadeIn('slow');
@@ -116,11 +116,11 @@ setTimeout(function() {
 			AUDIO & AUDIO BUTTON
 ---------------------------------------------------------------------------- */
 /**
- * Play music
- * @param {Object} player
- * @param {Object} audioIcon
- * @return {Object} audioBtn
- */
+* Play music
+* @param {Object} player
+* @param {Object} audioIcon
+* @return {Object} audioBtn
+*/
 const player = document.querySelector('#sound');
 function audioBtn() {
 	if ($(window).width() < 740) {
@@ -136,4 +136,4 @@ function audioBtn() {
 		player.play();
 		$(audioIcon).toggleClass('volume-up volume-off');
 	}
-};
+}

@@ -32,7 +32,7 @@ function bubble() {
 	if (++bubbleIndex > textInBubbleArray.length -1) {
 		bubbleIndex = 0;
 	}
-	document.getElementById("bubble-div").innerHTML = textInBubbleArray[bubbleIndex].innerHTML;
+	document.getElementById('bubble-div').innerHTML = textInBubbleArray[bubbleIndex].innerHTML;
 	tl.fromTo(chatBubbleWhole, 0.7, {alpha: 0}, {alpha:1, yoyo: true, repeat: 1, repeatDelay: 1});
 } 
 
@@ -64,7 +64,7 @@ function eyeBlink() {
 ---------------------------------------------------------------------------- */
 function tailMoving() {
 	setInterval(function() {
-		tl.staggerFromTo(tailAnimation, 1, {rotation: 0, transformOrigin: "center center"}, {rotation: -25, transformOrigin: "center center", yoyo: true, repeat: 1} );
+		tl.staggerFromTo(tailAnimation, 1, {rotation: 0, transformOrigin: 'center center'}, {rotation: -25, transformOrigin: 'center center', yoyo: true, repeat: 1} );
 	}, 4000);
 }
 
@@ -80,11 +80,6 @@ $(document).ready(function() {
 	eyeBlink();
 	tailMoving();	
 	bubble();
-
-	// $(document).on('click', function() {
- //        player.play();
- //    });
-
 });
 
 /* ----------------------------------------------------------------------------
@@ -98,9 +93,10 @@ function highfivePaw() {
 	tl.fromTo(paw, 0.3, {scale: 1, x:0, y:0}, {scale:1.3, x:0, y:-15, yoyo: true, repeat: 1});
 	tl.fromTo($('#highfive-lines'), 0.5, {alpha:0}, {alpha:1, yoyo: true, repeat: 1});
 
-	$("#paw-sound").trigger('load');
-	$("#paw-sound").trigger('play');
+	$('#paw-sound').trigger('load');
+	$('#paw-sound').trigger('play');
 
+	// PAT THE CAT DB COUNTER
 	addValue(); 
 }
 
@@ -118,9 +114,10 @@ function pleasedCat() {
 	tl.fromTo([rightEye, leftEye], 0.5, {alpha: 1}, {alpha:0, yoyo: true, repeat: 1, repeatDelay: 2});
 	tl.fromTo([eyesClosed], 0.5, {alpha: 0}, {alpha:1, yoyo: true, repeat: 1, repeatDelay: 2});
 
-	$("#purr").trigger('load');
-	$("#purr").trigger('play');
+	$('#purr').trigger('load');
+	$('#purr').trigger('play');
 
+	// PAT THE CAT DB COUNTER
 	addValue();
 }
 
@@ -131,11 +128,11 @@ function pleasedCat() {
 ---------------------------------------------------------------------------- */
 tails.addEventListener('click', angryCat);
 function angryCat() {
-/*	window.clearInterval(eyeBlinkInterval);
+	window.clearInterval(eyeBlinkInterval);
 	setTimeout(function() {
 		eyeBlink();
 	}, 4000);
-*/
+
 	tl.fromTo(semiClosed, 0.5, {alpha: 0}, {alpha:1, yoyo: true, repeat: 1, repeatDelay: 2});
 	tl.staggerFromTo($('#eyebrow-right'), 1, {rotation: 0, transformOrigin: 'center center'}, {rotation: -50, transformOrigin: 'center center', yoyo: true, repeat: 1, repeatDelay: 0.5});
 	tl.staggerFromTo($('#eyebrow-left'), 1, {rotation: 0, transformOrigin: 'center center'}, {rotation: 60, transformOrigin: 'center center', yoyo: true, repeat: 1, repeatDelay: 0.5});
