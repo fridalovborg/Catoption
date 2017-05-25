@@ -118,7 +118,7 @@ var TweenMax,audioTxt=document.querySelector(".pulse-txt"),animTxt=TweenMax.to(a
 * @param {Object} audioIcon
 * @return {Object} audioBtn
 */
-const player=document.querySelector("#sound");/* ----------------------------------------------------------------------------
+const player=document.getElementById("sound");/* ----------------------------------------------------------------------------
 			GOOGLE MAP
 - initmap() returns the map and its places, users position
 ---------------------------------------------------------------------------- */

@@ -134,7 +134,7 @@ setTimeout(function() {
 * @param {Object} audioIcon
 * @return {Object} audioBtn
 */
-const player = document.querySelector('#sound');
+const player = document.getElementById('sound');
 function audioBtn() {
 	if ($(window).width() < 740) {
 	   player.play();
