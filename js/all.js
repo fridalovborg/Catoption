@@ -64,7 +64,7 @@ var eyeBlinkInterval;/* --------------------------------------------------------
 	- when document has loaded, the head starts moving to the music 
 	- nose+whiskers start twitching
 ---------------------------------------------------------------------------- */
-$(document).ready(function(){tl.fromTo(headLayers,.8,{x:-15,y:0},{x:15,y:0,yoyo:!0,repeat:-1}),noseAnimation(nose),noseAnimation(whiskers),eyeBlink(),tailMoving(),bubble()}),/* ----------------------------------------------------------------------------
+document.addEventListener("DOMContentLoaded",function(){tl.fromTo(headLayers,.8,{x:-15,y:0},{x:15,y:0,yoyo:!0,repeat:-1}),noseAnimation(nose),noseAnimation(whiskers),eyeBlink(),tailMoving(),bubble()}),/* ----------------------------------------------------------------------------
 	PAW
 	- scales the paw and adds highfive lines when user clicks the cats paw
 	- triggers and plays highfive sounds

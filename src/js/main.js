@@ -75,11 +75,9 @@ function getIGImages() {
 			// IMG AND REPLACE CONTAINER
 			document.getElementById('img-container').innerHTML = this.responseText;
 			// LIKE FUNCTION WHEN CLIKCING ON IMG
-			document.getElementsByClassName('img-cont').addEventListener('click', function(event) {
-				$(this).toggleClass('img-like');
-				document.
-			});
-
+			$('.img-cont').on('click',function (event) {
+		        $(this).toggleClass('img-like');
+		    });
 		}
 	}); 
 	xhr.send();
@@ -136,7 +134,7 @@ setTimeout(function() {
 * @param {Object} audioIcon
 * @return {Object} audioBtn
 */
-const player = document.getElementById('sound');
+const player = document.querySelector('#sound');
 function audioBtn() {
 	if ($(window).width() < 740) {
 	   player.play();

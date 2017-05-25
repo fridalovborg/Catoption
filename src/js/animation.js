@@ -1,8 +1,3 @@
-/*----------------------------------------------------------------------------
-			VARIABLES 
-			- for animations 
------------------------------------------------------------------------------*/
-
 var tl = TweenMax;
 var headLayers = document.getElementById('head-layers');
 var nose = document.querySelectorAll('#nose path, #nose ellipse');
@@ -26,7 +21,6 @@ var bubble1 = document.getElementById('bubble1');
 var bubble2 = document.getElementById('bubble2');
 var bubble3 = document.getElementById('bubble3');
 var textInBubbleArray = [bubble1, bubble2, bubble3];
-
 /* ----------------------------------------------------------------------------
 	CHATBUBBLE
 	- makes the chatBubble appear every 4 seconds with a new message each time
@@ -79,7 +73,7 @@ function tailMoving() {
 	- when document has loaded, the head starts moving to the music 
 	- nose+whiskers start twitching
 ---------------------------------------------------------------------------- */
-document.addEventListener("DOMContentLoaded", function(event) ) {
+document.addEventListener("DOMContentLoaded", function() {
 	tl.fromTo(headLayers, 0.8, {x:-15, y:0}, {x:15, y:0, yoyo: true, repeat: -1 });
 	noseAnimation(nose);
 	noseAnimation(whiskers);
