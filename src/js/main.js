@@ -17,7 +17,6 @@ $(function () {
 			e.stopPropagation();
 		}, false);
 	}
-
 	/**
 	* Scroll hash
 	* @param {Object} currentHash
@@ -115,14 +114,10 @@ setTimeout(function() {
 	soundBtn.style.display = show;
 	count.style.display = show;
 
-// $('#intro-page').hide();
-// $('#main-page').show();
-// animTxt.kill(); 
-// $('#sound-btn').fadeIn('slow');
-// $('#cnt').fadeIn('slow');
-
-	var scrollto = window.location.hash;
-	scrollToHash(scrollto);
+	if(window.location.hash) {
+		var scrollto = window.location.hash;
+		scrollToHash(scrollto);
+	}
 }, 4000);
 
 /* ----------------------------------------------------------------------------
@@ -136,10 +131,6 @@ setTimeout(function() {
 */
 const player = document.getElementById('sound');
 function audioBtn() {
-	if ($(window).width() < 740) {
-	   player.play();
-	}
-
 	var audioIcon = document.getElementById('sound-icon');
 
 	if(!player.paused) {

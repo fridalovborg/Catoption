@@ -37,7 +37,7 @@ var e=new XMLHttpRequest;e.open("GET","get_insta.php?foo="+Math.random(),!0),e.a
 // IMG AND REPLACE CONTAINER
 document.getElementById("img-container").innerHTML=this.responseText,
 // LIKE FUNCTION WHEN CLIKCING ON IMG
-$(".img-cont").on("click",function(e){$(this).toggleClass("img-like")}))}),e.send()}function audioBtn(){$(window).width()<740&&player.play();var e=document.getElementById("sound-icon");player.paused?(player.play(),$(e).toggleClass("volume-up volume-off")):(player.pause(),$(e).toggleClass("volume-off volume-up"))}function initMap(){map=new google.maps.Map(document.getElementById("the-map"),{zoom:10,scrollwheel:!1}),infoWindow=new google.maps.InfoWindow;var e;navigator.geolocation?navigator.geolocation.getCurrentPosition(function(t){
+$(".img-cont").on("click",function(e){$(this).toggleClass("img-like")}))}),e.send()}function audioBtn(){var e=document.getElementById("sound-icon");player.paused?(player.play(),$(e).toggleClass("volume-up volume-off")):(player.pause(),$(e).toggleClass("volume-off volume-up"))}function initMap(){map=new google.maps.Map(document.getElementById("the-map"),{zoom:9,scrollwheel:!1}),infoWindow=new google.maps.InfoWindow;var e;navigator.geolocation?navigator.geolocation.getCurrentPosition(function(t){
 // MY POSITION COORDS
 var n={lat:t.coords.latitude,lng:t.coords.longitude};an=google.maps.Animation.DROP,
 // MY POSITIONS MARKER
@@ -55,7 +55,7 @@ function addMarker(e){an=google.maps.Animation.DROP;var t=new google.maps.Marker
 // THE RESULT OF JSON GET VALUE
 function result(e){counter.text(e)}
 // ADD 1 EACH CLICK ON THE CAT
-function addValue(){counter.text(parseInt(counter.text())+1),$.ajax({url:"src/js/db/input.php"}).done().fail(function(e){console.log(e)})}var tl=TweenMax,headLayers=document.getElementById("head-layers"),nose=document.querySelectorAll("#nose path, #nose ellipse"),whiskers=document.querySelectorAll("#whiskers line"),paw=document.getElementById("paw"),highfiveLines=document.querySelectorAll("#highfive-lines path"),catBody=document.getElementById("cat-body"),eyebrowLeft=document.getElementById("eyebrow-left"),eyebrowRight=document.getElementById("eyebrow-right"),mouthRight=document.getElementById("mouth-right"),mouthLeft=document.getElementById("mouth-left"),rightEye=document.getElementById("right-eye"),leftEye=document.getElementById("left-eye"),semiClosed=document.getElementById("semi-closed"),eyesClosed=document.getElementById("eyes-closed"),tails=document.getElementById("tails"),tailAnimation=document.querySelectorAll("#tails path"),chatBubbleWhole=document.getElementsByClassName("svg-bubble"),bubble1=document.getElementById("bubble1"),bubble2=document.getElementById("bubble2"),bubble3=document.getElementById("bubble3"),textInBubbleArray=[bubble1,bubble2,bubble3],bubbleIndex=0;setInterval(bubble,4e3);/* ----------------------------------------------------------------------------
+function addValue(){counter.text(parseInt(counter.text())+1),$.ajax({url:"src/js/db/input.php"}).done().fail(function(e){console.log(e)})}var tl=TweenMax,headLayers=document.getElementById("head-layers"),nose=document.querySelectorAll("#nose path, #nose ellipse"),whiskers=document.querySelectorAll("#whiskers line"),paw=document.getElementById("paw"),catBody=document.getElementById("cat-body"),eyebrowLeft=document.getElementById("eyebrow-left"),eyebrowRight=document.getElementById("eyebrow-right"),mouthRight=document.getElementById("mouth-right"),mouthLeft=document.getElementById("mouth-left"),rightEye=document.getElementById("right-eye"),leftEye=document.getElementById("left-eye"),semiClosed=document.getElementById("semi-closed"),eyesClosed=document.getElementById("eyes-closed"),tails=document.getElementById("tails"),tailAnimation=document.querySelectorAll("#tails path"),chatBubbleWhole=document.getElementsByClassName("svg-bubble"),bubble1=document.getElementById("bubble1"),bubble2=document.getElementById("bubble2"),bubble3=document.getElementById("bubble3"),textInBubbleArray=[bubble1,bubble2,bubble3],bubbleIndex=0;setInterval(bubble,4e3);/* ----------------------------------------------------------------------------
 	EYES
 	- makes the eyes blink every 4 seconds
 ---------------------------------------------------------------------------- */
@@ -82,10 +82,20 @@ catBody.addEventListener("click",pleasedCat),/* --------------------------------
 	- when touching/clicking on the cats tail, the cats eye become semiclosed,
 	  and eyebrows rotate to make an angry face
 ---------------------------------------------------------------------------- */
-tails.addEventListener("click",angryCat),/* ----------------------------------------------------------------------------
+tails.addEventListener("click",angryCat);/* ----------------------------------------------------------------------------
 			IE SETTINGS
 ---------------------------------------------------------------------------- */
-navigator.userAgent.match(/Trident\/7\./)&&($(".svg-cat").css("width","100%"),$(".svg-cat").css("height","100vh"),$(".svg-cat").css("max-height","100vh"),$(".cat-logotype").css("width","50%"),$(".cat-logotype").css("height","30%"),$(".header").css("margin-right","120px")),/* ----------------------------------------------------------------------------
+var svgCat=document.getElementById(".svg-cat"),catLogo=document.getElementById(".cat-logotype"),navbar=document.getElementById(".header");navigator.userAgent.match(/Trident\/7\./)&&(svgCat.style.width="100%",svgCat.style.height="100vh",svgCat.style.maxHeight="100vh",catLogo.style.width="50%",catLogo.style.height="30%",navbar=style.marginRight="120px"),
+// JQUERY
+// if (!!navigator.userAgent.match(/Trident\/7\./)) {
+// 	$('.svg-cat').css('width', '100%');
+// 	$('.svg-cat').css('height', '100vh');
+// 	$('.svg-cat').css('max-height', '100vh');
+// 	$('.cat-logotype').css('width', '50%');
+// 	$('.cat-logotype').css('height', '30%');
+// 	$('.header').css('margin-right', '120px');
+// }
+/* ----------------------------------------------------------------------------
 			LINK HASH
 ---------------------------------------------------------------------------- */
 /**
@@ -109,7 +119,7 @@ window.addEventListener("load",getIGImages);// FIRST SET OF IMAGES WHEN WINDOW L
 - toggle between volume icons
 - timeout function that clears the intropage and shows the homepage
 ---------------------------------------------------------------------------- */
-var TweenMax,audioTxt=document.querySelector(".pulse-txt"),animTxt=TweenMax.to(audioTxt,.8,{scaleX:1.2,scaleY:1.2,repeat:-1,yoyo:!0}),icon=document.getElementById("icon");setInterval(function(){$(icon).toggleClass("volume-down volume-up")},800);var hide="none",show="block",introPage=document.getElementById("intro-page"),mainPage=document.getElementById("main-page"),soundBtn=document.getElementById("sound-btn"),count=document.getElementById("cnt");setTimeout(function(){introPage.style.display=hide,mainPage.style.display=show,animTxt.kill(),soundBtn.style.display=show,count.style.display=show,scrollToHash(window.location.hash)},4e3);/* ----------------------------------------------------------------------------
+var TweenMax,audioTxt=document.querySelector(".pulse-txt"),animTxt=TweenMax.to(audioTxt,.8,{scaleX:1.2,scaleY:1.2,repeat:-1,yoyo:!0}),icon=document.getElementById("icon");setInterval(function(){$(icon).toggleClass("volume-down volume-up")},800);var hide="none",show="block",introPage=document.getElementById("intro-page"),mainPage=document.getElementById("main-page"),soundBtn=document.getElementById("sound-btn"),count=document.getElementById("cnt");setTimeout(function(){if(introPage.style.display=hide,mainPage.style.display=show,animTxt.kill(),soundBtn.style.display=show,count.style.display=show,window.location.hash){scrollToHash(window.location.hash)}},4e3);/* ----------------------------------------------------------------------------
 			AUDIO & AUDIO BUTTON
 ---------------------------------------------------------------------------- */
 /**

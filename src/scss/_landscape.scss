@@ -1,15 +1,6 @@
 /* ----------------------------------------------------------------------------
 			LANSCAPE MOBILE MODE
 ---------------------------------------------------------------------------- */
-.intro-txt {
-	padding-top: 10%;
-}
-
-.cat-logotype {
-	width: 25%;
-	height: 20%;
-}	
-
 .svg-cat {
 	width: 50%;
 	padding-top: 10%;
@@ -20,3 +11,14 @@
 	top: 20%;
 }
 
+.intro-page {
+
+	.intro-txt {
+		padding-top: 10%;
+	}
+
+	.cat-logotype {
+		width: 50%;
+		height: 20%;
+	}	
+}

@@ -6,7 +6,7 @@ var map, infoWindow, an;
 
 function initMap() {
 	map = new google.maps.Map(document.getElementById('the-map'), {
-		zoom: 10,
+		zoom: 9,
 		scrollwheel: false
 	});
 
