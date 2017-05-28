@@ -18,12 +18,12 @@
 	<audio id="sound" src="audio/catsong.mp3" autoplay loop></audio> 
 	<div class="intro-page" id="intro-page">
 		<div class="intro-txt">
-			<div class="cat-logotype" id="cat-logotype"> <?php include 'src/img/logotype.svg'; ?> </div>
+			<div class="cat-logotype"> <?php include 'src/img/logotype.svg'; ?> </div>
 			<h2 class="pulse-txt">Turn up your sound <i id="icon" class="fa volume-down"></i></h2>
 		</div>
 	</div>
 	<main id="main-page">
-		<header id="header">
+		<header>
 			<a href="#home" class="home">#CATOPTION</a>
 			<div id="sound-btn" onclick="audioBtn()" class="audio-btn"><i id="sound-icon" class="fa volume-off"></i></div>
 			<a href="#instagram" class="instagram fa"></a>
@@ -35,7 +35,7 @@
                 <div id="bubble2"><?php include 'src/img/chatbubble2.svg'; ?></div>
                 <div id="bubble3"><?php include 'src/img/chatbubble3.svg'; ?></div>
             </div> <!-- .svg-bubble -->
-			<div class="svg-cat" id="svg-cat">
+			<div class="svg-cat">
 				<?php include 'src/img/cat.svg'; ?> 
 			</div> <!-- .svg-cat -->
 			<div id="cnt" class="the-counter">

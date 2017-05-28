@@ -1,10 +1,10 @@
 function bubble(){++bubbleIndex>textInBubbleArray.length-1&&(bubbleIndex=0),document.getElementById("bubble-div").innerHTML=textInBubbleArray[bubbleIndex].innerHTML,tl.fromTo(chatBubbleWhole,.7,{alpha:0},{alpha:1,yoyo:!0,repeat:1,repeatDelay:1})}/* ----------------------------------------------------------------------------
-	NOSE
-	- makes the nose and whiskers do a small rotation/shake every 5 seconds
+    NOSE
+    - makes the nose and whiskers do a small rotation/shake every 5 seconds
 ---------------------------------------------------------------------------- */
 function noseAnimation(e){setInterval(function(){tl.staggerFromTo(e,.2,{rotation:0,transformOrigin:"center center"},{rotation:10,transformOrigin:"center center",yoyo:!0,repeat:1})},5e3)}function eyeBlink(){eyeBlinkInterval=window.setInterval(function(){tl.fromTo(eyesClosed,.3,{alpha:0},{alpha:1,yoyo:!0,repeat:1,repeatDelay:.2}),tl.fromTo([rightEye,leftEye],.3,{alpha:1},{alpha:0,yoyo:!0,repeat:1,repeatDelay:.2})},4e3)}/* ----------------------------------------------------------------------------
-	TAIL IS MOVING
-	- makes the cats tail sway
+    TAIL IS MOVING
+    - makes the cats tail sway
 ---------------------------------------------------------------------------- */
 function tailMoving(){setInterval(function(){tl.staggerFromTo(tailAnimation,1,{rotation:0,transformOrigin:"center center"},{rotation:-25,transformOrigin:"center center",yoyo:!0,repeat:1})},4e3)}function highfivePaw(){tl.fromTo(paw,.3,{scale:1,x:0,y:0},{scale:1.3,x:0,y:-15,yoyo:!0,repeat:1}),tl.fromTo($("#highfive-lines"),.5,{alpha:0},{alpha:1,yoyo:!0,repeat:1}),$("#paw-sound").trigger("load"),$("#paw-sound").trigger("play"),
 // PAT THE CAT DB COUNTER
@@ -37,16 +37,13 @@ var e=new XMLHttpRequest;e.open("GET","get_insta.php?foo="+Math.random(),!0),e.a
 // IMG AND REPLACE CONTAINER
 document.getElementById("img-container").innerHTML=this.responseText,
 // LIKE FUNCTION WHEN CLIKCING ON IMG
-$(".img-cont").on("click",function(e){$(this).toggleClass("img-like")}))}),e.send()}function audioBtn(){var e=document.getElementById("sound-icon");player.paused?(player.play(),$(e).toggleClass("volume-up volume-off")):(player.pause(),$(e).toggleClass("volume-off volume-up"))}function initMap(){map=new google.maps.Map(document.getElementById("the-map"),{
-// center: pos,
-zoom:9,scrollwheel:!1}),infoWindow=new google.maps.InfoWindow;var e;navigator.geolocation?navigator.geolocation.getCurrentPosition(function(t){
+$(".img-cont").on("click",function(e){$(this).toggleClass("img-like")}))}),e.send()}function audioBtn(){var e=document.getElementById("sound-icon");player.paused?(player.play(),$(e).toggleClass("volume-up volume-off")):(player.pause(),$(e).toggleClass("volume-off volume-up"))}function initMap(){map=new google.maps.Map(document.getElementById("the-map"),{center:void 0,zoom:9,scrollwheel:!1}),infoWindow=new google.maps.InfoWindow;var e;navigator.geolocation?navigator.geolocation.getCurrentPosition(function(t){
 // MY POSITION COORDS
 var n={lat:t.coords.latitude,lng:t.coords.longitude};an=google.maps.Animation.DROP,
 // MY POSITIONS MARKER
 e?e.setPosition(n):e=new google.maps.Marker({position:n,animation:an,map:map}),
 // INFO BOX FOR MY POSITION
 google.maps.event.addListener(e,"click",function(){var e="<strong>You are here!</strong><br>";infoWindow.setContent(e),infoWindow.open(map,this)}),map.setCenter(n);
-// map.panTo(pos);
 // CAT SHELTERS REQUEST
 var o={location:n,radius:"50000",keyword:"cat_shelter"};new google.maps.places.PlacesService(map).nearbySearch(o,showPlaces)},function(){handleLocationError(!0,infoWindow,map.getCenter())}):
 // BROWSER DO NOT SUPPORT GEOLOCATION
@@ -59,46 +56,36 @@ function addMarker(e){an=google.maps.Animation.DROP;var t=new google.maps.Marker
 function result(e){counter.text(e)}
 // ADD 1 EACH CLICK ON THE CAT
 function addValue(){counter.text(parseInt(counter.text())+1),$.ajax({url:"src/js/db/input.php"}).done().fail(function(e){console.log(e)})}var tl=TweenMax,headLayers=document.getElementById("head-layers"),nose=document.querySelectorAll("#nose path, #nose ellipse"),whiskers=document.querySelectorAll("#whiskers line"),paw=document.getElementById("paw"),catBody=document.getElementById("cat-body"),eyebrowLeft=document.getElementById("eyebrow-left"),eyebrowRight=document.getElementById("eyebrow-right"),mouthRight=document.getElementById("mouth-right"),mouthLeft=document.getElementById("mouth-left"),rightEye=document.getElementById("right-eye"),leftEye=document.getElementById("left-eye"),semiClosed=document.getElementById("semi-closed"),eyesClosed=document.getElementById("eyes-closed"),tails=document.getElementById("tails"),tailAnimation=document.querySelectorAll("#tails path"),chatBubbleWhole=document.getElementsByClassName("svg-bubble"),bubble1=document.getElementById("bubble1"),bubble2=document.getElementById("bubble2"),bubble3=document.getElementById("bubble3"),textInBubbleArray=[bubble1,bubble2,bubble3],bubbleIndex=0;setInterval(bubble,4e3);/* ----------------------------------------------------------------------------
-	EYES
-	- makes the eyes blink every 4 seconds
+    EYES
+    - makes the eyes blink every 4 seconds
 ---------------------------------------------------------------------------- */
 var eyeBlinkInterval;/* ----------------------------------------------------------------------------
-	HEAD
-	- when document has loaded, the head starts moving to the music 
-	- nose+whiskers start twitching
+    HEAD
+    - when document has loaded, the head starts moving to the music 
+    - nose+whiskers start twitching
 ---------------------------------------------------------------------------- */
 document.addEventListener("DOMContentLoaded",function(){tl.fromTo(headLayers,.8,{x:-15,y:0},{x:15,y:0,yoyo:!0,repeat:-1}),noseAnimation(nose),noseAnimation(whiskers),eyeBlink(),tailMoving(),bubble()}),/* ----------------------------------------------------------------------------
-	PAW
-	- scales the paw and adds highfive lines when user clicks the cats paw
-	- triggers and plays highfive sounds
-	- adds +1 to the pay the cat counter
+    PAW
+    - scales the paw and adds highfive lines when user clicks the cats paw
+    - triggers and plays highfive sounds
+    - adds +1 to the pay the cat counter
 ---------------------------------------------------------------------------- */
 paw.addEventListener("click",highfivePaw),/* ----------------------------------------------------------------------------
-	BODY
-	- when stroking the cat (clicking on the catBody), the eyebrows rotate
-	  and eyes goes from open to closed
-	- cat purring sounds triggers and plays
-	- adds +1 to the pay the cat counter  
+    BODY
+    - when stroking the cat (clicking on the catBody), the eyebrows rotate
+      and eyes goes from open to closed
+    - cat purring sounds triggers and plays
+    - adds +1 to the pay the cat counter  
 ---------------------------------------------------------------------------- */
 catBody.addEventListener("click",pleasedCat),/* ----------------------------------------------------------------------------
-	TAIL PULL
-	- when touching/clicking on the cats tail, the cats eye become semiclosed,
-	  and eyebrows rotate to make an angry face
+    TAIL PULL
+    - when touching/clicking on the cats tail, the cats eye become semiclosed,
+      and eyebrows rotate to make an angry face
 ---------------------------------------------------------------------------- */
-tails.addEventListener("click",angryCat);/* ----------------------------------------------------------------------------
+tails.addEventListener("click",angryCat),/* ----------------------------------------------------------------------------
 			IE SETTINGS
 ---------------------------------------------------------------------------- */
-var svgCat=document.getElementById("svg-cat"),catLogo=document.getElementById("cat-logotype"),navbar=document.getElementById("header");navigator.userAgent.match(/Trident\/7\./)&&(svgCat.style.width="100%",svgCat.style.height="100vh",svgCat.style.maxHeight="100vh",catLogo.style.width="50%",catLogo.style.height="30%",navbar=style.marginRight="120px"),
-// JQUERY
-// if (!!navigator.userAgent.match(/Trident\/7\./)) {
-// 	$('.svg-cat').css('width', '100%');
-// 	$('.svg-cat').css('height', '100vh');
-// 	$('.svg-cat').css('max-height', '100vh');
-// 	$('.cat-logotype').css('width', '50%');
-// 	$('.cat-logotype').css('height', '30%');
-// 	$('.header').css('margin-right', '120px');
-// }
-/* ----------------------------------------------------------------------------
+navigator.userAgent.match(/Trident\/7\./)&&($(".svg-cat").css("width","100%"),$(".svg-cat").css("height","100vh"),$(".svg-cat").css("max-height","100vh"),$(".cat-logotype").css("width","50%"),$(".cat-logotype").css("height","30%"),$(".header").css("margin-right","120px")),/* ----------------------------------------------------------------------------
 			LINK HASH
 ---------------------------------------------------------------------------- */
 /**
@@ -122,7 +109,7 @@ window.addEventListener("load",getIGImages);// FIRST SET OF IMAGES WHEN WINDOW L
 - toggle between volume icons
 - timeout function that clears the intropage and shows the homepage
 ---------------------------------------------------------------------------- */
-var TweenMax,audioTxt=document.querySelector(".pulse-txt"),animTxt=TweenMax.to(audioTxt,.8,{scaleX:1.2,scaleY:1.2,repeat:-1,yoyo:!0}),icon=document.getElementById("icon");setInterval(function(){$(icon).toggleClass("volume-down volume-up")},800);var hide="none",show="block",introPage=document.getElementById("intro-page"),mainPage=document.getElementById("main-page"),soundBtn=document.getElementById("sound-btn"),count=document.getElementById("cnt");setTimeout(function(){if(introPage.style.display=hide,mainPage.style.display=show,animTxt.kill(),soundBtn.style.display=show,count.style.display=show,window.location.hash){scrollToHash(window.location.hash)}},4e3);/* ----------------------------------------------------------------------------
+var audioTxt=document.querySelector(".pulse-txt"),animTxt=tl.to(audioTxt,.8,{scaleX:1.2,scaleY:1.2,repeat:-1,yoyo:!0}),icon=document.getElementById("icon");setInterval(function(){$(icon).toggleClass("volume-down volume-up")},800);var hide="none",show="block",introPage=document.getElementById("intro-page"),mainPage=document.getElementById("main-page"),soundBtn=document.getElementById("sound-btn"),count=document.getElementById("cnt");setTimeout(function(){if(introPage.style.display=hide,mainPage.style.display=show,animTxt.kill(),soundBtn.style.display=show,count.style.display=show,window.location.hash){scrollToHash(window.location.hash)}},4e3);/* ----------------------------------------------------------------------------
 			AUDIO & AUDIO BUTTON
 ---------------------------------------------------------------------------- */
 /**
@@ -135,4 +122,4 @@ const player=document.getElementById("sound");/* -------------------------------
 			GOOGLE MAP
 - initmap() returns the map and its places, users position
 ---------------------------------------------------------------------------- */
-var map,infoWindow,an,pos,counter=$("#counter");$.ajax("src/js/db/output.php").done(function(e){result(JSON.parse(e)[0].value)});
+var map,infoWindow,an,counter=$("#counter");$.ajax("src/js/db/output.php").done(function(e){result(JSON.parse(e)[0].value)});
