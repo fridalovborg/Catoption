@@ -5,10 +5,8 @@
 var map, infoWindow, an;
 
 function initMap() {
-	var pos;
 	map = new google.maps.Map(document.getElementById('the-map'), {
-		center: pos,
-		zoom: 9,
+		zoom: 15,
 		scrollwheel: false
 	});
 
@@ -41,8 +39,6 @@ function initMap() {
 				infoWindow.setContent(txt);
 				infoWindow.open(map, this);
 			});
-			map.setCenter(pos);
-			
 			// CAT SHELTERS REQUEST
 			var request = {
 				location: pos,
@@ -53,6 +49,7 @@ function initMap() {
 			var services = new google.maps.places.PlacesService(map);
 			services.nearbySearch(request, showPlaces);
 
+			map.setCenter(pos);
 		}, function() {
 			handleLocationError(true, infoWindow, map.getCenter());
 		});
@@ -87,4 +84,15 @@ function addMarker(place) {
 		infoWindow.setContent(txt);
 		infoWindow.open(map, this);
 	});
+}
+
+/* ----------------------------------------------------------------------------
+			ERROR MESSAGES
+---------------------------------------------------------------------------- */
+function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+	infoWindow.setPosition(pos);
+	infoWindow.setContent(browserHasGeolocation ?
+	'Ooops! Something went wrong...' :
+	'Ooops! Try another browser...');
+	infoWindow.open(map);
 }

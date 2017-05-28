@@ -21,10 +21,14 @@
                         LINEAR-GRADIENT MIXIN
 ------------------------------------------------------------------------------*/
 @mixin linear-gradient($degrees, $color1, $color2, $color3) {
-    background: -webkit-linear-gradient($degrees, $color1, $color2, $color3); /* For Safari */
-    background: -o-linear-gradient($degrees, $color1, $color2, $color3); /* For Opera */
-    background: -moz-linear-gradient($degrees, $color1, $color2, $color3); /* For Firefox */
-    background: linear-gradient($degrees, $color1, $color2, $color3); /* Standard syntax */
+    // FOR CHROME 25, SAFARI 6, iOS 6.1, ANDROID 4.3
+    background: -webkit-linear-gradient($degrees, $color1, $color2, $color3);
+    // FOR OLD OPERA (11.1 to 12.0) 
+    background: -o-linear-gradient($degrees, $color1, $color2, $color3);
+    // FOR FIREFOX (3.6 to 15) 
+    background: -moz-linear-gradient($degrees, $color1, $color2, $color3);
+    // STANDARD SYNTAX
+    background: linear-gradient($degrees, $color1, $color2, $color3); 
 }
 
 /*------------------------------------------------------------------------------

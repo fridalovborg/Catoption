@@ -1,9 +1,8 @@
-var tl = TweenMax;
+var TweenMax;
 var headLayers = document.getElementById('head-layers');
 var nose = document.querySelectorAll('#nose path, #nose ellipse');
 var whiskers = document.querySelectorAll('#whiskers line');
 var paw = document.getElementById('paw');
-//var highfiveLines = document.querySelectorAll('#highfive-lines path');
 var catBody = document.getElementById('cat-body');
 var eyebrowLeft = document.getElementById('eyebrow-left');
 var eyebrowRight = document.getElementById('eyebrow-right');
@@ -32,7 +31,7 @@ function bubble() {
         bubbleIndex = 0;
     }
     document.getElementById('bubble-div').innerHTML = textInBubbleArray[bubbleIndex].innerHTML;
-    tl.fromTo(chatBubbleWhole, 0.7, {alpha: 0}, {alpha:1, yoyo: true, repeat: 1, repeatDelay: 1});
+    TweenMax.fromTo(chatBubbleWhole, 0.7, {alpha: 0}, {alpha:1, yoyo: true, repeat: 1, repeatDelay: 1});
 } 
 /* ----------------------------------------------------------------------------
     NOSE
@@ -40,7 +39,7 @@ function bubble() {
 ---------------------------------------------------------------------------- */
 function noseAnimation(el) {
     setInterval(function() {
-        tl.staggerFromTo(el, 0.2, {rotation: 0, transformOrigin: 'center center'}, {rotation: 10, transformOrigin: 'center center', yoyo: true, repeat: 1} );
+        TweenMax.staggerFromTo(el, 0.2, {rotation: 0, transformOrigin: 'center center'}, {rotation: 10, transformOrigin: 'center center', yoyo: true, repeat: 1} );
     }, 5000);
 }
 /* ----------------------------------------------------------------------------
@@ -50,8 +49,8 @@ function noseAnimation(el) {
 var eyeBlinkInterval;
 function eyeBlink() {
     eyeBlinkInterval = window.setInterval(function() {
-        tl.fromTo(eyesClosed, 0.3, {alpha: 0}, {alpha:1, yoyo: true, repeat: 1, repeatDelay: 0.2});
-        tl.fromTo([rightEye, leftEye], 0.3, {alpha: 1}, {alpha:0, yoyo: true, repeat: 1, repeatDelay: 0.2});
+        TweenMax.fromTo(eyesClosed, 0.3, {alpha: 0}, {alpha:1, yoyo: true, repeat: 1, repeatDelay: 0.2});
+        TweenMax.fromTo([rightEye, leftEye], 0.3, {alpha: 1}, {alpha:0, yoyo: true, repeat: 1, repeatDelay: 0.2});
     }, 4000);
 }
 /* ----------------------------------------------------------------------------
@@ -60,7 +59,7 @@ function eyeBlink() {
 ---------------------------------------------------------------------------- */
 function tailMoving() {
     setInterval(function() {
-        tl.staggerFromTo(tailAnimation, 1, {rotation: 0, transformOrigin: 'center center'}, {rotation: -25, transformOrigin: 'center center', yoyo: true, repeat: 1} );
+        TweenMax.staggerFromTo(tailAnimation, 1, {rotation: 0, transformOrigin: 'center center'}, {rotation: -25, transformOrigin: 'center center', yoyo: true, repeat: 1} );
     }, 4000);
 }
 /* ----------------------------------------------------------------------------
@@ -69,7 +68,7 @@ function tailMoving() {
     - nose+whiskers start twitching
 ---------------------------------------------------------------------------- */
 document.addEventListener("DOMContentLoaded", function() {
-    tl.fromTo(headLayers, 0.8, {x:-15, y:0}, {x:15, y:0, yoyo: true, repeat: -1 });
+    TweenMax.fromTo(headLayers, 0.8, {x:-15, y:0}, {x:15, y:0, yoyo: true, repeat: -1 });
     noseAnimation(nose);
     noseAnimation(whiskers);
     eyeBlink();
@@ -84,8 +83,8 @@ document.addEventListener("DOMContentLoaded", function() {
 ---------------------------------------------------------------------------- */
 paw.addEventListener('click', highfivePaw);
 function highfivePaw() {
-    tl.fromTo(paw, 0.3, {scale: 1, x:0, y:0}, {scale:1.3, x:0, y:-15, yoyo: true, repeat: 1});
-    tl.fromTo($('#highfive-lines'), 0.5, {alpha:0}, {alpha:1, yoyo: true, repeat: 1});
+    TweenMax.fromTo(paw, 0.3, {scale: 1, x:0, y:0}, {scale:1.3, x:0, y:-15, yoyo: true, repeat: 1});
+    TweenMax.fromTo($('#highfive-lines'), 0.5, {alpha:0}, {alpha:1, yoyo: true, repeat: 1});
     $('#paw-sound').trigger('load');
     $('#paw-sound').trigger('play');
     // PAT THE CAT DB COUNTER
@@ -100,10 +99,10 @@ function highfivePaw() {
 ---------------------------------------------------------------------------- */
 catBody.addEventListener('click', pleasedCat);
 function pleasedCat() {
-    tl.staggerFromTo([eyebrowRight, mouthRight], 2, {rotation: 0, transformOrigin: 'center center'}, {rotation: -30, transformOrigin: 'center center', yoyo: true, repeat: 1} );
-    tl.staggerFromTo([eyebrowLeft, mouthLeft], 2, {rotation: 0, transformOrigin: 'center center'}, {rotation: 40, transformOrigin: 'center center', yoyo: true, repeat: 1} );
-    tl.fromTo([rightEye, leftEye], 0.5, {alpha: 1}, {alpha:0, yoyo: true, repeat: 1, repeatDelay: 2});
-    tl.fromTo([eyesClosed], 0.5, {alpha: 0}, {alpha:1, yoyo: true, repeat: 1, repeatDelay: 2});
+    TweenMax.staggerFromTo([eyebrowRight, mouthRight], 2, {rotation: 0, transformOrigin: 'center center'}, {rotation: -30, transformOrigin: 'center center', yoyo: true, repeat: 1} );
+    TweenMax.staggerFromTo([eyebrowLeft, mouthLeft], 2, {rotation: 0, transformOrigin: 'center center'}, {rotation: 40, transformOrigin: 'center center', yoyo: true, repeat: 1} );
+    TweenMax.fromTo([rightEye, leftEye], 0.5, {alpha: 1}, {alpha:0, yoyo: true, repeat: 1, repeatDelay: 2});
+    TweenMax.fromTo([eyesClosed], 0.5, {alpha: 0}, {alpha:1, yoyo: true, repeat: 1, repeatDelay: 2});
     $('#purr').trigger('load');
     $('#purr').trigger('play');
     // PAT THE CAT DB COUNTER
@@ -120,7 +119,7 @@ function angryCat() {
     setTimeout(function() {
         eyeBlink();
     }, 4000);
-    tl.fromTo(semiClosed, 0.5, {alpha: 0}, {alpha:1, yoyo: true, repeat: 1, repeatDelay: 2});
-    tl.staggerFromTo($('#eyebrow-right'), 1, {rotation: 0, transformOrigin: 'center center'}, {rotation: -50, transformOrigin: 'center center', yoyo: true, repeat: 1, repeatDelay: 0.5});
-    tl.staggerFromTo($('#eyebrow-left'), 1, {rotation: 0, transformOrigin: 'center center'}, {rotation: 60, transformOrigin: 'center center', yoyo: true, repeat: 1, repeatDelay: 0.5});
+    TweenMax.fromTo(semiClosed, 0.5, {alpha: 0}, {alpha:1, yoyo: true, repeat: 1, repeatDelay: 2});
+    TweenMax.staggerFromTo($('#eyebrow-right'), 1, {rotation: 0, transformOrigin: 'center center'}, {rotation: -50, transformOrigin: 'center center', yoyo: true, repeat: 1, repeatDelay: 0.5});
+    TweenMax.staggerFromTo($('#eyebrow-left'), 1, {rotation: 0, transformOrigin: 'center center'}, {rotation: 60, transformOrigin: 'center center', yoyo: true, repeat: 1, repeatDelay: 0.5});
 }

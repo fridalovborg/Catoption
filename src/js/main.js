@@ -91,7 +91,7 @@ window.addEventListener('load', getIGImages); // FIRST SET OF IMAGES WHEN WINDOW
 - timeout function that clears the intropage and shows the homepage
 ---------------------------------------------------------------------------- */
 var audioTxt = document.querySelector('.pulse-txt');
-var animTxt = tl.to(audioTxt, 0.8, {scaleX: 1.2, scaleY: 1.2, repeat: -1, yoyo: true});
+var animTxt = TweenMax.to(audioTxt, 0.8, {scaleX: 1.2, scaleY: 1.2, repeat: -1, yoyo: true});
 
 // INTERVAL OF VOLUME ICON
 var icon = document.getElementById('icon');
