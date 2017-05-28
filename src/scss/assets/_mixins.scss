@@ -4,7 +4,6 @@
 @mixin flexbox($display, $directionWrap, $justify-content, $align-items) {
     display: -webkit-flex;
     display: -ms-flexbox;
-    display: -webkit-flex;
     display: $display;
    
     -webkit-flex-flow: $directionWrap;
