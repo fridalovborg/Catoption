@@ -1,9 +1,9 @@
 /* ----------------------------------------------------------------------------
 			IE SETTINGS
 ---------------------------------------------------------------------------- */
-var svgCat = document.getElementById('.svg-cat'),
-catLogo = document.getElementById('.cat-logotype'),
-navbar = document.getElementById('.header');
+var svgCat = document.getElementById('svg-cat'),
+catLogo = document.getElementById('cat-logotype'),
+navbar = document.getElementById('header');
 
 if (!!navigator.userAgent.match(/Trident\/7\./)) {
 	svgCat.style.width = '100%';

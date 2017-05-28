@@ -2,10 +2,11 @@
 			GOOGLE MAP
 - initmap() returns the map and its places, users position
 ---------------------------------------------------------------------------- */
-var map, infoWindow, an;
+var map, infoWindow, an, pos;
 
 function initMap() {
 	map = new google.maps.Map(document.getElementById('the-map'), {
+		// center: pos,
 		zoom: 9,
 		scrollwheel: false
 	});
@@ -40,6 +41,7 @@ function initMap() {
 				infoWindow.open(map, this);
 			});
 			map.setCenter(pos);
+			// map.panTo(pos);
 			
 			// CAT SHELTERS REQUEST
 			var request = {

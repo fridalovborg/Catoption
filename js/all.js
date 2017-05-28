@@ -37,13 +37,16 @@ var e=new XMLHttpRequest;e.open("GET","get_insta.php?foo="+Math.random(),!0),e.a
 // IMG AND REPLACE CONTAINER
 document.getElementById("img-container").innerHTML=this.responseText,
 // LIKE FUNCTION WHEN CLIKCING ON IMG
-$(".img-cont").on("click",function(e){$(this).toggleClass("img-like")}))}),e.send()}function audioBtn(){var e=document.getElementById("sound-icon");player.paused?(player.play(),$(e).toggleClass("volume-up volume-off")):(player.pause(),$(e).toggleClass("volume-off volume-up"))}function initMap(){map=new google.maps.Map(document.getElementById("the-map"),{zoom:9,scrollwheel:!1}),infoWindow=new google.maps.InfoWindow;var e;navigator.geolocation?navigator.geolocation.getCurrentPosition(function(t){
+$(".img-cont").on("click",function(e){$(this).toggleClass("img-like")}))}),e.send()}function audioBtn(){var e=document.getElementById("sound-icon");player.paused?(player.play(),$(e).toggleClass("volume-up volume-off")):(player.pause(),$(e).toggleClass("volume-off volume-up"))}function initMap(){map=new google.maps.Map(document.getElementById("the-map"),{
+// center: pos,
+zoom:9,scrollwheel:!1}),infoWindow=new google.maps.InfoWindow;var e;navigator.geolocation?navigator.geolocation.getCurrentPosition(function(t){
 // MY POSITION COORDS
 var n={lat:t.coords.latitude,lng:t.coords.longitude};an=google.maps.Animation.DROP,
 // MY POSITIONS MARKER
 e?e.setPosition(n):e=new google.maps.Marker({position:n,animation:an,map:map}),
 // INFO BOX FOR MY POSITION
 google.maps.event.addListener(e,"click",function(){var e="<strong>You are here!</strong><br>";infoWindow.setContent(e),infoWindow.open(map,this)}),map.setCenter(n);
+// map.panTo(pos);
 // CAT SHELTERS REQUEST
 var o={location:n,radius:"50000",keyword:"cat_shelter"};new google.maps.places.PlacesService(map).nearbySearch(o,showPlaces)},function(){handleLocationError(!0,infoWindow,map.getCenter())}):
 // BROWSER DO NOT SUPPORT GEOLOCATION
@@ -85,7 +88,7 @@ catBody.addEventListener("click",pleasedCat),/* --------------------------------
 tails.addEventListener("click",angryCat);/* ----------------------------------------------------------------------------
 			IE SETTINGS
 ---------------------------------------------------------------------------- */
-var svgCat=document.getElementById(".svg-cat"),catLogo=document.getElementById(".cat-logotype"),navbar=document.getElementById(".header");navigator.userAgent.match(/Trident\/7\./)&&(svgCat.style.width="100%",svgCat.style.height="100vh",svgCat.style.maxHeight="100vh",catLogo.style.width="50%",catLogo.style.height="30%",navbar=style.marginRight="120px"),
+var svgCat=document.getElementById("svg-cat"),catLogo=document.getElementById("cat-logotype"),navbar=document.getElementById("header");navigator.userAgent.match(/Trident\/7\./)&&(svgCat.style.width="100%",svgCat.style.height="100vh",svgCat.style.maxHeight="100vh",catLogo.style.width="50%",catLogo.style.height="30%",navbar=style.marginRight="120px"),
 // JQUERY
 // if (!!navigator.userAgent.match(/Trident\/7\./)) {
 // 	$('.svg-cat').css('width', '100%');
@@ -132,4 +135,4 @@ const player=document.getElementById("sound");/* -------------------------------
 			GOOGLE MAP
 - initmap() returns the map and its places, users position
 ---------------------------------------------------------------------------- */
-var map,infoWindow,an,counter=$("#counter");$.ajax("src/js/db/output.php").done(function(e){result(JSON.parse(e)[0].value)});
+var map,infoWindow,an,pos,counter=$("#counter");$.ajax("src/js/db/output.php").done(function(e){result(JSON.parse(e)[0].value)});
