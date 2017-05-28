@@ -5,12 +5,12 @@
 $timeout = 1;
 $lastCache = file_get_contents('cache_time.txt');
 
-if ($lastCache + $timeout < time() ) { // Har det gått <timeout> tid?
+if ($lastCache + $timeout < time() ) { 
     file_put_contents('cache_time.txt', time());
     $url = 'https://www.instagram.com/explore/tags/cats/?__a=1';
-    // @ framför undertrycker felmeddelanden
+    // @ PREVENTS ERROR MESSAGES
     @$data = file_get_contents($url);
-    // Skriv bara om cache om API:et svarar. Annars behåll den gamla cachen.
+    // IF CACHE API ANSWER, ELSE KEEP OLD CACHE
     if ($data)
         file_put_contents('cache.txt', $data);
 }

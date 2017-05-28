@@ -29,14 +29,6 @@ gulp.task('scripts', function() {
 		.pipe(gulp.dest('./js'));
 });
 
-// gulp.task('browser-sync', ['sass'], function() {
-// 	bs.init({
-// 		server: {
-// 			baseDir: "./"
-// 		}
-// 	})
-// });
-
 //PHP
 gulp.task('browser-sync', function() {
   connect.server({}, function (){
