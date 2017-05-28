@@ -23,7 +23,7 @@
 		</div>
 	</div>
 	<main id="main-page">
-		<header class="header">
+		<header id="header">
 			<a href="#home" class="home">#CATOPTION</a>
 			<div id="sound-btn" onclick="audioBtn()" class="audio-btn"><i id="sound-icon" class="fa volume-off"></i></div>
 			<a href="#instagram" class="instagram fa"></a>
